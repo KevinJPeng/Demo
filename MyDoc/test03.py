@@ -3,6 +3,11 @@ import re
 from bs4 import BeautifulSoup
 from lxml import etree
 
+
+import sys
+import os
+import shutil
+
 #百度
 # 通过find定位标签
 # BeautifulSoup文档：https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html
@@ -188,6 +193,115 @@ def get_movies():
     #return xpath_parse_movies(r.text)
 
 
+# 获得程序中所有模块的路径
+def getModulesPath():
+    lst = []
+    # sys.modules是一个字典，数据格式如下：
+    # {'site': <module 'site' from 'D:\Python27\lib\site.pyc'>,
+    #for v in sys.modules.itervalues():
+    for v in sys.modules.values():
+        s = str(v)
+        if "from" in s:
+            data = s.split("'")
+            lst.append(data[-2])
+        else:
+            print("module : ", s)
+    return lst
+
+
+# 抽取文件
+def extractFiles(destDir, files):
+    destDir.replace("/", "\\")
+    if destDir[-1] != '\\':
+        destDir += '\\'
+
+    for f in files:
+        dest = filiterPath(destDir, f)
+        copyF(dest, f)
+
+
+# 过滤路径 去掉最大绝对路径
+def filiterPath(destDir, srcFile):
+    dest = destDir
+    maxLen = 0
+    for path in sys.path:
+        lenp = len(path)
+        if lenp < len(srcFile) and path == srcFile[:lenp]:
+            if maxLen < lenp:
+                dest = destDir + srcFile[lenp + 1:]
+                maxLen = lenp
+
+    dest.replace("/", "\\")
+    if '.' in dest:  # 去掉文件名
+        p = dest.rfind('\\')
+        if p >= 0:
+            dest = dest[:p]
+    return dest
+
+
+# 拷贝文件
+# 如果目标路径不存在，则创建
+def copyF(destDir, srcFile):
+    if not os.path.isfile(srcFile):
+        print("error : file %s not exist!" % srcFile)
+        return False
+    if not os.path.isdir(destDir):
+        os.mkdir(destDir)
+        print("make dir:", destDir)
+    try:
+        stemp = srcFile
+        stemp = stemp.lower()
+        index = stemp.rfind("\\")
+        stemp = stemp[0:index]
+        if stemp.find("\\lib") > 0:
+            index = stemp.find("\\lib")
+            stemp = stemp[index:]
+        elif stemp.find("\\dlls") > 0:
+            index = stemp.find("\\dlls")
+            stemp = stemp[index:]
+        else:
+            stemp = ''
+        destDir += stemp
+        destDir += '\\'
+        mkdir(destDir)
+        shutil.copy2(srcFile, destDir)
+        print("copy file : %s to %s" % (srcFile, destDir))
+    except IOError:
+        print("error : copy %s to %s faild" % (srcFile, destDir))
+        return False
+    return True
+
+
+def test():
+    a = getModulesPath()
+    extractFiles("testpg\\", a)  # 抽取后的文件会放到testpg目录下
+
+
+def mkdir(path):
+    # 去除首位空格
+    path = path.strip()
+    # 去除尾部 \ 符号
+    path = path.rstrip("\\")
+
+    # 判断路径是否存在
+    # 存在     True
+    # 不存在   False
+    isExists = os.path.exists(path)
+
+    # 判断结果
+    if not isExists:
+        # 如果不存在则创建目录
+        # 创建目录操作函数
+        os.makedirs(path)
+
+        print(path + ' 创建成功')
+        return True
+    else:
+        # 如果目录存在则不创建，并提示目录已存在
+        print(path + ' 目录已存在')
+        return False
+
 movies = get_movies()
+test()
 #print(movies)
 
