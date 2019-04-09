@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <intervaltime>       																<!--程序执行周期（单位：分钟）-->
+        <minute>5</minute>
+    </intervaltime>
+    <serverUrl>     
+    	<!--获取任务的API接口-->
+			<url_request>http://qz.sumszw.com:6001/Sumszw.Java.Helper/webservice/HttpService/GetSiteMap?websiteId=</url_request>
+			<!--提交任务结果的API接口-->
+			<url_reponse>http://qz.sumszw.com:6001/Sumszw.Java.Helper/webservice/HttpService/GetSiteMap?websiteId=</url_reponse>
+    </serverUrl>
+    <siteList>        																	<!--site的信息列表-->
+        <siteInfo>
+        	<enable>1</enable>
+          <url>https://b2b.baidu.com/</url>     				<!--网站url-->
+          <methon>0</methon>               							<!--0：selenium 1：requests-->
+          <xpath>null</xpath>
+        </siteInfo>
+        <siteInfo>
+        	<enable>1</enable>
+          <url>http://www.abiz.com/products/</url>     	<!--网站url-->
+          <methon>1</methon>               							<!--0：selenium 1：requests-->
+          <xpath>null</xpath>
+        </siteInfo>
+        <siteInfo>
+        	<enable>1</enable>
+          <url>https://s.1688.com/</url>     						<!--网站url-->
+          <methon>2</methon>               							<!--0：selenium 1：requests-->
+          <xpath>null</xpath>
+        </siteInfo>
+    </siteList>
+</root>
