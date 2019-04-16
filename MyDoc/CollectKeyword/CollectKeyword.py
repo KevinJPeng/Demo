@@ -11,19 +11,25 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import urllib
 import logging
+from logging.handlers import RotatingFileHandler
 import re
+import time
+import threading
+import os
 
 hotWordList = []
 classifyList = []
-
+#mutex = threading.Lock()
 #读取配置
 configInfo = my_xmlConfig.getConfig('config.xml')
 #创建一个logger
 logger = logging.getLogger('Collectkeyword_Log')
+#fh = logging.FileHandler('Collectkeyword.Log', encoding='UTF-8')
 
 
 #0:info 1:error
 def printLog(strInfo1, strInfo2 = '', level = 0, iType = 1):
+    #mutex.acquire()
     loginfo = strInfo1
     if iType == 0:
         for info in strInfo2:
@@ -36,20 +42,22 @@ def printLog(strInfo1, strInfo2 = '', level = 0, iType = 1):
         logger.info(loginfo)
     else:
         logger.error(loginfo)
-
+    #mutex.release()
 
 
 def InitLogger():
+    #mutex.acquire()
     logger.setLevel(logging.DEBUG)
     #创建一个handler,用于写入日志文件
-    fh = logging.FileHandler('Collectkeyword.Log', encoding='UTF-8')
+    fh = RotatingFileHandler('Collectkeyword.Log', encoding='UTF-8', maxBytes=5*1024*1024, backupCount=3)
+    #fh = logging.RotatingFileHandler('Collectkeyword.Log', encoding='UTF-8', maxBytes=1*1024, backupCount=3)
+    #fh.close()
     fh.setLevel(logging.DEBUG)
     #定义handler的输出格式
     formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(filename)s[:%(lineno)d] - %(message)s')
     fh.setFormatter(formatter)
     logger.addHandler(fh)
-
-
+    #mutex.release()
 
 def GetUrl_ByWebdriver(url, num_retries = 2):
     hotWordList_temp = []
@@ -65,15 +73,17 @@ def GetUrl_ByWebdriver(url, num_retries = 2):
             # 设置chrome浏览器无界面模式
             chrome_options.add_argument('--headless')
             browser = webdriver.Chrome(options=chrome_options)
-            # browser = webdriver.Chrome()
+            #location = 'C:/Program Files (x86)/Mozilla Firefox/geckodriver.exe'
+            #browser = webdriver.Firefox(executable_path=location, options=chrome_options)
             browser.get(url)
             # 休眠3秒,等待加载完成!
-            sleep(3)
+            sleep(5)
             bRequestOk = True
             break
         except Exception as e:
             #print('open browser error:%s'%e)
             printLog('Open browser error', '', 1)
+            return
 
     if bRequestOk:
         #采集热词
@@ -306,7 +316,7 @@ def GetHotWord(s_configInfo, _keyword):
                 url_code_name = urllib.parse.quote(utf_gb2312)
                 url = 'https://b2b.baidu.com/s?q={}'.format(url_code_name)
                 #url = 'https://b2b.baidu.com/s?q=手机壳'
-                GetHotWordMethon0(url, '')
+                #GetHotWordMethon0(url, '')
             elif methonType == '1':
                 utf_gb2312 = _keyword.encode('utf-8')
                 url_code_name = urllib.parse.quote(utf_gb2312)
@@ -318,7 +328,9 @@ def GetHotWord(s_configInfo, _keyword):
                     utf_gb2312 = _keyword.encode('gbk')
                     url_code_name = urllib.parse.quote(utf_gb2312)
                 except:
+                    #mutex.acquire()
                     logger.error('关键词转码失败')
+                    #mutex.locked()
                     continue
                 url = 'https://s.1688.com/selloffer/offer_search.htm?keywords={}'.format(url_code_name)
                 #url = 'https://s.1688.com/selloffer/offer_search.htm?keywords=%CA%D6%BB%FA%BF%C7'
@@ -359,7 +371,9 @@ def post_data(id, sKeyWord):
     headers = {'content-type': "application/json"}
 
     printLog('待提交数据：')
+    #mutex.acquire()
     logger.info(body)
+    #mutex.release()
 
     for index in range(0, 2):
         try:
@@ -375,7 +389,9 @@ def post_data(id, sKeyWord):
                     hjson = json.loads(text)
                     reValue = hjson['Data']
                     if reValue == True:
+                        #mutex.acquire()
                         logger.info('提交采集数据成功')
+                        #mutex.release()
                         break
                 except:
                     sleep(2)
@@ -389,8 +405,39 @@ def post_data(id, sKeyWord):
             sleep(2)
             continue
 
+def log_backup(filePath):
+    #mutex.acquire()
+    #try:
+    if os.path.isfile(filePath):
+        fsize = os.path.getsize(filePath)
+        fsize = fsize/float(1024*1024)
+        if round(fsize, 3) > 0.003:
+            ipos = filePath.find('.')
+            if ipos > 0:
+                #fh.close()
+                #fh = logging.FileHandler('Collectkeyword.Log', encoding='UTF-8')
+                #fh.close()
+                dstDir = filePath.replace('.', '_old.')
+                if os.path.isfile(dstDir):
+                    os.remove(dstDir)
+                os.rename(filePath, dstDir)
+                InitLogger()
+    #except:
+    #    logger.error('日志备份异常')
+    #mutex.release()
+
+def fun_timer():
+    log_backup('Collectkeyword.Log')
+    global timer
+    timer = threading.Timer(5, fun_timer)
+    timer.start()
+
 def main():
 
+    #filesize = get_FileSize('F:/book/C++/C++ Standard Library.pdf')
+    #log_backup('Collectkeyword.Log')
+    #timer = threading.Timer(1, fun_timer)
+    #timer.start()
     InitLogger()
     while 1:
         printLog('**************************我是分割线**************************\r\n\r\n')
@@ -399,7 +446,7 @@ def main():
 
         #请求任务
         bRequestOk = False
-
+        '''
         #url = 'http://192.168.1.83:1702/api/KeywordCollect/GetKeywordCollectTask'
         url = configInfo.url_request
         r_data = GetUrl_ByRequests(url)
@@ -408,8 +455,8 @@ def main():
             printLog('没请求到任务，程序睡眠')
             sleep(int(configInfo.intervaltime))
             continue
-
-        #r_data = '{"Data":{"UserId":109046,"ProductId":146228,"Keyword":"香蕉","State":1,"UpdateTime":"2019-04-10 14:08:37","Remark":"任务被请求","AddTime":"2019-04-04 09:55:40","AddMan":"","Id":16},"Elapsed":57,"IsException":false,"Message":"Api一路通顺（^_^）"}'
+        '''
+        r_data = '{"Data":{"UserId":109046,"ProductId":146228,"Keyword":"香蕉","State":1,"UpdateTime":"2019-04-10 14:08:37","Remark":"任务被请求","AddTime":"2019-04-04 09:55:40","AddMan":"","Id":16},"Elapsed":57,"IsException":false,"Message":"Api一路通顺（^_^）"}'
         print('任务数据%s'%r_data)
         printLog('任务数据：', r_data)
         try:
@@ -428,6 +475,8 @@ def main():
 
         GetHotWord(configInfo, Keyword)
         post_data(Id, Keyword)
+
+    #timer.cancel()
 
 main()
 
