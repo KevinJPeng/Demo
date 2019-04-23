@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <root>
     <intervaltime>       																<!--程序执行周期（单位：分钟）-->
-        <minute>30</minute>
+        <minute>5</minute>
     </intervaltime>
     <serverUrl>     
     	<!--获取任务的API接口-->
-			<url_request>http://192.168.1.253:1803/api/KeywordCollect/GetKeywordCollectTask</url_request>
+			<url_request>http://192.168.1.83:1702/api/KeywordCollect/GetKeywordCollectTask</url_request>
 			<!--提交任务结果的API接口-->
-			<url_reponse>http://192.168.1.253:1803/api/KeywordCollect/SaveKeywordCollectResult</url_reponse>
+			<url_reponse>http://192.168.1.83:1702/api/KeywordCollect/SaveKeywordCollectResult</url_reponse>
     </serverUrl>
     <siteList>        																	<!--site的信息列表-->
         <siteInfo>
