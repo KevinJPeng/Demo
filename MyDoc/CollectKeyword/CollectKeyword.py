@@ -16,6 +16,10 @@ import re
 import time
 import threading
 import os
+import stat
+import platform
+
+
 
 hotWordList = []
 classifyList = []
@@ -49,7 +53,8 @@ def InitLogger():
     #mutex.acquire()
     logger.setLevel(logging.DEBUG)
     #创建一个handler,用于写入日志文件
-    fh = RotatingFileHandler('Collectkeyword.Log', encoding='UTF-8', maxBytes=5*1024*1024, backupCount=3)
+    fh = RotatingFileHandler('Collectkeyword.Log', encoding='UTF-8', maxBytes=2*1024*1024, backupCount=10)
+    os.chmod('Collectkeyword.Log', stat.S_IRWXO + stat.S_IRWXG + stat.S_IRWXU)
     #fh = logging.RotatingFileHandler('Collectkeyword.Log', encoding='UTF-8', maxBytes=1*1024, backupCount=3)
     #fh.close()
     fh.setLevel(logging.DEBUG)
@@ -69,19 +74,31 @@ def GetUrl_ByWebdriver(url, num_retries = 2):
     bRequestOk = False
     for index in range(0, 2):
         try:
-            chrome_options = Options()
-            # 设置chrome浏览器无界面模式
-            chrome_options.add_argument('--headless')
-            browser = webdriver.Chrome(options=chrome_options)
-            #location = 'C:/Program Files (x86)/Mozilla Firefox/geckodriver.exe'
-            #browser = webdriver.Firefox(executable_path=location, options=chrome_options)
+            sysType = platform.system()
+            if(sysType == 'Windows'):
+                chrome_options = Options()
+                # 设置chrome浏览器无界面模式
+                chrome_options.add_argument('--headless')
+                browser = webdriver.Chrome(options=chrome_options)
+                #location = 'C:/Program Files (x86)/Mozilla Firefox/geckodriver.exe'
+                #browser = webdriver.Firefox(executable_path=location, options=chrome_options)
+            elif(sysType == 'Linux'):
+                chrome_options = webdriver.ChromeOptions()
+                chrome_options.add_argument('--headless')  # 指定无界面形式运行
+                chrome_options.add_argument('no-sandbox')  # 禁止沙盒
+                browser = webdriver.Chrome(options=chrome_options)
+            else:
+                chrome_options = webdriver.ChromeOptions()
+                chrome_options.add_argument('--headless')  # 指定无界面形式运行
+                chrome_options.add_argument('no-sandbox')  # 禁止沙盒
+                browser = webdriver.Chrome(options=chrome_options)
             browser.get(url)
             # 休眠3秒,等待加载完成!
             sleep(5)
             bRequestOk = True
             break
         except Exception as e:
-            #print('open browser error:%s'%e)
+            print('open browser error:%s'%e)
             printLog('Open browser error', '', 1)
             return
 
@@ -316,7 +333,7 @@ def GetHotWord(s_configInfo, _keyword):
                 url_code_name = urllib.parse.quote(utf_gb2312)
                 url = 'https://b2b.baidu.com/s?q={}'.format(url_code_name)
                 #url = 'https://b2b.baidu.com/s?q=手机壳'
-                #GetHotWordMethon0(url, '')
+                GetHotWordMethon0(url, '')
             elif methonType == '1':
                 utf_gb2312 = _keyword.encode('utf-8')
                 url_code_name = urllib.parse.quote(utf_gb2312)
@@ -446,7 +463,7 @@ def main():
 
         #请求任务
         bRequestOk = False
-        '''
+
         #url = 'http://192.168.1.83:1702/api/KeywordCollect/GetKeywordCollectTask'
         url = configInfo.url_request
         r_data = GetUrl_ByRequests(url)
@@ -455,8 +472,8 @@ def main():
             printLog('没请求到任务，程序睡眠')
             sleep(int(configInfo.intervaltime))
             continue
-        '''
-        r_data = '{"Data":{"UserId":109046,"ProductId":146228,"Keyword":"香蕉","State":1,"UpdateTime":"2019-04-10 14:08:37","Remark":"任务被请求","AddTime":"2019-04-04 09:55:40","AddMan":"","Id":16},"Elapsed":57,"IsException":false,"Message":"Api一路通顺（^_^）"}'
+
+        #r_data = '{"Data":{"UserId":109046,"ProductId":146228,"Keyword":"香蕉","State":1,"UpdateTime":"2019-04-10 14:08:37","Remark":"任务被请求","AddTime":"2019-04-04 09:55:40","AddMan":"","Id":16},"Elapsed":57,"IsException":false,"Message":"Api一路通顺（^_^）"}'
         print('任务数据%s'%r_data)
         printLog('任务数据：', r_data)
         try:
@@ -464,13 +481,15 @@ def main():
             Id = hjson['Data']['Id']
             Keyword = hjson['Data']['Keyword']
             if Id == '' or Keyword == '':  # 判断是否请求到任务
-                print('json解析失败，程序睡眠%s秒钟' % (configInfo.intervaltime))
-                printLog('json解析失败，程序睡眠')
-                sleep(int(configInfo.intervaltime))
+                intervaltime = int(configInfo.intervaltime)
+                print('任务解析异常，%d秒后重试' % intervaltime)
+                sleep(intervaltime)
                 continue
         except Exception as e:
             printLog('json解析异常')
-            sleep(int(configInfo.intervaltime))
+            intervaltime = int(configInfo.intervaltime)
+            print('任务数据异常，%d秒后重试'%intervaltime)
+            sleep(intervaltime)
             continue
 
         GetHotWord(configInfo, Keyword)
