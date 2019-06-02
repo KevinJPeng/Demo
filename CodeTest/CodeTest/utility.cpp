@@ -1,4 +1,5 @@
 #include "pch.h"
+#include <iostream>
 #include "utility.h"
 
 #include "log4z/log4z.h"
@@ -6,6 +7,8 @@ using namespace zsummer::log4z;
 
 #include "tinyxml2/tinyxml2.h"
 using namespace tinyxml2;
+
+#include "stringConvert/StringConvert.hpp"
 
 
 CUtility::CUtility()
@@ -75,4 +78,17 @@ void CUtility::tinyxml2Test()
 		doc.LoadFile("../Common/tinyxml2/resources/dream.xml");
 		doc.SaveFile("../Common/tinyxml2/resources/out/dreamout.xml");
 	}
+}
+
+void CUtility::StringConvertTest()
+{
+	const TCHAR* pwcTest(L"This is a wChar");
+	std::string sTest = StringConvert::wideStringToAnsiString(pwcTest);
+	std::cout << sTest << std::endl;
+
+	//C++ std::string存储的是单字节字符，对于中文编码，编码的时候一般是将中文字变成2个字节的gb2312后存储到std::string里面
+	std::string sTest01 = "hello世界";
+	int ilen = sTest01.length();
+	std::cout << "hello世界" << "  是" << ilen << "个字节" << std::endl;
+//	ucs2ToUtf8(const std::wstring& ucs2Str)
 }

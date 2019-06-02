@@ -18,6 +18,7 @@ int main()
 			<< "0: 退出\n"
 			<< "1: log4z test\n"
 			<< "2: tinyxml2 test\n"
+			<< "3: StringConvert test\n"
 			<< std::endl;
 
 		std::cin >> iIn;
@@ -32,6 +33,10 @@ int main()
 		else if (2 == iIn)
 		{
 			utility.tinyxml2Test();
+		}
+		else if (3 == iIn)
+		{
+			utility.StringConvertTest();
 		}
 		else
 		{

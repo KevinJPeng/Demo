@@ -154,12 +154,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Common\log4z\log4z.h" />
+    <ClInclude Include="..\Common\stringConvert\StringConvert.hpp" />
     <ClInclude Include="..\Common\tinyxml2\tinyxml2.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="utility.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Common\log4z\log4z.cpp" />
+    <ClCompile Include="..\Common\stringConvert\StringConvert.cpp" />
     <ClCompile Include="..\Common\tinyxml2\tinyxml2.cpp" />
     <ClCompile Include="CodeTest.cpp" />
     <ClCompile Include="pch.cpp">

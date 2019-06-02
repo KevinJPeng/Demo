@@ -9,6 +9,7 @@ public:
 public:
 	void log4zTest();
 	void tinyxml2Test();
+	void StringConvertTest();
 
 protected:
 private:

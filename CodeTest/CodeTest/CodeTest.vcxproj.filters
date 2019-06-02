@@ -33,6 +33,9 @@
     <ClInclude Include="..\Common\tinyxml2\tinyxml2.h">
       <Filter>头文件\common</Filter>
     </ClInclude>
+    <ClInclude Include="..\Common\stringConvert\StringConvert.hpp">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -48,6 +51,9 @@
       <Filter>源文件\common</Filter>
     </ClCompile>
     <ClCompile Include="..\Common\tinyxml2\tinyxml2.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\stringConvert\StringConvert.cpp">
       <Filter>源文件\common</Filter>
     </ClCompile>
   </ItemGroup>
