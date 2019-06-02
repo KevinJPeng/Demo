@@ -16,8 +16,8 @@ int main()
 			<< "\n\n"
 			<< "测试项:\n"
 			<< "0: 退出\n"
-			<< "1: log test(日志测试)\n"
-			<< "2: log test(日志测试)\n"
+			<< "1: log4z test\n"
+			<< "2: tinyxml2 test\n"
 			<< std::endl;
 
 		std::cin >> iIn;
@@ -31,6 +31,7 @@ int main()
 		}
 		else if (2 == iIn)
 		{
+			utility.tinyxml2Test();
 		}
 		else
 		{

@@ -8,6 +8,8 @@ public:
 	~CUtility();
 public:
 	void log4zTest();
+	void tinyxml2Test();
+
 protected:
 private:
 	int m_logId;

@@ -4,6 +4,9 @@
 #include "log4z/log4z.h"
 using namespace zsummer::log4z;
 
+#include "tinyxml2/tinyxml2.h"
+using namespace tinyxml2;
+
 
 CUtility::CUtility()
 {
@@ -11,7 +14,7 @@ CUtility::CUtility()
 }
 CUtility::~CUtility()
 {
-
+	
 }
 
 void CUtility::log4zTest()
@@ -26,4 +29,50 @@ void CUtility::log4zTest()
 	LOG_INFO(m_logId, "*** *** " << "this is log4z test" << " *** ***");
 
 	ILog4zManager::getRef().stop();
+}
+void CUtility::tinyxml2Test()
+{
+	{
+		static const char* xml =
+			"<information>"
+			"	<attributeApproach v='2' />"
+			"	<textApproach>"
+			"		<v>2</v>"
+			"	</textApproach>"
+			"</information>";
+
+		XMLDocument doc;
+		doc.Parse(xml);
+
+		int v0 = 0;
+		int v1 = 0;
+
+		XMLElement* attributeApproachElement = doc.FirstChildElement()->FirstChildElement("attributeApproach");
+		attributeApproachElement->QueryIntAttribute("v", &v0);
+
+		XMLElement* textApproachElement = doc.FirstChildElement()->FirstChildElement("textApproach");
+		textApproachElement->FirstChildElement("v")->QueryIntText(&v1);
+
+		int iErrorCode = doc.ErrorID();
+		printf("Both values are the same: %d and %d\n", v0, v1);
+	}
+
+	{
+		// This test is pre-test for the next one
+		// (where Element1 is inserted "after itself".
+		// This code didn't use to crash.
+		XMLDocument doc;
+		XMLElement* element1 = doc.NewElement("Element1");
+		XMLElement* element2 = doc.NewElement("Element2");
+		doc.InsertEndChild(element1);
+		doc.InsertEndChild(element2);
+		doc.InsertAfterChild(element2, element2);
+		doc.InsertAfterChild(element2, element2);
+	}
+
+	{
+		XMLDocument doc;
+		doc.LoadFile("../Common/tinyxml2/resources/dream.xml");
+		doc.SaveFile("../Common/tinyxml2/resources/out/dreamout.xml");
+	}
 }

@@ -30,6 +30,9 @@
     <ClInclude Include="..\Common\log4z\log4z.h">
       <Filter>头文件\common</Filter>
     </ClInclude>
+    <ClInclude Include="..\Common\tinyxml2\tinyxml2.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -42,6 +45,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="..\Common\log4z\log4z.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\tinyxml2\tinyxml2.cpp">
       <Filter>源文件\common</Filter>
     </ClCompile>
   </ItemGroup>
