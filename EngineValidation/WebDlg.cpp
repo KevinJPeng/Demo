@@ -28,7 +28,7 @@ CWebDlg::CWebDlg(CWnd* pParent /*=NULL*/)
 #ifndef _WIN32_WCE
 	EnableActiveAccessibility();
 #endif
-
+	m_ValidationConfirm = ::CreateEvent(NULL, false, false, NULL);
 }
 
 CWebDlg::~CWebDlg()
@@ -39,6 +39,8 @@ void CWebDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Control(pDX, IDC_EXPLORER2, m_webBrowser);
+	DDX_Control(pDX, IDC_BUTTON_YES, m_btnOK);
+	DDX_Control(pDX, IDC_BUTTON_NO, m_btnCancle);
 }
 
 
@@ -46,6 +48,8 @@ BEGIN_MESSAGE_MAP(CWebDlg, CDialogEx)
  	ON_MESSAGE(GETSEARCHDATA, &GetSearchData)
  	ON_MESSAGE(GETREDIRECTURL, &RedirectURL)
 	ON_BN_CLICKED(IDOK, &CWebDlg::OnBnClickedOk)
+	ON_BN_CLICKED(IDC_BUTTON_YES, &CWebDlg::OnBnClickedButtonYes)
+	ON_BN_CLICKED(IDC_BUTTON_NO, &CWebDlg::OnBnClickedButtonNo)
 END_MESSAGE_MAP()
 
 
@@ -60,6 +64,10 @@ BOOL CWebDlg::OnInitDialog()
 	m_webBrowser.put_Silent(TRUE);
 	//m_webBrowser.Navigate(_T("www.baidu.com"), NULL, NULL, NULL, NULL);
 	CreateThread(NULL, NULL, OpenSearchEngineThread, this, 0, NULL);
+
+	m_btnOK.EnableWindow(FALSE);
+	m_btnCancle.EnableWindow(FALSE);
+
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 	// 异常:  OCX 属性页应返回 FALSE
@@ -161,7 +169,10 @@ LRESULT  CWebDlg::GetSearchData(WPARAM wParam, LPARAM lParam)
 			strPage = bstr;
 			if (-1 != strPage.Find(g_ValidationText[p->iEngineId]))
 			{
-				strPage += bstr;
+				m_btnOK.EnableWindow(TRUE);
+				m_btnCancle.EnableWindow(TRUE);
+
+				return 1;
 			}
 
 		} while (0);
@@ -177,10 +188,21 @@ pEngineInfo CWebDlg::GetEngineInfo()
 	pEngineInfo pSData = NULL;
 	CLocalLock local(&g_critSection);
 
-	if (g_EngineInfos.size() > 0)
+	while (1)
 	{
-		pSData = (pEngineInfo)g_EngineInfos.top();
-		g_EngineInfos.pop();
+		if (g_EngineInfos.size() > 0)
+		{
+			pSData = (pEngineInfo)g_EngineInfos.top();
+			g_EngineInfos.pop();
+			if (g_bEngineGoing[pSData->iEngineId])
+			{
+				break;
+			}
+		}
+		else
+		{
+			break;
+		}
 	}
 	return pSData;
 }
@@ -248,6 +270,13 @@ DWORD CWebDlg::OpenSearchEngine()
 				} while (1);
 			}
 
+			if (1 == lMessageBack)
+			{
+				//返回值为1表示出现验证码
+				m_iEngineId = pDataInfo->iEngineId;
+				WaitForSingleObject(m_ValidationConfirm, INFINITE);
+			}
+
 			if (-1 != lMessageBack)
 			{
 				break;
@@ -269,4 +298,24 @@ void CWebDlg::OnBnClickedOk()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	CDialogEx::OnOK();
+}
+
+
+void CWebDlg::OnBnClickedButtonYes()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	::SetEvent(m_ValidationConfirm);
+	g_bEngineGoing[m_iEngineId] = FALSE;
+	m_btnOK.EnableWindow(false);
+	m_btnCancle.EnableWindow(false);
+
+}
+
+
+void CWebDlg::OnBnClickedButtonNo()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	::SetEvent(m_ValidationConfirm);
+	m_btnOK.EnableWindow(false);
+	m_btnCancle.EnableWindow(false);
 }

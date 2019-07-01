@@ -78,3 +78,4 @@ extern vector<CString> g_ValidationText;
 extern CLock g_critSection;
 extern map<int, int> g_mapEngineOpenCount;
 extern HANDLE g_notifyUiEvent; 
+extern vector<BOOL> g_bEngineGoing;

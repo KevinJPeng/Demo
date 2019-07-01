@@ -438,8 +438,10 @@ void CEngineValidationDlg::OnBnClickedButtonGo()
 	m_editMark8.GetWindowTextW(sText);
 	g_ValidationText.push_back(sText);
 
-
-
+	for (int i = 0; i < 8; i++)
+	{
+		g_bEngineGoing.push_back(TRUE);
+	}
 
 	vector<CString> v_keyWords;
 	v_keyWords = GetKeyWords();
@@ -486,7 +488,7 @@ void CEngineValidationDlg::OnBnClickedButtonGo()
 		}
 	}
 
-	const int iThreadNum = 5;
+	const int iThreadNum = 3;
 	HANDLE *hThreads = new HANDLE[iThreadNum];
 	for (int i = 0; i < iThreadNum; i++)
 	{

@@ -11,3 +11,4 @@ vector<CString> g_ValidationText;
 CLock g_critSection;
 map<int, int> g_mapEngineOpenCount;
 HANDLE g_notifyUiEvent;
+vector<BOOL> g_bEngineGoing;
