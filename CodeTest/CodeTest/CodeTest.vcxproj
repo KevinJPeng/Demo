@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -29,7 +29,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -90,7 +90,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
@@ -153,6 +153,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Common\Json\Common.h" />
+    <ClInclude Include="..\Common\Json\IJsonValue.h" />
+    <ClInclude Include="..\Common\Json\JPointer.h" />
+    <ClInclude Include="..\Common\Json\JSON.h" />
+    <ClInclude Include="..\Common\Json\JsonArray.h" />
+    <ClInclude Include="..\Common\Json\JsonBuilder.h" />
+    <ClInclude Include="..\Common\Json\JsonFormater.h" />
+    <ClInclude Include="..\Common\Json\JsonObject.h" />
+    <ClInclude Include="..\Common\Json\JsonParser.h" />
+    <ClInclude Include="..\Common\Json\JsonSimple.h" />
+    <ClInclude Include="..\Common\Json\JsonValue.h" />
+    <ClInclude Include="..\Common\Json\JsonWriter.h" />
+    <ClInclude Include="..\Common\Json\JString.h" />
     <ClInclude Include="..\Common\log4z\log4z.h" />
     <ClInclude Include="..\Common\stringConvert\StringConvert.hpp" />
     <ClInclude Include="..\Common\tinyxml2\tinyxml2.h" />
@@ -160,6 +173,11 @@
     <ClInclude Include="utility.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Common\Json\JsonBuilder.cpp" />
+    <ClCompile Include="..\Common\Json\JsonFormater.cpp" />
+    <ClCompile Include="..\Common\Json\JsonParser.cpp" />
+    <ClCompile Include="..\Common\Json\JsonValue.cpp" />
+    <ClCompile Include="..\Common\Json\JsonWriter.cpp" />
     <ClCompile Include="..\Common\log4z\log4z.cpp" />
     <ClCompile Include="..\Common\stringConvert\StringConvert.cpp" />
     <ClCompile Include="..\Common\tinyxml2\tinyxml2.cpp" />

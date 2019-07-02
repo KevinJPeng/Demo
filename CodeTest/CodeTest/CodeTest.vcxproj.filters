@@ -19,6 +19,12 @@
     <Filter Include="源文件\common">
       <UniqueIdentifier>{433be375-442f-4f38-89c5-1661cfdb66e9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\common\Json">
+      <UniqueIdentifier>{b4d03818-a55a-44cf-addb-351a5dfb10ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\common\Json">
+      <UniqueIdentifier>{0d2bb953-7f07-4a78-b46b-d7aa6b4ab1e0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -35,6 +41,45 @@
     </ClInclude>
     <ClInclude Include="..\Common\stringConvert\StringConvert.hpp">
       <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\Common.h">
+      <Filter>头文件\common\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\IJsonValue.h">
+      <Filter>头文件\common\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\JPointer.h">
+      <Filter>头文件\common\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\JSON.h">
+      <Filter>头文件\common\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\JsonArray.h">
+      <Filter>头文件\common\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\JsonBuilder.h">
+      <Filter>头文件\common\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\JsonFormater.h">
+      <Filter>头文件\common\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\JsonObject.h">
+      <Filter>头文件\common\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\JsonParser.h">
+      <Filter>头文件\common\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\JsonSimple.h">
+      <Filter>头文件\common\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\JsonValue.h">
+      <Filter>头文件\common\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\JsonWriter.h">
+      <Filter>头文件\common\Json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Json\JString.h">
+      <Filter>头文件\common\Json</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +100,21 @@
     </ClCompile>
     <ClCompile Include="..\Common\stringConvert\StringConvert.cpp">
       <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Json\JsonBuilder.cpp">
+      <Filter>源文件\common\Json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Json\JsonFormater.cpp">
+      <Filter>源文件\common\Json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Json\JsonParser.cpp">
+      <Filter>源文件\common\Json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Json\JsonValue.cpp">
+      <Filter>源文件\common\Json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Json\JsonWriter.cpp">
+      <Filter>源文件\common\Json</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -10,9 +10,10 @@ public:
 	void log4zTest();
 	void tinyxml2Test();
 	void StringConvertTest();
+	void JsonTest();
 
 protected:
 private:
-	int m_logId;
+	int m_logId;	//for log4zTest
 };
 #endif

@@ -19,6 +19,7 @@ int main()
 			<< "1: log4z test\n"
 			<< "2: tinyxml2 test\n"
 			<< "3: StringConvert test\n"
+			<< "4: Json test\n"
 			<< std::endl;
 
 		std::cin >> iIn;
@@ -37,6 +38,10 @@ int main()
 		else if (3 == iIn)
 		{
 			utility.StringConvertTest();
+		}
+		else if (4 == iIn)
+		{
+			utility.JsonTest();
 		}
 		else
 		{
