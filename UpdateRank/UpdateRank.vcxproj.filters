@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\public_s">
+      <UniqueIdentifier>{ac592c6a-ce7c-425c-8118-57c3e683505d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateRank.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CWebBrowser2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WebDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerSocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IntelligenceFind.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GetNetTime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\HttpUtils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateRank.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CWebBrowser2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WebDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerSocket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\CommFunc.cpp">
+      <Filter>源文件\public_s</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\FileReadAndSave.cpp">
+      <Filter>源文件\public_s</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\IKeyRW.cpp">
+      <Filter>源文件\public_s</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\IXMLRW.cpp">
+      <Filter>源文件\public_s</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Lock.cpp">
+      <Filter>源文件\public_s</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Reg.cpp">
+      <Filter>源文件\public_s</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\StdStrUtils.cpp">
+      <Filter>源文件\public_s</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\StringUtils.cpp">
+      <Filter>源文件\public_s</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Trace.cpp">
+      <Filter>源文件\public_s</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessData.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IntelligenceFind.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GetNetTime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\HttpUtils.cpp">
+      <Filter>源文件\public_s</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UpdateRank.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

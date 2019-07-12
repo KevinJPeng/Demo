@@ -3,6 +3,7 @@
 *
 */
 #include "pch.h"
+
 #include "StringConvert.hpp"
 #include <vector>
 #ifdef WIN32

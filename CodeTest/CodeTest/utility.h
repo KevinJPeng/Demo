@@ -8,9 +8,17 @@ public:
 	~CUtility();
 public:
 	void log4zTest();
+
 	void tinyxml2Test();
+
 	void StringConvertTest();
+
 	void JsonTest();
+
+	void CryptoTest();
+	void HexPrint(std::string datas);
+	std::string MD5En(std::string datas);
+	std::string MD5Source();
 
 protected:
 private:

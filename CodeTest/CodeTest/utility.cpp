@@ -16,6 +16,20 @@ using namespace tinyxml2;
 //Json
 #include "Json/JSON.h"
 
+//cryptopp
+#define CRYPTOPP_ENABLE_NAMESPACE_WEAK 1
+#include "cryptopp6.0.0/include/md5.h"
+#include "cryptopp6.0.0/include/modes.h"
+#include "cryptopp6.0.0/include/files.h"
+#include "cryptopp6.0.0/include/hex.h"
+using namespace CryptoPP;
+#ifdef _DEBUG
+#pragma comment(lib, "cryptopp6.0.0/lib/MDd/cryptlib.lib")
+#else
+#pragma comment(lib, "cryptopp6.0.0/lib/MD/cryptlib.lib")
+#endif
+
+using namespace std;
 
 CUtility::CUtility()
 {
@@ -167,3 +181,62 @@ void CUtility::JsonTest()
 
 //	_getch();
 }
+void CUtility::HexPrint(std::string datas)
+{
+	int datasize = datas.size();
+	for (int i = 0; i < datasize; i++)
+	{
+		std::cout << std::hex << (0xFF & static_cast<uint8_t>(datas.at(i)));
+	}
+	std::cout << std::dec << std::endl;
+	return;
+}
+
+//======================== MD5算法====================
+std::string CUtility::MD5En(std::string datas)
+{
+	int len = datas.length();
+	uint8_t *message = new uint8_t[len + 1];
+	memcpy(message, datas.c_str(), len + 1);
+	message[len] = 0;
+	//MD5生成的信息摘要固定长度位（16个字节）
+	const size_t size = CryptoPP::Weak::MD5::DIGESTSIZE;
+	uint8_t digest[size] = { 0 };//128 bits=16bytes
+	CryptoPP::Weak::MD5 md5;
+	md5.CalculateDigest(digest, message, len);
+		return std::string(reinterpret_cast<const char*>(digest), size);
+}
+std::string CUtility::MD5Source()
+{
+	CryptoPP::Weak::MD5 md;
+	const size_t size = CryptoPP::Weak1::MD5::DIGESTSIZE * 2;//32
+	uint8_t buf[size] = { 0 };
+	std::string strPath = "d:\\a.dat";
+	CryptoPP::FileSource(strPath.c_str(), true,
+		new CryptoPP::HashFilter(md,
+		new CryptoPP::HexEncoder(
+		new CryptoPP::ArraySink(buf, size))));
+	return std::string(reinterpret_cast<const char*>(buf), size);
+}
+void CUtility::CryptoTest()
+{
+
+	byte message[] = "HelloWorld!";
+	byte mres[16];//MD5 128 bits=16bytes
+	Weak::MD5 md5;
+	md5.Update(message, 11);//strlen=11
+	md5.Final(mres);
+ 	string smd5;
+	for (int i = 0; i < 16; i++)
+		printf("%02X", mres[i]);
+	printf("\r\n");
+
+	string sdatas = "HelloWorld!";
+	std::string md5str = MD5En(sdatas);
+
+	string encoded("");
+	CryptoPP::StringSource ss(bin, length, true, new CryptoPP::HexEncoder(new CryptoPP::StringSink(encoded)));
+
+	HexPrint(md5str);
+}
+

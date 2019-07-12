@@ -20,6 +20,7 @@ int main()
 			<< "2: tinyxml2 test\n"
 			<< "3: StringConvert test\n"
 			<< "4: Json test\n"
+			<< "5: Crypto++ test\n"
 			<< std::endl;
 
 		std::cin >> iIn;
@@ -42,6 +43,10 @@ int main()
 		else if (4 == iIn)
 		{
 			utility.JsonTest();
+		}
+		else if (5 == iIn)
+		{
+			utility.CryptoTest();
 		}
 		else
 		{
