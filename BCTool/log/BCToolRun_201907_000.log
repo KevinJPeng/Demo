@@ -1,0 +1,162 @@
+2019-07-22 15:57:35.021 [7908] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-23 11:48:42.455 [14904] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-23 11:49:53.853 [15740] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-23 13:41:56.253 [16332] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-23 13:44:46.342 [0632] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-23 14:16:45.228 [2324] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-23 15:10:04.303 [17092] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-23 16:52:31.221 [17540] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 09:21:21.181 [14704] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 09:27:34.072 [13224] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 10:17:46.452 [6512] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 10:19:14.891 [18124] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 10:20:31.124 [9944] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 10:20:53.739 [15308] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 10:21:16.336 [17836] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 14:56:49.484 [12744] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 16:52:11.844 [7508] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 16:53:48.640 [8564] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 16:57:23.737 [8228] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 17:02:15.942 [8008] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 17:02:34.617 [8008] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:02:53.678 [8436] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 17:03:11.244 [8436] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:04:43.387 [9108] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 17:04:52.001 [9108] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:04:52.001 [8152] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:330
+2019-07-24 17:04:58.853 [9108] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:05:00.432 [8152] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:330
+2019-07-24 17:05:43.749 [2376] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 17:05:47.385 [2376] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:05:47.385 [6656] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:05:50.673 [2376] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:05:50.673 [6656] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:05:55.193 [2376] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:05:55.193 [6656] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:02.530 [7144] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 17:12:05.617 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:05.618 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:10.825 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:10.825 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:14.177 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:14.177 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:20.337 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:20.337 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:25.065 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:25.065 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:28.673 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:28.673 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:31.489 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:31.489 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:35.057 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:35.057 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:37.081 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:37.081 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:39.017 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:39.018 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:41.737 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:41.737 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:44.481 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:44.481 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:12:57.505 [7144] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:12:57.505 [2384] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:39:54.424 [6320] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 17:40:01.689 [6320] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:40:01.689 [1628] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:40:06.106 [6320] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:40:06.106 [1628] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:40:54.081 [6320] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:40:54.081 [1628] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:40:58.018 [6320] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:40:58.018 [1628] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:41:00.561 [6320] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:41:00.562 [1628] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:42:11.906 [6320] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:42:11.906 [1628] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:42:15.145 [6320] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:42:15.145 [1628] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:42:18.129 [6320] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:42:18.129 [1628] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:42:20.473 [6320] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:42:20.473 [1628] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:46:57.549 [9052] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 17:48:33.511 [8912] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-24 17:48:49.450 [8912] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:48:49.450 [7264] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:48:56.730 [8912] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:48:56.730 [7264] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:49:22.969 [8912] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:49:22.969 [7264] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:49:28.786 [8912] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:49:28.786 [7264] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:49:42.194 [8912] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)深圳 webbrowserexui.cpp:18
+2019-07-24 17:49:42.194 [7264] LOG_INFO 收到JS数据：1(;0)2(;0)深圳 indexwnd.cpp:331
+2019-07-24 17:50:19.359 [0508] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 09:56:03.495 [8300] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 10:05:10.009 [8656] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 10:10:47.171 [8832] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 10:11:51.790 [7352] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 10:16:41.203 [8480] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 10:22:40.813 [5680] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 10:23:36.676 [4620] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 10:25:05.767 [7240] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 10:26:27.740 [6772] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 10:58:53.407 [10040] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 11:06:07.032 [8720] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 11:07:42.376 [7420] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 11:18:44.847 [9740] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 11:21:07.726 [10112] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 11:27:02.034 [6684] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 11:34:26.514 [9588] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 13:39:49.610 [7736] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 13:40:58.269 [9564] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 13:56:24.831 [8992] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 13:57:13.623 [9012] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 13:58:11.171 [5388] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 13:58:21.244 [8956] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 13:58:36.845 [7916] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 13:58:50.637 [6656] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 13:59:04.080 [8816] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 17:29:08.521 [10732] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 17:30:41.914 [10808] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-25 17:31:39.576 [6348] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 17:43:50.094 [8440] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-25 17:51:00.231 [8360] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-26 09:45:54.144 [9000] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-26 09:46:18.226 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:18.226 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:18.229 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:18.229 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:18.232 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:18.232 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:18.235 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:18.235 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:18.239 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:18.239 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:18.242 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:18.242 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:18.245 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:18.245 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:18.248 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:18.249 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:18.255 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:18.255 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:18.259 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:18.259 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:19.798 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)i6QmBPxFMNKUX9AY webBrowserExUI.cpp:18
+2019-07-26 09:46:19.798 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)i6QmBPxFMNKUX9AY indexWnd.cpp:415
+2019-07-26 09:46:19.807 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)i6QmBPxFMNKUX9AY webBrowserExUI.cpp:18
+2019-07-26 09:46:19.807 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)i6QmBPxFMNKUX9AY indexWnd.cpp:415
+2019-07-26 09:46:19.810 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:19.810 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:19.813 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:19.813 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:19.817 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:19.817 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:19.820 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:19.820 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:46:19.824 [9000] LOG_INFO 收到JS传过来的数据：1(;0)2(;0)lFxir84ezDUuwFA webBrowserExUI.cpp:18
+2019-07-26 09:46:19.824 [11016] LOG_INFO 收到JS数据：1(;0)2(;0)lFxir84ezDUuwFA indexWnd.cpp:415
+2019-07-26 09:47:54.773 [9244] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23
+2019-07-26 11:00:42.712 [11232] LOG_INFO *** *** 程序启动 *** *** bctool.cpp:23
+2019-07-26 11:00:59.486 [6296] LOG_INFO *** *** 程序启动 *** *** BCTool.cpp:23

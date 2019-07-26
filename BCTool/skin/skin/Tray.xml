@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="128,67" caption="0,0,0,67" mininfo="128,67" maxinfo="128,67">
+    <Font name="微软雅黑" size="14" bold="true" italic="false" />
+    <Font name="微软雅黑" size="12" bold="false" italic="false" />
+    <VerticalLayout name="rightClick" bordersize="1" width="128" height="67" bkcolor="#FFFFFFFF" bordercolor="#DDDDDDDD">
+        <VerticalLayout name="right_nav" bordersize="1" width="126" height="67" bordercolor="#FFEEEEEE">
+            <Option name="nav2" text="打开主窗口" float="true" pos="2,5,0,0" width="126" height="30" textpadding="40,6,0,0" textcolor="#FF333333" disabledtextcolor="#FFA7A6AA" font="1" hotimage="file=&apos;images\menu_bg.gif&apos;" group="contentnav" foreimage="file=&apos;images\icon2.png&apos; dest=&apos;12,7,28,23&apos;" />
+            <Option name="nav8" text="安全退出" float="true" pos="2,34,0,0" width="126" height="30" textpadding="40,6,0,0" textcolor="#FF333333" disabledtextcolor="#FFA7A6AA" font="1" hotimage="file=&apos;images\menu_bg.gif&apos;" group="contentnav" foreimage="file=&apos;images\icon7.png&apos; dest=&apos;12,7,28,24&apos;" />
+        </VerticalLayout>
+    </VerticalLayout>
+</Window>

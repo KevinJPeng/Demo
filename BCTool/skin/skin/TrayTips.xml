@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="162,61">
+    <Font name="宋体 Light" size="12" bold="false" italic="false" />
+    <Font name="微软雅黑" size="16" bold="true" italic="false" />
+    <VerticalLayout width="160" height="97" bkimage="images\traytips.png">
+        <Text name="tips_text" text="“您有新消息啦”" float="true" pos="12,17,0,0" width="141" height="28" mouse="false" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="0" align="centerwrap" />
+    </VerticalLayout>
+</Window>
