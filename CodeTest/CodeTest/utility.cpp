@@ -183,10 +183,12 @@ void CUtility::JsonTest()
 }
 void CUtility::HexPrint(std::string datas)
 {
+	cout.fill('0');//设置有效位空白字符填充字符'0'，只对有效位空白字符有效，一般结合cout.width()一起使用，对\t和\n无效
 	int datasize = datas.size();
 	for (int i = 0; i < datasize; i++)
 	{
-		std::cout << std::hex << (0xFF & static_cast<uint8_t>(datas.at(i)));
+		cout.width(2);	//显示固定2位数十六进制数，不足前面补零
+		std::cout << std::hex << std::uppercase << (0xFF & static_cast<uint8_t>(datas.at(i)));
 	}
 	std::cout << std::dec << std::endl;
 	return;
@@ -220,7 +222,6 @@ std::string CUtility::MD5Source()
 }
 void CUtility::CryptoTest()
 {
-
 	byte message[] = "HelloWorld!";
 	byte mres[16];//MD5 128 bits=16bytes
 	Weak::MD5 md5;
@@ -233,10 +234,9 @@ void CUtility::CryptoTest()
 
 	string sdatas = "HelloWorld!";
 	std::string md5str = MD5En(sdatas);
-
-	string encoded("");
-	CryptoPP::StringSource ss(bin, length, true, new CryptoPP::HexEncoder(new CryptoPP::StringSink(encoded)));
-
 	HexPrint(md5str);
+
+// 	string encoded("");
+// 	CryptoPP::StringSource ss(bin, length, true, new CryptoPP::HexEncoder(new CryptoPP::StringSink(encoded)));
 }
 
