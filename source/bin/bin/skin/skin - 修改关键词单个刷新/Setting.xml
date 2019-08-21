@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="128,150"sizebox="0,0,0,0" caption="0,0,0,0" maxinfo="128,150" mininfo="128,150"> 
+<Font name="微软雅黑" size="14" bold="true" italic="false" /> <Font name="微软雅黑" size="12" bold="false" italic="false" />
+  <VerticalLayout name="rightClick"  width="128" height="150" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#dddddddd">
+
+    <VerticalLayout name="right_nav"  bordersize="1" bordercolor="#FFEEEEEE">
+      <Option name="nav2" text="登录商舟网" height="30" textpadding="40,6,0,0" align="left" textcolor="#00000000" foreimage="file='images\icon2.png' dest='12,7,28,23'"disabledtextcolor="#FFA7A6AA" font="1" normalimage="file='images\line.gif' dest='0,29,260,59'" hotimage="file='images\menu_bg.gif'" group="contentnav"  />
+     <!-- <Option name="nav3" text="商舟建站" height="30" textpadding="45,6,0,0" align="left" textcolor="#00000000" foreimage="file='images\icon6.png' dest='18,7,34,23'"  normalimage="file='images\line.gif' dest='0,29,260,59'" disabledtextcolor="#FFA7A6AA" font="1" hotimage="file='images\menu_bg.gif'" group="contentnav"/>
+      <Option name="nav4" text="清除快照" height="30" textpadding="45,6,0,0" align="left" textcolor="#00000000" foreimage="file='images\icon4.png' dest='18,7,34,23'"disabledtextcolor="#FFA7A6AA" font="1"  normalimage="file='images\line.gif' dest='0,29,260,59'" hotimage="file='images\menu_bg.gif'" group="contentnav"  />-->
+	    <Option name="nav7" text="系统设置" height="30" textpadding="40,6,0,0" align="left" textcolor="#00000000" foreimage="file='images\icon3.png' dest='12,7,28,23'"disabledtextcolor="#FFA7A6AA" font="1"  normalimage="file='images\line.gif' dest='0,29,260,59'" hotimage="file='images\menu_bg.gif'" group="contentnav"  />
+     <!-- <Option name="nav5" text="系统升级" height="30" textpadding="45,6,0,0" align="left" textcolor="#00000000" foreimage="file='images\icon5.png' dest='18,7,34,23'"disabledtextcolor="#FFA7A6AA"  normalimage="file='images\line.gif' dest='0,29,260,59'"  font="1" hotimage="file='images\menu_bg.gif'" group="contentnav"/>-->
+       <Option name="nav9" text="问题诊断" height="30" textpadding="40,6,0,0" align="left" textcolor="#00000000" foreimage="file='images\icon9.png' dest='12,7,28,23'"disabledtextcolor="#FFA7A6AA" font="1"  normalimage="file='images\line.gif' dest='0,29,260,59'" hotimage="file='images\menu_bg.gif'" group="contentnav"  />
+      <Option name="nav6" text="注销登录" height="30" textpadding="40,6,0,0" align="left" textcolor="#00000000" foreimage="file='images\icon8.png' dest='12,7,28,23'"disabledtextcolor="#FFA7A6AA" font="1"  normalimage="file='images\line.gif' dest='0,29,260,59'" hotimage="file='images\menu_bg.gif'" group="contentnav"  />
+      <Option name="nav8" text="安全退出" height="30" textpadding="40,6,0,0" align="left" textcolor="#00000000" foreimage="file='images\icon7.png' dest='12,8,28,24'"disabledtextcolor="#FFA7A6AA" font="1"  hotimage="file='images\menu_bg.gif'" group="contentnav"  />
+    </VerticalLayout>
+
+ 
+  </VerticalLayout>
+</Window>

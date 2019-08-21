@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="900,600" sizebox="4,4,6,6" caption="0,0,0,120" roundcorner="4,4" maxinfo="900,600" mininfo="900,600"  > 
+<Font name="微软雅黑" size="12" bold="true" />
+<Font name="微软雅黑" size="42" />
+
+  <VerticalLayout name="layout" pos="0,0,900,600" width="900" height="600" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#dddddddd" >
+   
+
+    <HorizontalLayout name="navlayout" float="true" pos="1,0,899,30" height="30" bkcolor="#f2f2f2f2" bkcolor2="#eaeaeaea"  bordersize="0,0,0,1" bordercolor="#ffd3d4d4" />
+			
+
+
+		
+		  <!--未开通商舟微信通-->
+		
+  <VerticalLayout name=""  float="true" pos="1,30,899,460" bkcolor="#fff9fafa">
+		<Container name="wechat" float="true" pos="0,0,898,430" width="898" height="430" bkcolor="#fff9fafa" bkimage="file='images\web.png'" >
+  
+			<Button name="btnregistjz" text="" tooltip="立即开通" float="true" pos="422,200,571,239" width="149" height="39" align="center"  textcolor="#ffffffff" hottextcolor="#ffffff00"  normalimage=" file='images\buynow.png' " hotimage=" file='images\buynow2.png' " />
+			
+			<Text text="开通服务后，只需要会简单的word操作，即可创建自己的企业网站，而且还有"  pos="422, 265, 880,280" float="true" textcolor="#ffa4a4a4" />
+			<Text text="丰富的网站模板提供选择，好用到没有朋友！"  pos="422, 285, 880,320" float="true" textcolor="#ffa4a4a4" />
+			
+
+		</Container>
+
+		
+	</VerticalLayout>
+	
+
+    
+  </VerticalLayout>
+</Window>

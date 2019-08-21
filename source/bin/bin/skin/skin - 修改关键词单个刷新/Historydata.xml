@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="900,600" sizebox="4,4,6,6" caption="0,0,0,120" roundcorner="4,4" maxinfo="900,600" mininfo="900,600"  > 
+<Font name="微软雅黑" size="12" bold="true" />
+<Font name="微软雅黑" size="42" />
+
+  <VerticalLayout name="layout" pos="0,0,900,600" width="900" height="600" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#dddddddd" >
+   
+
+		<HorizontalLayout name="navlayout" float="true" pos="1,0,899,30" height="30" bkcolor="#f2f2f2f2" bkcolor2="#eaeaeaea"  bordersize="0,0,0,1" bordercolor="#ffd3d4d4">
+			<Option float="true" pos="10, 2, 105, 30" text="上线关键词" name="option_keyword" textcolor="#FF0b7bc3"  hotimage="file='images\snav_bg2.png'"  selectedimage="file='images\snav_bg.png'" group="contentnav"  selected="true" />
+			<Option float="true" pos="115, 2, 210, 30" text="产品曝光量" name="option_exposure" textcolor="#FF0b7bc3"  hotimage="file='images\snav_bg2.png'"  selectedimage="file='images\snav_bg.png'" group="contentnav"/>
+			<Option float="true" pos="220, 2, 315, 30" text="关键词排名" name="option_keywordrank" textcolor="#FF0b7bc3"  hotimage="file='images\snav_bg2.png'"  selectedimage="file='images\snav_bg.png'" group="contentnav"/>
+		</HorizontalLayout>
+		
+		
+		<Container name="contentLeft" float="true" pos="0,30,680,480" width="680" height="430">
+    <!--左边图表内容部分-->
+        	
+              	<VerticalLayout name="" float="true" pos="30,20,650,340"  width="620" height="320">
+              	<WebBrowser name="flash_keywordrank" clsid="{8856F961-340A-11D0-A96B-00C04FD705A2}" delaycreate="false" />
+                </VerticalLayout>
+    <!--左边昨天数据统计-->
+			<HorizontalLayout name="dateCount" float="true" pos="50,350,640,390" width="590" height="40"  bordersize="1"  bordercolor="#eeeeeeee" bkcolor="#fffafafa">
+            	<HorizontalLayout width="600" height="40" >
+							<Label text="提示：为了获得更好的推广效果，建议前期多推广，排名稳定后每周推广两三次即可" float="true" pos="0,0,600,40" textcolor="#ffb7b5b5"   showhtml="true"  textpadding="10,5,0,0"/>
+							
+							<Button name="btnposssumsz2" text="进入一键推广" tooltip="进入一键推广" float="true" pos="500,8,590,33" width="82" height="25" align="center"  textcolor="#ffffffff"  normalimage=" file='images\tui_btn.gif' " hotimage=" file='images\tui_btn2.gif' " />
+					
+					</HorizontalLayout>		
+			</HorizontalLayout>
+		</Container>
+		
+		
+		<!--右边内容部分-->
+		<Container name="contentRight" float="true" pos="680,30,900,460"  bordersize="1,0,0,0"  bordercolor="#dddddddd" >
+        	<Label text="<b>推广数据统计</b>" float="true" pos="5,10,210,40"  bordersize="0,0,0,1"  bordercolor="#dddddddd"  showhtml="true" textpadding="5,5,0,5" textcolor="#ff4f4f4f" />
+	<!--智能引擎推广数据-->		
+        	<HorizontalLayout name="" float="true"  pos="10,55,210,135">
+          		<Label name="" text="<b>关键词排名：</b>" float="true" pos="0,5,200,25" textcolor="#ff21a154" showhtml="true"/>
+				<VerticalLayout name="" float="true" pos="0,35,200,55" >
+           			<Text name="" text="关键词总个数：" float="true" pos="0,0,90,20" textcolor="#ff555555" showhtml="true"/>
+					<Text name="textYq1" text="0" float="true" pos="90,0,120,20" textcolor="#ffcc3333" font="4" align="center"  />
+					<Text name="" text="个" float="true" pos="120,0,200,20" textcolor="#ff555555" />
+				</VerticalLayout>
+				
+				<VerticalLayout name="" float="true"  pos="0,60,200,80" >
+           			<Text name="" text="首页排名个数：" float="true" pos="0,0,90,20" textcolor="#ff555555" showhtml="true"/>
+					<Text name="textYq2" text="0" float="true" pos="90,0,120,20" textcolor="#ffcc3333" font="4" align="center"  />
+					<Text name="" text="个" float="true" pos="120,0,200,20" textcolor="#ff555555" />
+				</VerticalLayout>
+
+			</HorizontalLayout>
+			
+	<!--优势产品推广数据-->		
+			<HorizontalLayout name="" float="true"  pos="10,165,210,225">
+				<Label name="" text="<b>产品曝光量：</b>" float="true" pos="0,5,200,25" textcolor="#ff21a154" showhtml="true" />
+				
+				<VerticalLayout name="" float="true" pos="0,35,200,55" >
+           			<Text name="" text="近七天曝光量：" float="true" pos="0,0,90,20" textcolor="#ff555555" />
+					<Text name="textPro1" text="0" float="true" pos="90,0,160,20" textcolor="#ffcc3333"  font="4" align="left"  />
+					<Text name="" text="次" float="true" pos="160,0,178,20" textcolor="#ff555555" />
+				</VerticalLayout>
+			</HorizontalLayout>
+			
+			
+			
+			<!--网络采购推广数据-->		
+			<HorizontalLayout name="" float="true"   pos="10,255,210,335">
+				<Label name="" text="<b>产品数量统计：</b>" float="true" pos="0,5,200,25" textcolor="#ff21a154" showhtml="true" />
+				
+				<VerticalLayout name="" float="true" pos="0,35,200,55" >
+           			<Text name="" text="产品总数量：" float="true" pos="0,0,80,20" textcolor="#ff555555" />
+					<Text name="textprocure1" text="0" float="true" pos="80,0,100,20" textcolor="#ffcc3333" font="4" align="center" />
+					<Text name="" text="个" float="true" pos="100,0,200,20" textcolor="#ff555555" />
+				</VerticalLayout>
+				
+				<VerticalLayout name="" float="true"  pos="0,60,200,80" >
+           			<Text name="" text="有下架风险：" float="true" pos="0,0,80,20" textcolor="#ff555555" />
+					<Text name="textprocure2" text="0" float="true" pos="80,0,100,20" textcolor="#ffcc3333" font="4" align="center" />
+					<Text name="" text="个" float="true" pos="100,0,200,20" textcolor="#ff555555" />
+				</VerticalLayout>
+			
+			</HorizontalLayout>
+
+	
+			
+			
+				<!--网站信息推广数据		
+		<HorizontalLayout name="" float="true" pos="10,305,210,370">
+				<Label name="" text="<b>产品信息覆盖：</b>" float="true" pos="0,5,200,25" textcolor="#ff21a154" showhtml="true"/>
+				
+				<VerticalLayout name="" float="true" pos="0,35,200,55" >
+           			<Text name="" text="日均覆盖网民：" float="true" pos="0,0,90,20" textcolor="#ff555555"/>
+					<Text name="textWeb1" text="0" float="true" pos="90,0,170,20" textcolor="#ffcc3333" font="4" align="left" />  <Text name="" text="人" float="true" pos="170,0,200,20" textcolor="#ff555555" />
+				</VerticalLayout>
+				
+		</HorizontalLayout>-->
+		
+			</Container>	
+	
+
+    
+  </VerticalLayout>
+</Window>

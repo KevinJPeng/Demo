@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="470,325" sizebox="0,0,0,0" caption="0,0,0,325" maxinfo="470,325" mininfo="470,325" >
+  <Font name="微软雅黑" size="12" bold="true" />
+  <VerticalLayout name="update" pos="0,0,470,325" width="470" height="325" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#dddddddd" mouse="false">
+   <!-- 头部内容-->
+    <HorizontalLayout name="update_head" pos="0,0,470,29" width="470" height="29" bkimage=" file='images\update_head.gif' ">
+	<!-- 头部标题内容-->
+      <VerticalLayout name="update_logo" float="true" pos="5,3,190,25">
+        <Text name="text_versions" mouse="false" text="舟大师升级提示" float="true" pos="10,5,180,20" textcolor="#ffffffff" />
+      </VerticalLayout>
+	  <!-- 头部关闭按钮-->
+      <VerticalLayout name="update_close" float="true" pos="430,0,470,23" width="35" height="23" padding="0,0,0,5" >
+        <Button name="btn_close" tooltip="关闭" width="35" height="23"  normalimage=" file='images\close.png' " hotimage=" file='images\close2.png' " pushedimage=" file='images\close3.png' " />
+      </VerticalLayout>
+    </HorizontalLayout>
+	<!-- 主体内容-->
+    <HorizontalLayout name="update_content" pos="1,30,470,255" float="true" width="468" height="225" bkimage="file='images\update_false.gif' ">
+	 <Text name="text_tips" text="由于网络等原因本次升级失败，请重新升级！" float="true" pos="202,140,460,160" textcolor="#ff555555" />
+	</HorizontalLayout>
+   <!-- 底部关闭按钮-->
+    <HorizontalLayout name="update_foot" pos="1,260,469,307"  float="true" >
+      <VerticalLayout name="update_btn" float="true" pos="260,0,469,27">
+        <Button name="btn_cancel"  text="关 闭" align="center" textcolor="#ff333333" float="true" pos="100,0,190,27" width="71" height="27"  normalimage=" file='images\btn.gif' " hotimage=" file='images\btn2.gif' "/>
+      </VerticalLayout>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

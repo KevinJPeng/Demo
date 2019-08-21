@@ -1,0 +1,12 @@
+[AutoTask]
+MaxConcurrency = 2
+delay_for_each_task = 2
+SouthServer=
+NorthServer=
+FastServer=http://198.18.0.254:8009
+KeyWordServer = http://198.18.0.254:8091
+RefreshServer = http://198.18.0.254:8092
+ShopTrafServer = http://198.18.0.240:8058
+
+[ConnectUseUdp]
+ip = 198.18.0.254

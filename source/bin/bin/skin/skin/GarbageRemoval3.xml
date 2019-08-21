@@ -1,0 +1,32 @@
+
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="900,600" sizebox="4,4,6,6" caption="0,0,0,120" roundcorner="4,4" maxinfo="900,600" mininfo="900,600"  > <Font name="微软雅黑" size="12" bold="true" />
+  <VerticalLayout name="layout" pos="0,0,900,600" width="900" height="600" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#dddddddd" >
+   
+    <!--二级菜单-->
+    <HorizontalLayout name="navlayout" float="true" pos="1,0,899,30" height="30" bkcolor="#f2f2f2f2" bkcolor2="#eaeaeaea" bordercolor="#dddddddd" bottombordersize="1" />
+    
+
+    <!--立即清理内容-->
+    <HorizontalLayout name="garbage" float="true" pos="190,150,900,460" height="430" >
+      
+ 		 <Container name="clearOver" >
+			 <Control float="true" pos="60,20,190,150"  bkimage=" file='images\success.gif' "/>
+			 <Label name="" text="<f 3> 清理完成！</f>" float="true" pos="215,20,800,70" textcolor="#FF20a356" showhtml="true" />
+			 <VerticalLayout name="VerticalLayoutUI1" float="true" pos="222,90,600,110">
+			 <Text name="TextUI1" text="本次总共帮您清理了"  float="true" pos="0,0,120,20"textcolor="#ff555555" showhtml="true"/>
+			 <Text name="TextUI2" text=""  float="true" pos="115,0,195,20"textcolor="#cc3333" showhtml="true"/>
+			 <Text name="TextUI3" text="  垃圾释放了磁盘空间！"  float="true" pos="140,0,295,20"textcolor="#ff555555" showhtml="true"/>
+			  </VerticalLayout>
+			 <Button name="btn_clear_back" tooltip="返回" float="true" pos="225,120,346,147"  text="返 回" textcolor="#ff5e5f5e" width="121" height="27"  normalimage=" file='images\btn_clear.gif' " hotimage=" file='images\btn_clear2.gif' " />
+			
+         </Container>
+
+
+   
+     
+    </HorizontalLayout>
+
+    
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="900,600" sizebox="4,4,6,6" caption="0,0,0,120" roundcorner="4,4" maxinfo="900,600" mininfo="900,600"  > 
+	<Font name="宋体" size="12" />
+	<Font name="宋体" size="14" />
+	<Font name="微软雅黑" size="48" bold="true" />
+	<!--内容开始-->
+  	<VerticalLayout name="layout" pos="0,0,900,600" width="900" height="600" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#dddddddd" >	
+	<!--中间主体内容开始-->
+	
+	<!--二级菜单开始-->
+		<HorizontalLayout name="navlayout" pos="0,0,900,30" height="30" bkcolor="#f2f2f2f2" bkcolor2="#eaeaeaea"  bordersize="0,0,0,1" bordercolor="#ffd3d4d4" />
+
+	
+	<!--主要内容开始-->
+		 <Container name="content" float="true" pos="0,50,900,460"  >
+   <!--搜索内容部分-->
+   	 	 <HorizontalLayout name="" float="true" pos="150,10,900,60">
+		 	<Edit name="text_search" float="true" pos="0,0,440,40" height="40"  width="420" text="" textpadding="15,13,15,13"  align="left" bordersize="5" bordercolor="#ff057fdb"  font="1" />
+		 	 <Button name="btn_search_start" tooltip="网站综合查询" float="true" pos="450,0,578,42" width="128" height="42"  normalimage=" file='images\search_all.gif' " hotimage=" file='images\search_all2.gif' " visible="true" />
+		 	 <ButtonGif name="btn_search_loading"   tooltip="正在查询稍后..." float="true"  pos="440,0,472,32"  height="32" width="32" text=""  textcolor="#ff057fdb"  NormalGifFile="images\loading.gif" visible="false" /> 
+			 <Button name="btn_search_cancel"  text="取 消" align="center" textcolor="#ff333333" float="true" pos="490,5,561,29" width="71" height="27"  normalimage=" file='images\btn.gif' " hotimage=" file='images\btn2.gif' " visible="false" />
+		 	 <Label name="search_error" text="" float="true" pos="590,10,690,30" textcolor="#ffff0000"  showhtml="true" />
+		 </HorizontalLayout>
+		 
+	 		  
+	 		
+	 	 <HorizontalLayout name="" float="true" pos="15,60,885,230">
+	 		 <Label text="<b>网站基本信息</b>" float="true" pos="0,0,870,30"  bordersize="0,0,0,1"  bordercolor="#dddddddd"  showhtml="true" textpadding="5,5,0,5" textcolor="#ff047eda" /> 
+			 
+			 
+			 <VerticalLayout name="" float="true" pos="5,50,870,75">
+			 	<Text name="" text="<b>网站域名</b" float="true" pos="0,0,60,20" textcolor="#ff666666" showhtml="true" />	
+				<Text name="websitesearchText" text="" float="true" pos="100,0,870,20" textcolor="#ffed4c50" showhtml="true" />	
+			 </VerticalLayout>
+			 
+			<VerticalLayout name="" float="true" pos="5,85,870,110" >
+			  <Text name="" text="<b>SEO信息</b>" float="true" pos="0,0,60,20" textcolor="#ff666666" showhtml="true"/>
+			  <Text name="" text="百度权重：" float="true" pos="100,0,170,20" textcolor="#ff666666" showhtml="true"/>
+			  <Text name="websitesearchText_1" text="" float="true" pos="170,0,250,20" textcolor="#ffed4c50" font="4"/>
+			  <Text name="" text="GOOGLE PR：" float="true" pos="250,0,320,20" textcolor="#ff666666" showhtml="true"/>
+			  <Text name="websitesearchText_2" text="" float="true" pos="320,0,400,20" textcolor="#ffed4c50" font="4"/>
+			  <Text name="" text="反链数：" float="true" pos="400,0,470,20" textcolor="#ff666666" showhtml="true"/>
+			  <Text name="websitesearchText_3" text="" float="true" pos="470,0,550,20" textcolor="#ffed4c50" font="4"/>
+			  <Text name="" text="站内链接：" float="true" pos="550,0,620,20" textcolor="#ff666666" showhtml="true"/>
+			  <Text name="websitesearchText_4" text="" float="true" pos="620,0,830,20" textcolor="#ffed4c50" font="4"/>
+			 </VerticalLayout>
+			 
+			 
+			<VerticalLayout name="" float="true" pos="5,120,870,145" >
+				 <Text name="" text="<b>域名年龄</b>" float="true" pos="0,0,60,20" textcolor="#ff666666" showhtml="true"/>
+				 <Text name="websitesearchText_5" text="" float="true"  pos="100,0,870,20" textcolor="#ff666666" />
+			</VerticalLayout>
+			
+			
+			<VerticalLayout name="" float="true"  pos="5,155,870,180" >			
+				  <Text name="" text="<b>域名备案</b>" float="true" pos="0,0,60,20" textcolor="#ff666666" showhtml="true"/>
+				  <Text name="" text="备案号：" float="true" pos="100,0,160,20" textcolor="#ff666666" />
+				  <Text name="websitesearchText_6" text="" float="true" pos="150,0,340,20" textcolor="#ff666666" />
+				  <Text name="" text="名称：" float="true" pos="340,0,380,20" textcolor="#ff666666" />
+				  <Text name="websitesearchText_7" text="" float="true" pos="380,0,600,20" textcolor="#ff666666" />
+				  <Text name="" text="备案时间：" float="true" pos="600,0,670,20" textcolor="#ff666666" />
+				  <Text name="websitesearchText_8" text="" float="true" pos="670,0,830,20" textcolor="#ff666666" /> 	 
+			</VerticalLayout>
+			
+	 		
+	 		 
+	 	 </HorizontalLayout>
+		 
+		 <HorizontalLayout name="" float="true" pos="15,250,885,460">
+	 		 <Label text="<b>网站的收录/反链信息</b>" float="true" pos="0,0,870,30"  bordersize="0,0,0,1"  bordercolor="#dddddddd"  showhtml="true" textpadding="5,5,0,5" textcolor="#ff047eda" /> 	
+				 <VerticalLayout name="" float="true" pos="5,40,870,70">
+					<Label text="<b>搜索引擎</b>" float="true" pos="0,0,175,30"  textcolor="#ff666666" showhtml="true"/>
+					<Label text="百度" float="true" pos="175,0,350,30"  textcolor="#ff666666" />
+					<Label text="谷歌" float="true" pos="350,0,505,30"  textcolor="#ff666666" />
+					<Label text="360" float="true" pos="505,0,680,30"  textcolor="#ff666666" />
+					<Label text="搜狗" float="true" pos="680,0,855,30"  textcolor="#ff666666" />
+				 </VerticalLayout>
+				 
+				 <VerticalLayout name="" float="true" pos="5,70,870,100">
+					<Label text="<b> 收 录 </b>" float="true" pos="0,0,175,30"  textcolor="#ff666666" showhtml="true" />
+					<Text name = "websitesearchText_9" text="" float="true" pos="175,0,350,30"  textcolor="#ff666666" textpadding="0,5,0,0" />
+					<Text name = "websitesearchText_10" text="" float="true" pos="350,0,505,30"  textcolor="#ff666666" textpadding="0,5,0,0"/>
+					<Text name = "websitesearchText_11" text="" float="true" pos="505,0,680,30"  textcolor="#ff666666" textpadding="0,5,0,0"/>
+					<Text name = "websitesearchText_12" text="" float="true" pos="680,0,855,30"  textcolor="#ff666666" textpadding="0,5,0,0"/>
+				 </VerticalLayout>
+				 
+				  <VerticalLayout name="" float="true" pos="5,100,870,130">
+					<Label text="<b> 反 链 </b>" float="true" pos="0,0,175,30"  textcolor="#ff666666" showhtml="true" />
+					<Text name = "websitesearchText_13" text="" float="true" pos="175,0,350,30"  textcolor="#ff666666" textpadding="0,5,0,0"/>
+					<Text name = "websitesearchText_14" text="" float="true" pos="350,0,505,30"  textcolor="#ff666666" textpadding="0,5,0,0"/>
+					<Text name = "websitesearchText_15" text="" float="true" pos="505,0,680,30"  textcolor="#ff666666" textpadding="0,5,0,0"/>
+					<Text name = "websitesearchText_16" text="" float="true" pos="680,0,855,30"  textcolor="#ff666666" textpadding="0,5,0,0"/>
+				 </VerticalLayout>
+
+	 	 </HorizontalLayout>
+		 
+		 
+		 
+		 
+		 
+		 
+    </Container>
+	
+	
+
+	<!--中间主体内容结束-->
+  </VerticalLayout>
+	<!--所有内容结束-->	
+</Window>

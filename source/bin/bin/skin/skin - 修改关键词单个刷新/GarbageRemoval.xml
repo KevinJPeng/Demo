@@ -1,0 +1,26 @@
+
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="900,600" sizebox="4,4,6,6" caption="0,0,0,120" roundcorner="4,4" maxinfo="900,600" mininfo="900,600"  > <Font name="微软雅黑" size="12" bold="true" />
+  <VerticalLayout name="layout" pos="0,0,900,600" width="900" height="600" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#dddddddd" >
+   
+    <!--二级菜单-->
+    <HorizontalLayout name="navlayout" float="true" pos="1,0,899,30" height="30" bkcolor="#f2f2f2f2" bkcolor2="#eaeaeaea" bordercolor="#dddddddd" bottombordersize="1" />
+    
+
+    <!--立即清理内容-->
+    <HorizontalLayout name="garbage" float="true" pos="0,30,900,460" height="430" >
+      
+ 		  <Button name="btnSystem" tooltip="清理系统垃圾" float="true" pos="220,100,387,257" width="167" height="157"  normalimage=" file='images\clear1.gif' " hotimage=" file='images\clear3.gif' " pushedimage=" file='images\clear3.gif' "  />
+		 <Button name="btnPhoto" tooltip="清理快照垃圾" float="true" pos="520,100,537,667" width="167" height="157"  normalimage=" file='images\clear2.gif' " hotimage=" file='images\clear4.gif' " pushedimage=" file='images\clear4.gif' "    />
+
+
+   
+     
+    </HorizontalLayout>
+    <!--底部内容-->
+    <HorizontalLayout name="copyright" float="true" pos="1,573,899,599" height="26" bkcolor="#fff5f5f5" bordercolor="#dddddddd" topbordersize="1">
+      <Text text="主程序版本：1.0.0.0"  pos="5, 6, 140, 22" float="true" textcolor="#ff9c9a9a"/>
+      <Button text="检测更新" name="btn_check" textcolor="#ff388ddf" pos="140,6,200,22" float="true" align="center" showhtml="true"/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

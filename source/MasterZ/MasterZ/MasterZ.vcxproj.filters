@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\common">
+      <UniqueIdentifier>{7ff95a12-ec7f-4408-90ad-96c2b642db77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\common">
+      <UniqueIdentifier>{f63111d6-aadc-4df0-b5c3-c3c4afb81c4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\threadmodel">
+      <UniqueIdentifier>{32f7aa5a-7579-45d3-9a54-41e2c0594c50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\threadmodel">
+      <UniqueIdentifier>{5855d025-f152-400b-aa9f-6fab6bd27ce2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\interface">
+      <UniqueIdentifier>{21181014-4013-4590-97ae-384eb5d761ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\interface">
+      <UniqueIdentifier>{aeb76514-2345-42f7-a377-25173007c678}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="small.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="MasterZ.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="BizGUI1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="icon1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="C:\Users\Administrator\Desktop\48x48.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="newMasterZ.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="C:\Users\Administrator\Desktop\16x16.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Tray.ico">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MasterZ.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\CommFunc.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\HttpUtils.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\IniFile.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Lock.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Ping.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Reg.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\StdString.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\StdStrUtils.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\IMsgQueue.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\IThreadManage.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\IThreadUnit.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\MsgDef.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\MsgQueue.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\ThreadManage.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\UiHelper.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\commondef.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Directory.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ICommCallback.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="NewVersionWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateErrorWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UpdateTipsWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TrayWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlEx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MainWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\interface\GetSearchData.h">
+      <Filter>头文件\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Base64.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="WarningWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="controls_ex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientSettingWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\interface\ClientInterface.h">
+      <Filter>头文件\interface</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowChart.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalDef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomWebEventHandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PostMsgWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SafeExit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckProWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ZhenciWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\IXMLRW.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\IKeyRW.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Trace.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MasterZ.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\CommFunc.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\HttpUtils.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\IniFile.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\Lock.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\Reg.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\StdStrUtils.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\Ping.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\IMsgQueue.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\IThreadManage.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\IThreadUnit.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\MsgQueue.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\ThreadManage.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\UiHelper.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="MainWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\Directory.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NewVersionWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateErrorWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UpdateTipsWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TrayWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\interface\GetSearchData.cpp">
+      <Filter>源文件\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\SQLiteWrapper.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\SQLiteOperate.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="WarningWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="controls_ex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientSettingWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\interface\ClientInterface.cpp">
+      <Filter>源文件\interface</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowChart.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PostMsgWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SafeExit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckProWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ZhenciWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\IXMLRW.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\IKeyRW.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="Trace.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MasterZ.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

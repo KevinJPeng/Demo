@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="480,200" sizebox="0,0,0,0" caption="0,0,0,30" mininfo="480,200" maxinfo="480,200">
+  <Font name="微软雅黑" size="12" bold="true" />
+  <VerticalLayout name="set" width="480" height="200" bkcolor="#fff3fbff" bordersize="1" bordercolor="#dddddddd" >
+    <!-- 头部内容-->
+    <HorizontalLayout name="" width="480" height="30" bkcolor="#ff1c80d1">
+      <!-- 头部标题-->
+      <VerticalLayout name="setting" float="true" pos="0,0,480,30">
+        <Text name="settitle" mouse="false" text="舟大师系统设置" float="true" pos="10,9,180,30" textcolor="#ffffffff" />
+      </VerticalLayout>
+      <!-- 头部关闭按钮-->
+       <VerticalLayout name="update_close" float="true" pos="440,0,480,23" width="35" height="23" padding="0,0,0,5" >
+        <Button name="closebtn" tooltip="关闭" width="35" height="23"  normalimage=" file='images\close.png' " hotimage=" file='images\close2.png' " pushedimage=" file='images\close3.png' " />
+      </VerticalLayout>
+    </HorizontalLayout>
+	
+	
+	 <HorizontalLayout name="setcnt" height="130"  padding="1,0,0,1" >
+	   <Text name="setbase" text="<b>基本设置：</b>" float="true" pos="40,20,400,40"  font="0" showhtml="true" />
+	 
+	 	  <Option name="option_start"  height="14" width="300" float="true" pos="42,50,400,64"  text="开机启动"  align="left"  textcolor="#FF777777"textpadding="20,0,0,0" normalimage="file='images\checkbox1.gif' dest='0,0,14,14'"  selectedimage="file='images\checkbox2.gif' dest='0,0,14,14'"  hotimage="file='images\checkbox1.gif' dest='0,0,14,14'"  group="" />
+		       
+	 	 <Option name="option_plain"  height="14" width="300" float="true" pos="42,84,320,98" text="参加“舟大师用户体验”计划"  align="left"  textcolor="#FF777777"textpadding="20,0,0,0" normalimage="file='images\checkbox1.gif' dest='0,0,14,14'"  selectedimage="file='images\checkbox2.gif' dest='0,0,14,14'"  hotimage="file='images\checkbox1.gif' dest='0,0,14,14'"  group="" />
+		
+	 </HorizontalLayout>
+	
+   <HorizontalLayout  name="save_btn" float="true" pos="0,160,480,200" bordersize="0,1,0,0" bordercolor="#ffe9f4fc" >
+        <Button name="btnOk"  text="确 认" align="center" textcolor="#ff333333" float="true" pos="300,5,370,30" width="70" height="25"  normalimage=" file='images\btn.gif' " hotimage=" file='images\btn2.gif' "/>
+        <Button name="closebtn"  text="取 消" align="center" textcolor="#ff333333" float="true" pos="390,5,470,30" width="71" height="25"  normalimage=" file='images\btn.gif' " hotimage=" file='images\btn2.gif' "/>
+      </HorizontalLayout >
+
+
+
+  
+  </VerticalLayout>
+</Window>

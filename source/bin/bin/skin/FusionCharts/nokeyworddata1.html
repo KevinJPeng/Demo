@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ChartStatisticData</title>
+    <style>
+        body,html{ margin:0 auto;overflow: hidden; }
+        div,form,input,img,ul,li,dl,dt,dd,p{margin: 0; padding: 0; border: 0;}
+        ul,dl{list-style-type:none;}
+        h1,h2,h3,h4,h5,h6 {margin:0; padding:0;font-weight:normal;}
+        a,a:hover{ text-decoration:none;}
+        .submenu {background-color: #ebebeb; width: 898px; height: 30px; background: -webkit-linear-gradient(#f1f1f1, #ebebeb); /* Safari 5.1 - 6.0 */ background: -o-linear-gradient(#f1f1f1, #ebebeb); /* Opera 11.1 - 12.0 */ background: -moz-linear-gradient(#f1f1f1, #ebebeb); /* Firefox 3.6 - 15 */ background: linear-gradient(#f1f1f1, #ebebeb); }
+        .submenu a { margin-top: 2px; margin-left: 12px; height: 27px; line-height: 26px; color: #0b7bc3; font-size: 12px; padding: 0px 15px; display: inline-block; border: 1px solid #ebebeb; border-bottom: 0px; }
+        .submenu a:hover { height: 27px; background: #e4e4e4; border: 1px solid #e4e4e4; border-radius: 5px 5px 0px 0px; border-bottom: 0px; }
+        .submenu_active { height: 27px; background: #FFFFFF; border: 1px solid #e2e3e3; border-radius: 5px 5px 0px 0px; border-bottom: 0px; }
+        .box { width: 898px; height: 430px; overflow: hidden; background: #FFF; }
+        .left { width: 629px; height: 430px; float: left; }
+        .left_form { height: 280px; padding-top: 40px; }
+        .left_msg { width: 581px; padding-right: 7px; height: 38px; line-height: 38px; margin-top: 20px;margin-left: 50px; background: #fafafa; color: #b7b5b5; font-size: 12px; border: 1px solid #eeeeee; }
+        .left_msg p { width: 475px; height: 38px; overflow: hidden; text-indent: 1em; float: left; }
+        .left_msg a { background: #078bee; width: 82px; height: 25px; line-height: 25px; text-align: center; background: #0c8bd8; display: block; font-size: 13px; color: #FFFFFF; border-radius: 5px; display: inline-block; float: right; margin-top: 8px; }
+        .right { width: 218px; height: 430px; float: right; border-left: 1px solid #dddddd; }
+        .right p { padding-left: 10px; color: #4f4f4f; font-weight: bold; font-size: 12px; margin-top: 20px; }
+        .right dl { padding-left: 10px; font-size: 12px; line-height: 26px; color: #555555; }
+        .right dt { margin-top: 30px; }
+        .red { color: #cc3333; padding: 0px 5px; }
+        .green { color: #21a154; }
+    </style>
+</head>
+    <body>
+        <div class="submenu">
+            <a class="submenu_active btn-kc" href="javascript:;">上线关键词</a><a href="javascript:;" class="btn-ke">产品曝光量</a><a class="btn-rank" href="javascript:;">关键词排名</a>
+        </div>
+        <div class="box">
+            <div class="left">
+                <div style="width:590px;height:280px;margin:40px 0 0 40px;" id="chart1"></div>
+                <div style="width:590px;height:280px;margin:40px 0 0 40px;" id="chart2"></div>
+                <div style="width:880px;height:390px;display:none;overflow:hidden;" id="rank">
+                    <iframe style="border:none;width:100%;height:100%;" frameborder="no" border="0" src="keyword.html"></iframe>
+                </div>
+
+            </div>
+            <div class="right">
+                <p>推广数据统计</p>
+                <dl>
+                    <dt class="green"><b>关键词排名：</b></dt>
+                    <dd>关键词总个数：<span class="red">0</span>个</dd>
+                    <dd>首页排名个数：<span class="red">0</span>个</dd>
+                    <dt class="green"><b>产品曝光量：</b></dt>
+                    <dd>近七天曝光量：<span class="red">0</span>次</dd>
+                    <dt class="green"><b>产品数量统计：</b></dt>
+                    <dd>产品总数量：<span class="red">0</span>个</dd>
+                    <dd>有下架风险：<span class="red">0</span>个</dd>
+                </dl>
+            </div>
+        </div>
+        <script src="js/echarts.js"></script>
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script>
+            require.config({
+                paths: {
+                    echarts: './js' //  http://echarts.baidu.com/build/dist
+                }
+            });
+            require(['echarts', 'echarts/chart/line'], function (ec) {
+                var chart = ec.init(document.getElementById('chart1'), 'macarons');
+                var chart1 = ec.init(document.getElementById('chart2'), 'macarons');
+                var keywordDateData = '01-01'.split(',');
+                var keywordData = [0];
+                var exposureDateData = '01-01'.split(',');
+                var exposureData = [0];
+                // 关键词
+                !function keywordChart() {
+                    var option = {
+                        title: {
+                            text: '近一个月上线关键词统计',
+                            x: 'center',
+                            textStyle: {
+								fontFamily: '宋体',
+                                fontSize: 14,
+                                fontWeight: 'bolder',
+                                color: '#666'
+                            }
+                        },
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: { type: 'none' }
+                        },
+                        grid: {
+                            x: 40,
+                            x2: 40,
+                            y: 35,
+                            y2: 30
+                        },
+                        xAxis: [
+                            {
+                                name: '日期',
+                                type: 'category',
+                                boundaryGap: true,
+                                data: keywordDateData,
+                                axisLine: {
+                                    lineStyle: {
+                                        color: '#999',
+                                        width: 1,
+                                        type: 'solid'
+                                    }
+                                }
+                            }
+                        ],
+                        yAxis: [
+                            {
+                                name: '数量',
+                                type: 'value',
+                                axisLabel: {
+                                    formatter: '{value}'
+                                },
+                                axisLine: {
+                                    lineStyle: {
+                                        color: '#999',
+                                        width: 1,
+                                        type: 'solid'
+                                    }
+                                }
+                            }
+                        ],
+                        series: [
+                            {
+                                name: '有排名的数量',
+                                type: 'line',
+                                data: keywordData
+                            }
+                        ]
+                    };
+                    chart.setOption(option);
+                }()
+                $('#chart2').hide();
+                // 曝光量
+                !function exposureChart() {
+                    var option1 = {
+                        title: {
+                            text: '近一个月产品曝光量统计',
+                            x: 'center',
+                            textStyle: {
+								fontFamily: '宋体',
+                                fontSize: 14,
+                                fontWeight: 'bolder',
+                                color: '#666'
+                            }
+                        },
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: { type: 'none' }
+                        },
+                        grid: {
+                            borderColor: '#999',
+                            x: 80,
+                            x2: 40,
+                            y: 35,
+                            y2: 30
+                        },
+                        xAxis: [
+                            {
+                                name: '日期',
+                                type: 'category',
+                                boundaryGap: true,
+                                data: exposureDateData,
+                                axisLine: {
+                                    lineStyle: {
+                                        color: '#999',
+                                        width: 1,
+                                        type: 'solid'
+                                    }
+                                }
+                            }
+                        ],
+                        yAxis: [
+                            {
+                                name: '数量',
+                                type: 'value',
+                                axisLabel: {
+                                    formatter: '{value}'
+                                },
+                                axisLine: {
+                                    lineStyle: {
+                                        color: '#999',
+                                        width: 1,
+                                        type: 'solid'
+                                    }
+                                }
+                            }
+                        ],
+                        series: [
+                            {
+                                name: '产品曝光量',
+                                type: 'line',
+                                data: exposureData
+                            }
+                        ]
+                    };
+                    chart1.setOption(option1);
+                }()
+            })
+            $(function() {
+                $('a.btn-kc').click(function() {
+                    $(this).addClass('submenu_active').siblings().removeClass('submenu_active');
+                    $('#chart2').hide();
+                    $('#rank').hide();
+                    $('#chart1').show();
+                    $('div.right').show();
+                    
+                })
+                $('a.btn-ke').click(function () {
+                    $(this).addClass('submenu_active').siblings().removeClass('submenu_active');
+                    $('#chart1').hide();
+                    $('#rank').hide();
+                    $('#chart2').show();
+                    $('div.right').show();
+                })
+                $('a.btn-rank').click(function () {
+                    $(this).addClass('submenu_active').siblings().removeClass('submenu_active');
+                    $('#chart1').hide();
+                    $('#chart2').hide();
+                    $('#rank').show();
+                    $('div.right').hide();
+                })
+            })
+        </script>
+    </body>
+</html>

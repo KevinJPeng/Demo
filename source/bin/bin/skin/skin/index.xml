@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="900,600" sizebox="4,4,6,6" caption="0,0,0,120" roundcorner="4,4" maxinfo="900,600" mininfo="900,600" > 
+	<Font name="宋体" size="12" />
+	<Font name="宋体" size="14"  />
+	<Font name="微软雅黑" size="28"  />
+	<Font name="微软雅黑" size="42" />
+	<Font name="宋体" size="12" bold="true"  />
+	<Font name="微软雅黑" size="18"  />
+	<Default name="VScrollBar" value="button1normalimage=&quot;file='images/scrollbar.bmp' source='0,90,16,106' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='images/scrollbar.bmp' source='18,90,34,106' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='images/scrollbar.bmp' source='36,90,52,106' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='images/scrollbar.bmp' source='54,90,70,106' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='images/scrollbar.bmp' source='0,108,16,124' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='images/scrollbar.bmp' source='18,108,34,124' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='images/scrollbar.bmp' source='36,108,52,124' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='images/scrollbar.bmp' source='54,108,70,124' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='images/scrollbar.bmp' source='0,126,16,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='images/scrollbar.bmp' source='18,126,34,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='images/scrollbar.bmp' source='36,126,52,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='images/scrollbar.bmp' source='54,126,70,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='images/scrollbar.bmp' source='0,144,16,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='images/scrollbar.bmp' source='18,144,34,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='images/scrollbar.bmp' source='36,144,52,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='images/scrollbar.bmp' source='54,144,70,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='images/scrollbar.bmp' source='0,162,16,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='images/scrollbar.bmp' source='18,162,34,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='images/scrollbar.bmp' source='36,162,52,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='images/scrollbar.bmp' source='54,162,70,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+	<Default name="HScrollBar" value="button1normalimage=&quot;file='images/scrollbar.bmp' source='0,0,16,16' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='images/scrollbar.bmp' source='18,0,34,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='images/scrollbar.bmp' source='36,0,52,16' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='images/scrollbar.bmp' source='54,0,70,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='images/scrollbar.bmp' source='0,18,16,34' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='images/scrollbar.bmp' source='18,18,34,34' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='images/scrollbar.bmp' source='36,18,52,34' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='images/scrollbar.bmp' source='54,18,70,34' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='images/scrollbar.bmp' source='0,36,16,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='images/scrollbar.bmp' source='18,36,34,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='images/scrollbar.bmp' source='36,36,52,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='images/scrollbar.bmp' source='54,36,70,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='images/scrollbar.bmp' source='0,54,16,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='images/scrollbar.bmp' source='18,54,34,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='images/scrollbar.bmp' source='36,54,52,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='images/scrollbar.bmp' source='54,54,70,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='images/scrollbar.bmp' source='0,72,16,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='images/scrollbar.bmp' source='18,72,34,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='images/scrollbar.bmp' source='36,72,52,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='images/scrollbar.bmp' source='54,72,70,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+	<!--内容开始-->
+  	<VerticalLayout name="layout" pos="0,0,900,600" width="900" height="600" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#dddddddd" >	
+	<!-- 头部内容开始-->
+    <HorizontalLayout name="headLayout" pos="0,0,900,113" width="900" height="113" bkimage=" file='images\head_bg.jpg' ">
+    <!-- 标题、登录-->
+		<VerticalLayout name="headTool"  pos="0,0,900,23" height="23">
+			<HorizontalLayout name="headLayout" pos="0,0,780,23" float="true" height="23">	
+				<Text name="textName" mouse="false" text="舟大师—精准营销推广工具" float="true" pos="10,5,200,18" textcolor="#ffffffff"/>	
+       		</HorizontalLayout>
+			
+	<!--最大化、最小化、关闭按钮-->
+		<HorizontalLayout name="toolbar" float="true" pos="780,0,900,23" width="120" height="23" padding="0,0,0,5" bkimage=" file='images\tool_bg.png' ">
+          		<Button name="setbtn" tooltip="设置" float="true" pos="5,0,40,23" width="35" height="23"  normalimage=" file='images\set.png' " hotimage=" file='images\set2.png' " pushedimage=" file='images\set3.png' " />
+          		<Button name="minbtn" tooltip="最小化" float="true" pos="44,0,79,23"  width="35" height="23"  normalimage=" file='images\minbtn.png' " hotimage=" file='images\minbtn2.png' " pushedimage=" file='images\minbtn3.png' " />
+          		<Button name="closebtn_index" tooltip="关闭" float="true" pos="83,0,118,23"  width="35" height="23"  normalimage=" file='images\close.png' " hotimage=" file='images\close2.png' " pushedimage=" file='images\close3.png' " />
+		</HorizontalLayout>	
+		
+		<Button name="btnLogin_index" text="<u>登 录</u>" textcolor="#ffffffff" pos="670,4,770,20" float="true" align="right" showhtml="true"/>
+			
+	</VerticalLayout>		
+	<!-- 头部功能按钮结束-->	    
+	  
+	<!--头部一级菜单开始-->
+		<HorizontalLayout name="menuLayout" float="true" pos="10,25,900,113" height="90">
+			<HorizontalLayout name="first_menu"  childpadding="35">
+				<Option name="optionCount" width="85" height="80" text="<b>推广统计</b>" align="bottom" textpadding="0,0,0,2" textcolor="#FFFFFF" foreimage="file='images\nav1.png' " normalimage="file='images\nav_bg.png'" hotimage="file='images\nav_bg2.png'" pushedimage="file='images\nav_bg.png'" selectedimage="file='images\nav_bg2.png'" group="contenttab" showhtml="true" selected="true" />
+				<Option name="optionAnalysis"width="85" height="80" text="<b>关键词分析</b>" align="bottom"  textpadding="0,0,0,2" textcolor="#FFFFFF"  foreimage="file='images\nav2.png' " normalimage="file='images\nav_bg.png'" hotimage="file='images\nav_bg2.png'" pushedimage="file='images\nav_bg.png'" selectedimage="file='images\nav_bg2.png'" group="contenttab" showhtml="true" />
+				<!--<Option name="optionRubbish"width="85" height="80"  text="<b>垃圾清理</b>" align="bottom"  textpadding="0,0,0,2" textcolor="#FFFFFF" foreimage="file='images\nav3.png' " normalimage="file='images\nav3.png'" hotimage="file='images\nav_bg2.png'" pushedimage="file='images\nav_bg.png'" selectedimage="file='images\nav_bg2.png'" group="contenttab" showhtml="true" />-->
+				<Option name="optionSearch" width="85" height="80" text="<b>网站综合查询</b>" align="bottom" textpadding="0,0,0,2" textcolor="#FFFFFF"foreimage="file='images\nav4.png'' " normalimage="file='images\nav_bg.png'" hotimage="file='images\nav_bg2.png'" pushedimage="file='images\nav_bg.png'" selectedimage="file='images\nav_bg2.png'" group="contenttab" showhtml="true"/>
+				<Option name="wechat" width="85" height="80" text="<b>商舟微信通</b>" align="bottom" textpadding="0,0,0,2" textcolor="#FFFFFF" foreimage="file='images\nav7.png' " normalimage="file='images\nav_bg.png'" hotimage="file='images\nav_bg2.png'" pushedimage="file='images\nav_bg.png'" selectedimage="file='images\nav_bg2.png'" group="contenttab"showhtml="true" />
+				<Option name="optionWebsite" width="85" height="80" text="<b>商舟建站</b>" align="bottom" textpadding="0,0,0,2" textcolor="#FFFFFF" foreimage="file='images\nav5.png' " normalimage="file='images\nav_bg.png'" hotimage="file='images\nav_bg2.png'" pushedimage="file='images\nav_bg.png'" selectedimage="file='images\nav_bg2.png'" group="contenttab"  showhtml="true"/>
+				<!--<Option name="optionFaq" width="85" height="80" text="<b>常见问题</b>" align="bottom" textpadding="0,0,0,2" textcolor="#FFFFFF" foreimage="file='images\nav6.png' " normalimage="file='images\nav_bg.png'" hotimage="file='images\nav_bg2.png'" pushedimage="file='images\nav_bg.png'" selectedimage="file='images\nav_bg2.png'" group="contenttab"  showhtml="true"/>-->
+		</HorizontalLayout>		
+	<!--头部logo-->
+		<VerticalLayout  name="logo" float="true" pos="780,0,900,89" >
+			<Control bkimage=" file='images\logo.png' source='100,0,220,89'" tooltip="舟大师客户端" height="89" />
+		</VerticalLayout>
+				
+		</HorizontalLayout>
+	<!--头部一级菜单结束-->	  
+    </HorizontalLayout>
+	<!--头部所有内容结束-->
+	
+	
+	<!--中间主体内容开始-->
+
+		<TabLayout name="switch" pos="0,113,900,573" height="460"  width="900">			
+			<HistoryData />			
+			<KeywordAnalysis />
+			<GarbageRemoval />
+			<WebsiteSearch />
+			<website />
+			<website2 />
+			<Faq />	
+		  <GarbageRemoval2 />	
+		  <GarbageRemoval3 />	
+		 <PromotionDetails />
+		 <wechat />
+		 <wechat2 />
+		 <!-- add by zhumingxing 20140730 to add keywordrank ui for sumsz2.0-->
+		 <keywordrank />		 		
+		</TabLayout>
+
+	<!--中间主体内容结束-->
+	
+	
+	
+	<!--底部内容开始-->	
+	<HorizontalLayout name="copyright" float="true" pos="0,573,900,600" height="27" bkcolor="#fff5f5f5" bordercolor="#dddddddd" bordersize="1">
+		<Text text="主程序版本：1.0.0.0" name="textVersions"  pos="5, 6, 180, 22" float="true" textcolor="#ff9c9a9a"/>
+		<Button text="检测更新" name="btnCheck" textcolor="#ff388ddf" pos="180,6,240,22" float="true" align="center" showhtml="true"/>
+	</HorizontalLayout>
+	<!--底部内容结束-->	
+  </VerticalLayout>
+	<!--所有内容结束-->	
+</Window>

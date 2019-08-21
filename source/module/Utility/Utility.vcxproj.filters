@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\threadmodel">
+      <UniqueIdentifier>{67eddc69-282c-46f3-afb3-95b756056eb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\threadmodel">
+      <UniqueIdentifier>{750e06c6-3913-4b94-beff-1cce003da93b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\common">
+      <UniqueIdentifier>{abcf5641-4b13-495a-b980-8ef738f40cbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\common">
+      <UniqueIdentifier>{71474ae9-068b-45b3-aa25-e698e6c719f8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\Utility.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Utility.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SiteAnalyzeDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="webbrowser2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\IMsgQueue.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\IThreadManage.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\IThreadUnit.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\MsgQueue.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\ThreadManage.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\UiHelper.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\Lock.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\Trace.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\CommFunc.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\StdStrUtils.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\Directory.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\IniFile.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\FileReadAndSave.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\Reg.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="ClearFiles.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyword.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilityThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SiteAnalysz.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CommClient.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\IXMLRW.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\IKeyRW.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SiteAnalyzeDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="webbrowser2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\IMsgQueue.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\IThreadManage.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\IThreadUnit.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\MsgDef.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\MsgQueue.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\ThreadManage.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\UiHelper.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Lock.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Trace.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\CommFunc.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\IniFile.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Directory.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Reg.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\FileReadAndSave.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="ClearFiles.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyword.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilityThread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SiteAnalyze.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CommClient.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\IXMLRW.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Utility.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

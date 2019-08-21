@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="900,600" sizebox="4,4,6,6" caption="0,0,0,120" roundcorner="4,4" maxinfo="900,600" mininfo="900,600"  > 
+<Font name="微软雅黑" size="12" bold="true" />
+<Font name="微软雅黑" size="42" />
+
+  <VerticalLayout name="layout" pos="0,0,900,600" width="900" height="600" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#dddddddd" >
+   
+
+    <HorizontalLayout name="navlayout" float="true" pos="1,0,899,30" height="30" bkcolor="#f2f2f2f2" bkcolor2="#eaeaeaea"  bordersize="0,0,0,1" bordercolor="#ffd3d4d4" />
+			
+
+
+		
+		  <!--未开通商舟微信通-->
+		
+  <VerticalLayout name=""  float="true" pos="1,30,899,460" bkcolor="#fff9fafa">
+		
+  		<HorizontalLayout name="" float="true" pos="140,70,378,261" width="238" height="191" bkimage=" file='images\website.png' " />
+			
+  			
+  		<HorizontalLayout name="" float="true" pos="420,70,890,320" >
+			
+			<Label name="" text="<f 5>您的商舟建站系统信息如下：</f>" float="true" pos="0,0,450,25" textcolor="#ff000000" showhtml="true" />
+			
+			<Text text="<f 6>●</f> 网站地址："  pos="0,50,85,65" float="true" textcolor="#ff555555" showhtml="true" />
+			<Button name="jzweburl" text="<u>www.sumszw.com</u>"   pos="85,55,400,70" float="true" textcolor="#ff1c99e7" align="left"  showhtml="true" />
+			
+			<!--<Text text="<f 6>●</f> <f 1>绑定域名：</f>"   pos="0,85,100,100" float="true" textcolor="#ff555555"  showhtml="true"/>
+			<Button  name="jzbindDomain" text="<f 1><u>www.sumszw.com</u></f>"   pos="90,85,450,100" float="true" textcolor="#ff1c99e7" align="left"  showhtml="true" />
+			
+			<HorizontalLayout name="unbind" pos="90,85,450,110" float="true" font="1">
+				<Text text="<f 1>未绑定</f>"  pos="0,3,50,20" float="true" textcolor="#ff555555" showhtml="true"/>
+				<Button name="jzbindbutton" text="<f 1><u>立即绑定</u></f>"   pos="70,3,200,20" float="true" textcolor="#ff1c99e7" align="left"   showhtml="true"/>
+			</HorizontalLayout>-->
+			
+			
+			<Text text="<f 6>●</f> 到期时间："   pos="0,85,85,100" float="true" textcolor="#ff555555"  showhtml="true" />
+			<Text name="jzexpirationdate" text="2015-11-12"  pos="85,90,450,110" float="true" textcolor="#ff555555"  showhtml="true"/>
+			
+			<Button name="btnEnterJz" text="" tooltip="进入建站系统"  pos="5,130,154,199" float="true" width="149" height="39" align="center"  textcolor="#ffffffff" hottextcolor="#ffffff00"  normalimage=" file='images\weblink.png' " hotimage=" file='images\weblink2.png' " />
+			
+			
+			
+			
+			
+		</HorizontalLayout>
+
+		
+
+		
+	</VerticalLayout>
+	
+
+    
+  </VerticalLayout>
+</Window>

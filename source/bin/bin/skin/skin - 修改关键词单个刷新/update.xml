@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="470,325" sizebox="0,0,0,0" caption="0,0,0,325" mininfo="470,325" maxinfo="470,325">
+  <Font name="微软雅黑" size="12" bold="true" />
+  <Font name="" size="14" bold="true" />
+  <VerticalLayout name="update" pos="0,0,470,325" width="470" height="325" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#dddddddd" mouse="false">
+    <!-- 头部内容-->
+    <HorizontalLayout name="update_head" pos="0,0,470,29" width="470" height="29" bkimage=" file='images\update_head.gif' ">
+      <!-- 头部标题-->
+      <VerticalLayout name="update_logo" float="true" pos="5,3,190,25">
+        <Control name="logo" bkimage=" file='images\logo_s.png' " height="22" width="22" />
+        <Text name="text_versions" mouse="false" text="舟大师升级提示" float="true" pos="35,5,180,20" textcolor="#ffffffff" />
+      </VerticalLayout>
+      <!-- 头部关闭按钮-->
+       <VerticalLayout name="update_close" float="true" pos="430,0,470,23" width="35" height="23" padding="0,0,0,5" >
+        <Button name="closebtn" tooltip="关闭" width="35" height="23"  normalimage=" file='images\close.png' " hotimage=" file='images\close2.png' " pushedimage=" file='images\close3.png' " />
+      </VerticalLayout>
+    </HorizontalLayout>
+    <!-- 升级主题内容图片-->
+    <!-- <HorizontalLayout name="update_content" pos="1,30,470,225" float="true" width="468" height="195" bkimage="file='images\update_move.gif' " />-->
+    <ButtonGif  float="true" pos="1,30,470,225" width="469" height="195"  NormalGifFile="images\update_move.gif" /> 
+    <!-- 升级进度条-->
+    <HorizontalLayout name="update_progress" pos="1,225,469,280" float="true">
+      <Progress name="Progress_update" text="0%" float="true" pos="15,0,455,247"  height="22" bkimage="file='images\loading_bg.gif'" foreimage=" file='images\update_loading.png' "  min="0" max="100" value="0" hor="true" align="center" textpadding="0,5,0,0"  />
+      <Text name="update_tips" text="正在检测新版本，请稍后..." float="true" pos="15,28,450,260" height="16"   textcolor="#ff666666"  />
+    </HorizontalLayout>
+    <!-- 底部按钮-->
+    <HorizontalLayout name="update_foot" pos="1,280,469,307"  float="true" >
+      <VerticalLayout name="update_btn" float="true" pos="280,0,469,27">
+        <Button name="btn_min"  text="后台升级" align="center" textcolor="#ff333333" float="true" pos="0,0,71,27" width="71" height="27"  normalimage=" file='images\btn.gif' " hotimage=" file='images\btn2.gif' "/>
+        <Button name="closebtn"  text="取 消" align="center" textcolor="#ff333333" float="true" pos="100,0,190,27" width="71" height="27"  normalimage=" file='images\btn.gif' " hotimage=" file='images\btn2.gif' "/>
+      </VerticalLayout>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

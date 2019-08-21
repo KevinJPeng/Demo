@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="128,100" sizebox="0,0,0,0" caption="0,0,0,100" maxinfo="128,100" mininfo="128,100"> 
+<Font name="微软雅黑" size="14" bold="true" italic="false" /> <Font name="微软雅黑" size="12" bold="false" italic="false" />
+  <VerticalLayout name="rightClick"  width="128" height="100" bkcolor="#FFFFFFFF"  bordersize="1" bordercolor="#dddddddd">
+    <!-- 头部内容-->
+    <!-- <HorizontalLayout name="rightTitle" width="260" height="68" bkimage=" file='images\head_bg.jpg' ">
+      <Label name="LabelUI1" text="{b}舟大师客户端{b}" size="14" float="true" pos="0,0,260,30" textpadding="15,0,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" font="0" showhtml="true" />
+       <VerticalLayout name="login_sz" float="true" pos="0,30,260,68">
+        <Control name="login_ico" float="true" pos="15,8,36,29" bkimage=" file='images\login.gif' " />
+       <Label name="label_name" text="已经成功连接到商舟云端服务" float="true" pos="45,0,210,38" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" font="1" />
+      </VerticalLayout>
+    </HorizontalLayout>
+    <!--主体菜单内容-->
+    
+    <VerticalLayout name="right_nav" bordersize="1,0,1,0" height="100" width="126" bordercolor="#FFEEEEEE">
+     <!-- <Option name="nav1" text="打开客户端界面" height="30" width="260" textpadding="45,6,0,0" align="left" textcolor="#FF333333" foreimage="file='images\icon1.png' dest='18,7,34,23'"disabledtextcolor="#FFA7A6AA" font="1" hotimage="file='images\menu_bg.gif'" group="contentnav"/>-->
+      <Option name="nav2"  float="true" pos="2,5,128,35" text="登录商舟网" height="30"  width="126" textpadding="40,6,0,0" align="left" textcolor="#FF333333" foreimage="file='images\icon2.png' dest='12,7,28,23'"disabledtextcolor="#FFA7A6AA" font="1"  hotimage="file='images\menu_bg.gif'" group="contentnav"  />
+      <!--<Option name="nav3" text="商舟建站" height="30"  width="260" textpadding="45,6,0,0" align="left" textcolor="#FF333333" foreimage="file='images\icon6.png' dest='18,7,34,23'"disabledtextcolor="#FFA7A6AA" font="1" hotimage="file='images\menu_bg.gif'" group="contentnav"/>
+      <Option name="nav4" text="清除快照" height="30"  width="260" textpadding="45,6,0,0" align="left" textcolor="#FF333333" foreimage="file='images\icon4.png' dest='18,7,34,23'"disabledtextcolor="#FFA7A6AA" font="1"  normalimage="file='images\line.gif' dest='0,29,260,59'" hotimage="file='images\menu_bg.gif'" group="contentnav"  />-->
+	    <!--<Option name="nav7"  float="true" pos="2,35,128,65" text="系统设置" height="30"  width="126" textpadding="45,6,0,0" align="left" textcolor="#FF333333" foreimage="file='images\icon3.png' dest='18,7,34,23'"disabledtextcolor="#FFA7A6AA" font="1" hotimage="file='images\menu_bg.gif'" group="contentnav"/>
+      <Option name="nav5" text="系统升级" height="30"  width="260" textpadding="45,6,0,0" align="left" textcolor="#FF333333" foreimage="file='images\icon5.png' dest='18,7,34,23'"disabledtextcolor="#FFA7A6AA" font="1" hotimage="file='images\menu_bg.gif'" group="contentnav"/>-->
+      <Option name="nav9"  float="true" pos="2,35,128,65" text="问题诊断" height="30"  width="126" textpadding="40,6,0,0" align="left" textcolor="#FF333333" foreimage="file='images\icon9.png' dest='12,7,28,23'"disabledtextcolor="#FFA7A6AA" font="1" hotimage="file='images\menu_bg.gif'" group="contentnav"/>
+        <!--<Option name="nav6" text="注销登录" height="30"  width="260" textpadding="45,6,0,0" align="left" textcolor="#FF333333" foreimage="file='images\icon8.png' dest='18,7,34,23'"disabledtextcolor="#FFA7A6AA" font="1"  normalimage="file='images\line.gif' dest='0,29,260,59'" hotimage="file='images\menu_bg.gif'" group="contentnav"  />-->
+      <Option name="nav8" float="true" pos="2,65,128,95" text="安全退出" height="30"  width="126" textpadding="40,6,0,0" align="left" textcolor="#FF333333" foreimage="file='images\icon7.png' dest='12,7,28,24'"disabledtextcolor="#FFA7A6AA" font="1"  hotimage="file='images\menu_bg.gif'" group="contentnav"  />
+    </VerticalLayout>
+    <!--底部内容-->
+    <!--<HorizontalLayout name="rightMenu" width="260" height="32" bkimage=" file='images\foot.gif' ">
+    	</HorizontalLayout>-->
+  </VerticalLayout>
+</Window>

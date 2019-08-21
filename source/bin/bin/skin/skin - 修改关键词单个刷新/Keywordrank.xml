@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="900,600" sizebox="4,4,6,6" caption="0,0,0,120" mininfo="900,600" maxinfo="900,600" roundcorner="4,4"> <Font name="宋体" size="12" bold="false" italic="false" /> <Font name="微软雅黑" size="12" bold="true" italic="false" /> <Font name="SimSun" size="12" bold="true" italic="false" />
+
+
+  <VerticalLayout name="layout" pos="0,0,900,600" width="900" height="600" bkcolor="#FFFFFFFF"  bordersize="1" bordercolor="#FFDDDDDD">
+    <HorizontalLayout name="navlayout" bordersize="0" float="true" pos="1,0,899,30" bkcolor="#F2F2F2F2" bkcolor2="#EAEAEAEA" bordercolor="#FFD3D4D4">
+     <Option float="true" pos="10, 2, 105, 30" text="上线关键词" name="option_keyword2" textcolor="#FF0b7bc3"  hotimage="file='images\snav_bg2.png'"  selectedimage="file='images\snav_bg.png'" group="contentnav2"  />
+			<Option float="true" pos="115, 2, 210, 30" text="产品曝光量" name="option_exposure2" textcolor="#FF0b7bc3"  hotimage="file='images\snav_bg2.png'"  selectedimage="file='images\snav_bg.png'" group="contentnav2"  />
+			<Option float="true" pos="220, 2, 315, 30" text="关键词排名" name="option_keywordrank2" textcolor="#FF0b7bc3"  hotimage="file='images\snav_bg2.png'"  selectedimage="file='images\snav_bg.png'" group="contentnav2"/>
+    </HorizontalLayout>
+    <HorizontalLayout name="HorizontalLayoutUI1" float="true" pos="0,30,900,80">
+       <Label name="rank_getnewest" text="提示：系统已获取最新的关键词排名！" float="true" pos="0,0,348,50" textcolor="#ffb7b5b5"   showhtml="true"  bordercolor="#dddddddd" textpadding="15,5,0,0"  visible="false" />
+       <!-- <Button name="btn_rank_refresh" text="立即刷新"  float="true" pos="348,20,400,50" align="left" textcolor="#ff0066cc" visible="false"/> -->
+	 	 <ButtonGif name="btn_keywordLoading"   tooltip="舟大师正在为您抓取最新关键词排名" float="true" pos="15,8,47,40" height="32" width="32"   textcolor="#ff057fdb"  NormalGifFile="images\running.gif"  visible="false"/>
+	  	<Label name="rank_getrunning" pos="38,11,400,43" float="true" text="舟大师正在为您抓取最新关键词排名,请稍后..." textcolor="#ffc2c1c1" textpadding="38,5,0,0" visible="false" />
+    </HorizontalLayout>
+	
+	<HorizontalLayout name="" height="30" width="898" bkcolor="#ffeeeeee"  float="true" pos="1,80,899,110" >
+			  <Label  text="<b>关键词</b>" width="300" bordercolor="#dddddddd" textcolor="#ff333333" showhtml="true"  textpadding="15,8,0,0" align="left"/>
+			   <Label  text="<b>搜索引擎</b>" width="140" bordercolor="#dddddddd" textcolor="#ff333333" showhtml="true"  textpadding="0,8,0,0" align="left"/>
+			   <Label  text="<b>排名情况</b>" width="180" bordercolor="#dddddddd" textcolor="#ff333333" showhtml="true"  textpadding="0,8,0,0" align="left"/>
+			   <Label  text="<b>统计时间</b>" width="150" bordercolor="#dddddddd" textcolor="#ff333333" showhtml="true"  textpadding="5,8,0,0" align="left"/>
+			   <Label  text="<b>操作</b>"  width="130" bordercolor="#dddddddd" textcolor="#ff333333" showhtml="true"  textpadding="5,8,0,0" align="center"/>
+    </HorizontalLayout>
+    <HorizontalLayout name="analysisResult" float="true" pos="0,110,900,460">
+	 <VerticalLayout>
+	 	
+	 	<!--0-->
+	  <HorizontalLayout height="36" width="900" bordersize="1" bordercolor="#ffeeeeee" padding="0,-1,0,0">
+		<Text text="商务快车" name="rank_keyword0" width="320" endellipsis="true" float="true" pos="0,10,300,35" textpadding="15,2,0,0" />
+		<Text text="百度打算大声道撒旦打算打算打算打算打算打算大声道" name="rank_search0" float="true" pos="300,10,440,35"  textpadding="5,2,0,0"/>
+		<VerticalLayout name="" height="30" float="true"  pos="440,10,620,35" > 
+		<Text text="第1000页" name="rank_page0" float="true" pos="5,0,55,18" bkcolor="#ff057b05" textcolor="#ffffffff" align="center" textpadding="0,2,0,0"/>
+		<!--<Text text="第1、3、5页" name="rank_detail0" float="true" pos="30,0,170,35"  textpadding="5,2,0,0"/>-->
+		</VerticalLayout>
+		<Text text="2014-07-01" name="rank_date0" float="true" pos="620,10,770,35"  textpadding="5,2,0,0"/>
+		<Button name="rank_check0" text="查看"  float="true" pos="780,10,835,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+		<Button name="rank_update0" text="校验"  float="true" pos="840,10,895,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+	 	
+	 	<!--1-->
+	  <HorizontalLayout height="36" width="900"  bordersize="1" bordercolor="#ffeeeeee" padding="0,-1,0,0">
+		<Text text="商务快车" name="rank_keyword1" width="320" endellipsis="true" float="true" pos="0,10,300,35" textpadding="15,2,0,0" />
+		<Text text="百度" name="rank_search1" float="true" pos="300,10,440,35"  textpadding="5,2,0,0"/>
+		<VerticalLayout name="" height="30" float="true"  pos="440,10,620,35" > 
+		<Text text="首页" name="rank_page1" float="true" pos="5,0,55,18" bkcolor="#ff057b05" textcolor="#ffffffff" align="center" textpadding="0,2,0,0"/>
+		<!--<Text text="第1、3、5页" name="rank_detail1" float="true" pos="30,0,170,35"  textpadding="5,2,0,0"/>-->
+		</VerticalLayout>
+		<Text text="2014-07-01" name="rank_date1" float="true" pos="620,10,770,35"  textpadding="5,2,0,0"/>
+		<Button name="rank_check1" text="查看"  float="true" pos="780,10,835,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+		<Button name="rank_update1" text="校验"  float="true" pos="840,10,895,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+	 	
+	 	<!--2-->
+	  <HorizontalLayout height="36" width="900"  bordersize="1" bordercolor="#ffeeeeee" padding="0,-1,0,0">
+		<Text text="商务快车" name="rank_keyword2" width="350" endellipsis="true" float="true" pos="0,10,300,35" textpadding="15,2,0,0" />
+		<Text text="百度" name="rank_search2" float="true" pos="300,10,440,35"  textpadding="5,2,0,0"/>
+		<VerticalLayout name="" height="30" float="true"  pos="440,10,620,35" > 
+		<Text text="首页" name="rank_page2" float="true" pos="5,0,55,18" bkcolor="#ff057b05" textcolor="#ffffffff" align="center" textpadding="0,2,0,0"/>
+		<!--<Text text="第1、3、5页" name="rank_detail2" float="true" pos="30,0,170,35"  textpadding="5,2,0,0"/>-->
+		</VerticalLayout>
+		<Text text="2014-07-01" name="rank_date2" float="true" pos="620,10,770,35"  textpadding="5,2,0,0"/>
+		<Button name="rank_check2" text="查看"  float="true" pos="780,10,835,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+		<Button name="rank_update2" text="校验"  float="true" pos="840,10,895,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+	 
+	 	<!--3-->
+	  <HorizontalLayout height="36" width="900"  bordersize="1" bordercolor="#ffeeeeee" padding="0,-1,0,0">
+		<Text text="商务快车" name="rank_keyword3" width="350" endellipsis="true" float="true" pos="0,10,300,35" textpadding="15,2,0,0" />
+		<Text text="百度" name="rank_search3" float="true" pos="300,10,440,35"  textpadding="5,2,0,0"/>
+		<VerticalLayout name="" height="30" float="true"  pos="440,10,620,35" > 
+		<Text text="首页" name="rank_page3" float="true" pos="5,0,55,18" bkcolor="#ff057b05" textcolor="#ffffffff" align="center" textpadding="0,2,0,0"/>
+		<!--<Text text="第1、3、5页" name="rank_detail3" float="true" pos="30,0,170,35"  textpadding="5,2,0,0"/>-->
+		</VerticalLayout>
+		<Text text="2014-07-01" name="rank_date3" float="true" pos="620,10,770,35"  textpadding="5,2,0,0"/>
+		<Button name="rank_check3" text="查看"  float="true" pos="780,10,835,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+		<Button name="rank_update3" text="校验"  float="true" pos="840,10,895,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+	 	
+	 	<!--4-->
+	  <HorizontalLayout height="36" width="900" bordersize="1" bordercolor="#ffeeeeee" padding="0,-1,0,0">
+		<Text text="商务快车" name="rank_keyword4" width="350" endellipsis="true" float="true" pos="0,10,300,35" textpadding="15,2,0,0" />
+		<Text text="百度" name="rank_search4" float="true" pos="300,10,440,35"  textpadding="5,2,0,0"/>
+		<VerticalLayout name="" height="30" float="true"  pos="440,10,620,35" > 
+		<Text text="首页" name="rank_page4" float="true" pos="5,0,55,18" bkcolor="#ff057b05" textcolor="#ffffffff" align="center" textpadding="0,2,0,0"/>
+		<!--<Text text="第1、3、5页" name="rank_detail4" float="true" pos="30,0,170,35"  textpadding="5,2,0,0"/>-->
+		</VerticalLayout>
+		<Text text="2014-07-01" name="rank_date4" float="true" pos="620,10,770,35"  textpadding="5,2,0,0"/>
+		<Button name="rank_check4" text="查看"  float="true" pos="780,10,835,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+		<Button name="rank_update4" text="校验"  float="true" pos="840,10,895,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+	 	
+	 	<!--5-->
+	  <HorizontalLayout height="36" width="900"  bordersize="1"bordercolor="#ffeeeeee" padding="0,-1,0,0">
+		<Text text="商务快车" name="rank_keyword5" width="350" endellipsis="true" float="true" pos="0,10,300,35" textpadding="15,2,0,0" />
+		<Text text="百度" name="rank_search5" float="true" pos="300,10,440,35"  textpadding="5,2,0,0"/>
+		<VerticalLayout name="" height="30" float="true"  pos="440,10,620,35" > 
+		<Text text="首页" name="rank_page5" float="true" pos="5,0,55,18" bkcolor="#ff057b05" textcolor="#ffffffff" align="center" textpadding="0,2,0,0"/>
+		<!--<Text text="第1、3、5页" name="rank_detail5" float="true" pos="30,0,170,35"  textpadding="5,2,0,0"/>-->
+		</VerticalLayout>
+		<Text text="2014-07-01" name="rank_date5" float="true" pos="620,10,770,35"  textpadding="5,2,0,0"/>
+		<Button name="rank_check5" text="查看"  float="true" pos="780,10,835,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+		<Button name="rank_update5" text="校验"  float="true" pos="840,10,895,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+	  
+	  <!--6-->
+	  <HorizontalLayout height="36" width="900"  bordersize="1"bordercolor="#ffeeeeee" padding="0,-1,0,0">
+		<Text text="商务快车" name="rank_keyword6" width="350" endellipsis="true" float="true" pos="0,10,300,35" textpadding="15,2,0,0" />
+		<Text text="百度" name="rank_search6" float="true" pos="300,10,440,35"  textpadding="5,2,0,0"/>
+		<VerticalLayout name="" height="30" float="true"  pos="440,10,620,35" > 
+		<Text text="首页" name="rank_page6" float="true" pos="5,0,55,18" bkcolor="#ff057b05" textcolor="#ffffffff" align="center" textpadding="0,2,0,0"/>
+		<!--<Text text="第1、3、5页" name="rank_detail6" float="true" pos="30,0,170,35"  textpadding="5,2,0,0"/>-->
+		</VerticalLayout>
+		<Text text="2014-07-01" name="rank_date6" float="true" pos="620,10,770,35"  textpadding="5,2,0,0"/>
+		<Button name="rank_check6" text="查看"  float="true" pos="780,10,835,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+		<Button name="rank_update6" text="校验"  float="true" pos="840,10,895,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+	  
+	  <!--7-->
+	  <HorizontalLayout height="36" width="900"  bordersize="1"bordercolor="#ffeeeeee" padding="0,-1,0,0">
+		<Text text="商务快车" name="rank_keyword7" width="350" endellipsis="true" float="true" pos="0,10,300,35" textpadding="15,2,0,0" />
+		<Text text="百度" name="rank_search7" float="true" pos="300,10,440,35"  textpadding="5,2,0,0"/>
+		<VerticalLayout name="" height="30" float="true"  pos="440,10,620,35" > 
+		<Text text="首页" name="rank_page7" float="true" pos="5,0,55,18" bkcolor="#ff057b05" textcolor="#ffffffff" align="center" textpadding="0,2,0,0"/>
+		<!--<Text text="第1、3、5页" name="rank_detail7" float="true" pos="30,0,170,35"  textpadding="5,2,0,0"/>-->
+		</VerticalLayout>
+		<Text text="2014-07-01" name="rank_date7" float="true" pos="620,10,770,35"  textpadding="5,2,0,0"/>
+		<Button name="rank_check7" text="查看"  float="true" pos="780,10,835,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+		<Button name="rank_update7" text="校验"  float="true" pos="840,10,895,35" align="left" textcolor="#ff0066cc"  textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+		
+	</VerticalLayout>
+
+      <HorizontalLayout name="keywordtitle" float="true" pos="0,300,900,350">
+	  
+        <Button name="btnpageup" text="上一页" bordersize="0" float="true" pos="740,0,790,30" bordercolor="#DDDDDDDD" textcolor="#FF0066CC" disabledtextcolor="#FFA7A6AA" />
+		 <Combo name="page_select" droptype="droplist"  width="50" height="22" float="true"  pos="790,5,840,27" itemtextpadding="10,0,0,0" textpadding="4,1,1,1" normalimage="file='images/combo.png' source='0,0,100,22' corner='2,2,20,2'" hotimage="file='images/combo.png' source='0,22,100,44' corner='2,2,22,2'" pushedimage="file='images/combo.png' source='0,44,100,66' corner='2,2,22,2'">
+                     <!-- <ListLabelElement text="1" selected="true" height="23" />
+                      <ListLabelElement text="2" height="23" />
+                      <ListLabelElement text="3" height="23" />
+                      <ListLabelElement text="4" height="23" />
+                      <ListLabelElement text="5" height="23" />
+                      <ListLabelElement text="6" height="23" />
+                      <ListLabelElement text="7" height="23" />
+                      <ListLabelElement text="8" height="23" />
+                      <ListLabelElement text="9" height="23" />
+                      <ListLabelElement text="10" height="23" />-->
+                    </Combo>
+		
+		
+        <Button name="btnpagedown" text="下一页" bordersize="0" float="true" pos="840,0,890,30" bordercolor="#DDDDDDDD" textcolor="#FF0066CC" disabledtextcolor="#FFA7A6AA" />
+      </HorizontalLayout>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

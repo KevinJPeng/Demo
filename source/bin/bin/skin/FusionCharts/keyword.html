@@ -1,0 +1,73 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>关键词排名</title>
+    <link href="/Content/newstyle/style.css" rel="stylesheet" />
+    <style>
+        body { margin: 0 auto;overflow:hidden;}
+        div, form, input, img, ul, li, dl, dt, dd, p { margin: 0; padding: 0; border: 0; }
+        ul, dl { list-style-type: none; }
+        h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; font-weight: normal; }
+        a, a:hover { text-decoration: none; }
+        .submenu { width: 898px; height: 30px; background: -webkit-linear-gradient(#f1f1f1, #ebebeb); /* Safari 5.1 - 6.0 */ background: -o-linear-gradient(#f1f1f1, #ebebeb); /* Opera 11.1 - 12.0 */ background: -moz-linear-gradient(#f1f1f1, #ebebeb); /* Firefox 3.6 - 15 */ background: linear-gradient(#f1f1f1, #ebebeb); /* 标准的语法（必须放在最后） */ }
+        .submenu a { margin-top: 2px; margin-left: 12px; height: 27px; line-height: 26px; color: #0b7bc3; font-size: 12px; padding: 0px 15px; display: inline-block; border: 1px solid #ebebeb; border-bottom: 0px; }
+        .submenu a:hover { height: 27px; background: #e4e4e4; border: 1px solid #e4e4e4; border-radius: 5px 5px 0px 0px; border-bottom: 0px; }
+        .submenu_active { height: 27px; background: #FFFFFF; border: 1px solid #e2e3e3; border-radius: 5px 5px 0px 0px; border-bottom: 0px; }
+        .box { width: 898px; height: 430px; overflow: hidden; background: #FFF; }
+        .left { width: 629px; height: 430px; padding-left: 50px; float: left; }
+        .tab { border-collapse: collapse; font-size: 12px;margin: 0; }
+        .tab td tr { border-bottom: 1px solid #f1f1f1; }
+        .tab th,.tab table th { height: 25px; line-height: 25px; padding-left: 8px; font-weight: bold; color: #333; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: left;background-color: #FFF; }
+        .tab td { height: 25px; padding: 3px 8px; text-align: left; }
+        .tab td a { padding-right: 8px; }
+        .tab td span { padding: 2px 5px; background-color: #008040; color: #fff; }
+        .right { width: 218px; height: 430px; float: right; border-left: 1px solid #dddddd; }
+        .right p { padding-left: 10px; color: #4f4f4f; font-weight: bold; font-size: 12px; margin-top: 20px; }
+        .right dl { padding-left: 10px; font-size: 12px; line-height: 26px; color: #555555; }
+        .right dt { margin-top: 30px; }
+        .red { color: #cc3333; padding: 0px 5px; }
+        .green { color: #21a154; }
+        .tab td span.span-icon {
+            padding: 1.5px 1.5px 1.5px 2px;
+            color: #fff;
+        }
+        .pages {font-size:12px;float:right;padding:3px 6px;margin-top:5px;}
+    </style>
+</head>
+<body>
+    <div style="height:345px; overflow:hidden;">
+        <table width="100%" class="tab">
+            <tbody>
+                <tr>
+                    <th width="27%" scope="col">关键词</th>
+                    <th width="16%" scope="col">搜索引擎</th>
+                    <th width="31%" scope="col">排名情况</th>
+                    <th width="15%" scope="col">统计时间</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pages">
+        
+<!--MvcPager v2.0 for ASP.NET MVC 4.0+ ? 2009-2013 Webdiyer (http://www.webdiyer.com)-->
+
+    </div>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/Common.js"></script>
+    <script>
+        $(function () {
+            $('a.refreshkw').click(function () {
+                var keyword = $(this).attr('data-keyword');
+                zds.alert('系统正在为您重新获取关键词排名，请稍后刷新本页查看最新排名数据');
+                $.post('/keywordrank/RefreshKeyword', { keyword: keyword });
+            })
+        })
+    </script>
+</body>
+</html>

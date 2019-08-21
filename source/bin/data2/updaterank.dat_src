@@ -1,0 +1,246 @@
+<root>
+    <module name="FingerRecogn">
+        <section name="FingerInfo">
+            <item key="CharData" value="åø|Ø¡|ñâ|ÛÉ|ÞÐ|â»|ãÜ|ãÝ|í±|âà|åæ|ãÅ|ÞÃ|ðÚ|ìá|æù|åÁ|ãß|áÜ|ÛÈ|Ùï|Øç|Ùè" />
+            <item key="MatchNum" value="2" />
+        </section>
+    </module>
+    <module name="updaterank">
+        <section name="EngineCnt">
+            <item key="count" value="9" />
+            <item key="AceWeb" value="" />
+            <item key="CssPath" value="http://img.sumszw.com/static" />
+        </section>
+        <!-- °Ù¶È -->
+        <section name="Engine0">
+            <item key="JumpUrl" value="http://www.baidu.com/s?wd=%s&amp;pn=%d" />
+            <item key="CollTags" value="div" />
+            <item key="ItemFlag1" value="%d" />
+            <item key="FindUrlFlag1" value="c-showurl" />
+            <item key="FindUrlFlag2" value="&gt;" />
+            <item key="FindUrlFlag3" value="&lt;/a&gt;" />
+            <item key="UniversalFst" value="/" />
+            <item key="TargetMarkWeb" value="" />
+            <item key="TargetKey" value="" />
+            <item key="TargetPreLen" value="" />
+            <item key="TargetLastLen" value="" />
+            <item key="TargetStart" value="" />
+            <item key="TargetEnd" value="" />
+            <item key="BtnId" value="su" />
+            <item key="GetUrlFlag1" value="href=" />
+            <item key="GetUrlFlag2" value='&quot;' />
+            <item key="JudgeHtmlTag" value="html" />
+            <item key="ItemLocationTitle" value="0,h3,0,0,0;0,a,0,0,0" />
+            <item key="ItemtargetTitle" value="1,href" />
+            <item key="ItemLocationLink" value="2,a,0,class,c-showurl" />
+            <item key="ItemtargetLink" value="0,0" />
+            <item key="SaveHtmlName" value="_BAIDU.html" />
+        </section>
+        <!-- 360ËÑË÷ -->
+        <section name="Engine1">
+            <item key="JumpUrl" value="http://www.so.com/s?q=%s&amp;pn=%d" />
+            <item key="CollTags" value="li" />
+            <item key="ItemFlag1" value="res-list" />
+            <item key="FindUrlFlag1" value="&lt;cite&gt;" />
+            <item key="FindUrlFlag2" value="&gt;" />
+            <item key="FindUrlFlag3" value="&lt;/cite&gt;" />
+            <item key="UniversalFst" value="" />
+            <item key="TargetMarkWeb" value=".china.cn/pic," />
+            <item key="TargetKey" value="²é¿´ÏêÇé," />
+            <item key="TargetPreLen" value="100," />
+            <item key="TargetLastLen" value="" />
+            <item key="TargetStart" value="href=," />
+            <item key="TargetEnd" value='&quot;,' />
+            <item key="BtnId" value="su" />
+            <item key="GetUrlFlag1" value="href=" />
+            <item key="GetUrlFlag2" value='&quot;' />
+            <item key="JudgeHtmlTag" value="html" />
+            <item key="ItemLocationTitle" value="0,h3,0,0,0;0,a,0,0,0" />
+            <item key="ItemtargetTitle" value="1,href" />
+            <item key="ItemLocationLink" value="0,cite,0,0,0" />
+            <item key="ItemtargetLink" value="0,0" />
+            <item key="SaveHtmlName" value="_360.html" />
+            <item key="ReplaceTagWebs" value="http://www.gbs.cn," />
+        </section>
+        <!-- ËÑ¹· -->
+        <section name="Engine2">
+            <item key="JumpUrl" value="http://www.sogou.com/web?query=%s&amp;page=%d" />
+            <item key="CollTags" value="div" />
+            <item key="ItemFlag1" value="class=rb" />
+            <item key="ItemFlag2" value="class=vrwrap" />
+            <item key="FindUrlFlag1" value="class=pt" />
+            <item key="FindUrlFlag2" value="class=vrTitle" />
+            <item key="FindUrlFlag3" value="class=fb" />
+            <item key="UniversalFst" value="" />
+            <item key="TargetMarkWeb" value="" />
+            <item key="TargetKey" value="" />
+            <item key="TargetPreLen" value="" />
+            <item key="TargetLastLen" value="" />
+            <item key="TargetStart" value="" />
+            <item key="TargetEnd" value="" />
+            <item key="BtnId" value="searchBtn" />
+            <item key="GetUrlFlag1" value="href=" />
+            <item key="GetUrlFlag2" value='&quot;' />
+            <item key="ItemLocationTitle" value="0,h3,0,0,0;0,a,0,0,0" />
+            <item key="ItemtargetTitle" value="1,href" />
+            <item key="ItemLocationLink" value="0,cite,0,0,0" />
+            <item key="ItemtargetLink" value="0,0" />
+            <item key="JudgeHtmlTag" value="html" />
+            <item key="SaveHtmlName" value="_SOGOU.html" />
+            <item key="" value="" />
+        </section>
+        <!-- ±ØÓ¦ -->
+        <section name="Engine3">
+            <item key="JumpUrl" value="http://cn.bing.com/search?q=%s&amp;first=%d" />
+            <item key="CollTags" value="li" />
+            <item key="ItemFlag1" value="b_algo" />
+            <item key="FindUrlFlag1" value="" />
+            <item key="FindUrlFlag2" value="" />
+            <item key="FindUrlFlag3" value="" />
+            <item key="UniversalFst" value="" />
+            <item key="TargetMarkWeb" value="" />
+            <item key="TargetKey" value="" />
+            <item key="TargetPreLen" value="" />
+            <item key="TargetLastLen" value="" />
+            <item key="TargetStart" value="" />
+            <item key="TargetEnd" value="" />
+            <item key="BtnId" value="sb_form_go" />
+            <item key="GetUrlFlag1" value="href=" />
+            <item key="GetUrlFlag2" value='&quot;' />
+            <item key="ItemLocationTitle" value="0,h2,0,0,0;0,a,0,0,0" />
+            <item key="ItemtargetTitle" value="1,href" />
+            <item key="ItemLocationLink" value="0,cite,0,0,0" />
+            <item key="ItemtargetLink" value="0,0" />
+            <item key="JudgeHtmlTag" value="html" />
+            <item key="SaveHtmlName" value="_BING.html" />
+            <item key="" value="" />
+        </section>
+        <!-- ÓÐµÀ -->
+        <section name="Engine4">
+            <item key="JumpUrl" value="http://www.youdao.com/search?q=%s&amp;start=%d" />
+            <item key="CollTags" value="li" />
+            <item key="ItemFlag1" value="res-list" />
+            <item key="FindUrlFlag1" value="" />
+            <item key="FindUrlFlag2" value="" />
+            <item key="FindUrlFlag3" value="" />
+            <item key="UniversalFst" value="head" />
+            <item key="UniversalSnd" value="div" />
+            <item key="TargetMarkWeb" value="" />
+            <item key="TargetKey" value="" />
+            <item key="TargetPreLen" value="" />
+            <item key="TargetLastLen" value="" />
+            <item key="TargetStart" value="" />
+            <item key="TargetEnd" value="" />
+            <item key="BtnId" value="type=submit" />
+            <item key="GetUrlFlag1" value="href=" />
+            <item key="GetUrlFlag2" value='&quot;' />
+            <item key="ItemLocationTitle" value="0,h2,0,0,0;0,a,0,0,0" />
+            <item key="ItemtargetTitle" value="1,href" />
+            <item key="ItemLocationLink" value="0,cite,0,0,0" />
+            <item key="ItemtargetLink" value="0,0" />
+            <item key="JudgeHtmlTag" value="html" />
+            <item key="SaveHtmlName" value="_YOUDAO.html" />
+            <item key="" value="" />
+        </section>
+        <!-- ÊÖ»ú°Ù¶È -->
+        <section name="Engine5">
+            <item key="JumpUrl" value="http://wap.baidu.com/s?word=%s&amp;pn=%d" />
+            <item key="CollTags" value="div" />
+            <item key="ItemFlag1" value="class=c-container" />
+            <item key="ItemFlag2" value="c-title" />
+            <item key="FindUrlFlag1" value="c-showurl>" />
+            <item key="FindUrlFlag2" value="" />
+            <item key="FindUrlFlag3" value="&lt;/" />
+            <item key="UniversalFst" value="&lt;span&gt;" />
+            <item key="TargetMarkWeb" value="" />
+            <item key="TargetKey" value="" />
+            <item key="TargetPreLen" value="" />
+            <item key="TargetLastLen" value="" />
+            <item key="TargetStart" value="" />
+            <item key="TargetEnd" value="" />
+            <item key="BtnId" value="se-bn" />
+            <item key="GetUrlFlag1" value="href=" />
+            <item key="GetUrlFlag2" value='&quot;' />
+            <item key="JudgeHtmlTag" value="html" />
+            <item key="ItemLocationTitle" value="0,a,0,0,0" />
+            <item key="ItemtargetTitle" value="1,href" />
+            <item key="ItemLocationLink" value="2,span,0,class,c-showurl" />
+            <item key="ItemtargetLink" value="0,0" />
+            <item key="SaveHtmlName" value="_PHONEBAIDU.html" />
+            <item key="" value="" />
+        </section>
+        <!-- ÊÖ»úËÑ¹· -->
+        <section name="Engine6">
+            <item key="JumpUrl" value="http://wap.sogou.com/web/searchList.jsp?keyword=%s&amp;p=%d" />
+            <item key="CollTags" value="div" />
+            <item key="ItemFlag1" value='class=&quot;result&quot;' />
+            <item key="ItemFlag2" value="resultLink" />
+            <item key="FindUrlFlag1" value="citeurl" />
+            <item key="FindUrlFlag2" value="&gt;" />
+            <item key="FindUrlFlag3" value="&lt;/div&gt;" />
+            <item key="UniversalFst" value='class=&quot;strResult&quot;' />
+            <item key="TargetMarkWeb" value="" />
+            <item key="TargetKey" value="" />
+            <item key="TargetPreLen" value="" />
+            <item key="TargetLastLen" value="" />
+            <item key="TargetStart" value="" />
+            <item key="TargetEnd" value="" />
+            <item key="BtnId" value="s_1" />
+            <item key="GetUrlFlag1" value="href=" />
+            <item key="GetUrlFlag2" value='&quot;' />
+            <item key="JudgeHtmlTag" value="html" />
+            <item key="ItemLocationTitle" value="0,a,0,0,0" />
+            <item key="ItemtargetTitle" value="1,href" />
+            <item key="ItemLocationLink" value="2,div,0,class,citeurl" />
+            <item key="ItemtargetLink" value="0,0" />
+            <item key="SaveHtmlName" value="_PHONESOGOU.html" />
+            <item key="" value="" />
+        </section>
+        <!-- ÊÖ»ú360 -->
+        <section name="Engine7">
+            <item key="JumpUrl" value="http://m.so.com/s?q=%s&amp;pn=%d&amp;mode=jisu" />
+            <item key="CollTags" value="div" />
+            <item key="ItemFlag1" value="g-card" />
+            <item key="ItemFlag2" value="res-list" />
+            <item key="FindUrlFlag1" value="&lt;cite" />
+            <item key="FindUrlFlag2" value="&gt;" />
+            <item key="FindUrlFlag3" value="&lt;/cite&gt;" />
+            <item key="TargetMarkWeb" value=".china.cn/pic," />
+            <item key="TargetKey" value="²é¿´ÏêÇé," />
+            <item key="TargetPreLen" value="250," />
+            <item key="TargetLastLen" value="" />
+            <item key="TargetStart" value="href=," />
+            <item key="TargetEnd" value='&quot;,' />
+            <item key="BtnId" value="type=submit" />
+            <item key="GetUrlFlag1" value="href=" />
+            <item key="GetUrlFlag2" value='&quot;' />
+            <item key="JudgeHtmlTag" value="html" />
+            <item key="ItemLocationTitle" value="2,div,0,class,res-list;0,a,0,0,0" />
+            <item key="ItemtargetTitle" value="1,href" />
+            <item key="ItemLocationLink" value="0,cite,0,0,0" />
+            <item key="ItemtargetLink" value="0,0" />
+            <item key="SaveHtmlName" value="_PHONE360.html" />
+            <item key="" value="" />
+        </section>
+        <!-- Î¢ÐÅ -->
+        <section name="Engine8">
+            <item key="JumpUrl" value="http://weixin.sogou.com/weixin?type=2&amp;query=%s" />
+            <item key="CollTags" value="li" />
+            <item key="ItemFlag1" value="txt-box" />
+            <item key="ItemFlag2" value="wx-rb3" />
+            <item key="FindUrlFlag1" value="title=" />
+            <item key="FindUrlFlag2" value='&quot;' />
+            <item key="BtnId" value="weixin_search_button_pc_art" />
+            <item key="GetUrlFlag1" value="href=" />
+            <item key="GetUrlFlag2" value='&quot;' />
+            <item key="JudgeHtmlTag" value="html" />
+            <item key="ItemLocationTitle" value="2,div,0,class,res-list;0,a,0,0,0" />
+            <item key="ItemtargetTitle" value="1,href" />
+            <item key="ItemLocationLink" value="0,cite,0,0,0" />
+            <item key="ItemtargetLink" value="0,0" />
+            <item key="SaveHtmlName" value="_WEIXIN.html" />
+            <item key="" value="" />
+        </section>
+    </module>
+</root>
+      

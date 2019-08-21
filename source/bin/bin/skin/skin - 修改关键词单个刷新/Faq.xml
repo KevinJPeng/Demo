@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="900,600" sizebox="4,4,6,6" caption="0,0,0,120" roundcorner="4,4" maxinfo="900,600" mininfo="900,600"  bkcolor="#ffffffff" > 
+<HorizontalLayout bkcolor="##ffffffff" >
+	<ActiveX name="iectrl_1" clsid="{8856F961-340A-11D0-A96B-00C04FD705A2}" delaycreate="false" />
+</HorizontalLayout>	
+	<!--所有内容结束-->	
+</Window>

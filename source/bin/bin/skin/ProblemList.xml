@@ -1,0 +1,6 @@
+<root>
+   <item index = "1" problem = "检测客户端的系统依赖文件是否缺失"/>	
+   <item index = "2" problem = "检测浏览器插件是否正常" />
+   <item index = "3" problem = "检测系统时间是否正常"/>
+   <item index = "4" problem = "检测客户端版本是否最新" />
+</root>

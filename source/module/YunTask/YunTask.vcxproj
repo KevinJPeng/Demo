@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{953CE3E1-8E83-4DEB-A44B-DAB149A470BA}</ProjectGuid>
+    <RootNamespace>YunTask</RootNamespace>
+    <Keyword>MFCDLLProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\..\common;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\..\common;..\..\3rdparty\oss-c-sdk\include;..\..\3rdparty\oss-c-sdk\include\apr;..\..\3rdparty\oss-c-sdk\include\aprutil;..\..\3rdparty\oss-c-sdk\include\curl;..\..\3rdparty\oss-c-sdk\include\mxml;..\..\3rdparty\oss-c-sdk\include\sdk;$(IncludePath)</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSdk_71A_LibraryPath_x86);..\..\lib</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>.\YunTask.def</ModuleDefinitionFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <AdditionalIncludeDirectories>..\..\3rdparty;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>.\YunTask.def</ModuleDefinitionFile>
+      <IgnoreSpecificDefaultLibraries>libcmtd.lib;libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <AdditionalLibraryDirectories>..\..\3rdparty\oss-c-sdk\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libapr-1.lib;libaprutil-1.lib;curl.lib;mxml1.lib;oss_c_sdk.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "..\..\bin\bin\$(TargetFileName)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\3rdparty\json_cpp\json_reader.cpp" />
+    <ClCompile Include="..\..\3rdparty\json_cpp\json_value.cpp" />
+    <ClCompile Include="..\..\3rdparty\json_cpp\json_writer.cpp" />
+    <ClCompile Include="..\..\common\CommFunc.cpp" />
+    <ClCompile Include="..\..\common\Directory.cpp" />
+    <ClCompile Include="..\..\common\FileReadAndSave.cpp" />
+    <ClCompile Include="..\..\common\FTP.cpp" />
+    <ClCompile Include="..\..\common\FtpSocket.cpp" />
+    <ClCompile Include="..\..\common\HttpUtils.cpp" />
+    <ClCompile Include="..\..\common\IKeyRW.cpp" />
+    <ClCompile Include="..\..\common\IniFile.cpp" />
+    <ClCompile Include="..\..\common\IXMLRW.cpp" />
+    <ClCompile Include="..\..\common\Lock.cpp" />
+    <ClCompile Include="..\..\common\Ping.cpp" />
+    <ClCompile Include="..\..\common\Reg.cpp" />
+    <ClCompile Include="..\..\common\SQLiteOperate.cpp" />
+    <ClCompile Include="..\..\common\SQLiteWrapper.cpp" />
+    <ClCompile Include="..\..\common\StdStrUtils.cpp" />
+    <ClCompile Include="..\..\common\Timer.cpp" />
+    <ClCompile Include="..\..\common\Trace.cpp" />
+    <ClCompile Include="..\..\threadmodel\IMsgQueue.cpp" />
+    <ClCompile Include="..\..\threadmodel\IThreadManage.cpp" />
+    <ClCompile Include="..\..\threadmodel\IThreadUnit.cpp" />
+    <ClCompile Include="..\..\threadmodel\MsgQueue.cpp" />
+    <ClCompile Include="..\..\threadmodel\ThreadManage.cpp" />
+    <ClCompile Include="..\..\threadmodel\UiHelper.cpp" />
+    <ClCompile Include="ALiOssApi.cpp" />
+    <ClCompile Include="InternetHttp.cpp" />
+    <ClCompile Include="TaskFactory.cpp" />
+    <ClCompile Include="TaskGeneral.cpp" />
+    <ClCompile Include="TaskInfo.cpp" />
+    <ClCompile Include="TaskQuickPhoto.cpp" />
+    <ClCompile Include="CommClient.cpp" />
+    <ClCompile Include="TaskBase.cpp" />
+    <ClCompile Include="TaskThread.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TaskMgr.cpp" />
+    <ClCompile Include="UploadFileUseUdp.cpp" />
+    <ClCompile Include="YunTask.cpp" />
+    <ClCompile Include="YunTaskStreamCtr.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\common\CommFunc.h" />
+    <ClInclude Include="..\..\common\Directory.h" />
+    <ClInclude Include="..\..\common\FileReadAndSave.h" />
+    <ClInclude Include="..\..\common\FTP.h" />
+    <ClInclude Include="..\..\common\FtpSocket.h" />
+    <ClInclude Include="..\..\common\HttpUtils.h" />
+    <ClInclude Include="..\..\common\IniFile.h" />
+    <ClInclude Include="..\..\common\IXMLRW.h" />
+    <ClInclude Include="..\..\common\Lock.h" />
+    <ClInclude Include="..\..\common\Ping.h" />
+    <ClInclude Include="..\..\common\Reg.h" />
+    <ClInclude Include="..\..\common\ServerData.h" />
+    <ClInclude Include="..\..\common\SQLiteOperate.h" />
+    <ClInclude Include="..\..\common\SQLiteWrapper.h" />
+    <ClInclude Include="..\..\common\StdStrUtils.h" />
+    <ClInclude Include="..\..\common\tinystr.h" />
+    <ClInclude Include="..\..\common\tinyxml.h" />
+    <ClInclude Include="..\..\common\Trace.h" />
+    <ClInclude Include="..\..\common\ZipFunction.h" />
+    <ClInclude Include="..\..\threadmodel\IMsgQueue.h" />
+    <ClInclude Include="..\..\threadmodel\IThreadManage.h" />
+    <ClInclude Include="..\..\threadmodel\IThreadUnit.h" />
+    <ClInclude Include="..\..\threadmodel\MsgDef.h" />
+    <ClInclude Include="..\..\threadmodel\MsgQueue.h" />
+    <ClInclude Include="..\..\threadmodel\ThreadManage.h" />
+    <ClInclude Include="..\..\threadmodel\UiHelper.h" />
+    <ClInclude Include="..\Schedule\Timer.h" />
+    <ClInclude Include="ALiOssApi.h" />
+    <ClInclude Include="InternetHttp.h" />
+    <ClInclude Include="TaskFactory.h" />
+    <ClInclude Include="TaskGeneral.h" />
+    <ClInclude Include="TaskQuickPhoto.h" />
+    <ClInclude Include="CommClient.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="TaskBase.h" />
+    <ClInclude Include="TaskThread.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TaskInfo.h" />
+    <ClInclude Include="TaskMgr.h" />
+    <ClInclude Include="UploadFileUseUdp.h" />
+    <ClInclude Include="YunTask.h" />
+    <ClInclude Include="YunTaskStreamCtr.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\YunTask.rc2" />
+    <None Include="YunTask.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="YunTask.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

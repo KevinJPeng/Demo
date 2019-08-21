@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="900,600" sizebox="4,4,6,6" caption="0,0,0,120" roundcorner="4,4" maxinfo="900,600" mininfo="900,600"  > 
+	<Font name="宋体" size="12" />
+	<Font name="微软雅黑" size="12" bold="true" />
+	<!--内容开始-->
+  	<VerticalLayout name="layout" pos="0,0,900,600" width="900" height="600" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#dddddddd" >	
+	
+	<!--二级菜单开始-->
+		<HorizontalLayout name="navlayout" float="true" pos="1,0,899,30" height="30" bkcolor="#f2f2f2f2" bkcolor2="#eaeaeaea"  bordersize="0,0,0,1" bordercolor="#ffd3d4d4" />
+	
+	<!--主要内容开始-->
+	
+	<!--填写关键词部分-->
+		<HorizontalLayout name="analysisLayout" float="true" pos="0,30,900,200" >
+		
+			
+			<VerticalLayout float="true" pos="20,80,280,110">
+				<Text text="<c #ff0000>*</c>主关键词：" textcolor="#ff555555" float="true" pos="0,0,80,25"  textpadding="0,4,0,0" showhtml="true" align="left"/>
+			 	<Edit name="word1" float="true" pos="80,0,260,25" height="20"  width="180" text=""  align="left" bordersize="0,0,0,1" bordercolor="#dddddddd" textcolor="#ff047eda" endellipsis="true" font="1" />
+			</VerticalLayout>
+			
+			<VerticalLayout float="true" pos="310,80,570,110">
+				<Text text="<c #ff0000>*</c>公司简称：" textcolor="#ff555555" float="true" pos="0,0,80,20"  textpadding="0,4,0,0" showhtml="true" align="left"/>
+			 	<Edit name="word2" float="true" pos="80,0,260,25" height="20"  width="180" text=""  align="left" bordersize="0,0,0,1" bordercolor="#dddddddd" textcolor="#ff047eda" endellipsis="true" font="1"/>
+			</VerticalLayout>
+			
+			<VerticalLayout float="true" pos="600,80,860,110">
+				<Text text="所在省份：" textcolor="#ff555555" float="true" pos="0,0,80,20"  textpadding="0,4,0,0" showhtml="true" align="left"/>
+			 	<Edit name="word3" float="true" pos="80,0,260,25" height="20"  width="180" text="" endellipsis="true" align="left" bordersize="0,0,0,1" bordercolor="#dddddddd" textcolor="#ff047eda" font="1" />
+			</VerticalLayout>
+			
+			<VerticalLayout float="true" pos="20,130,280,160">
+				<Text text="所在城市：" textcolor="#ff555555" float="true" pos="0,0,80,20"  textpadding="0,4,0,0" showhtml="true" align="left"/>
+			 	<Edit name="word4" float="true" pos="80,0,260,25" height="20"  width="180" text="" align="left" bordersize="0,0,0,1" bordercolor="#dddddddd" endellipsis="true" textcolor="#ff047eda" font="1"/>
+			</VerticalLayout>
+			
+			<VerticalLayout float="true" pos="310,130,570,160">
+				<Text text="<c #ff0000>*</c>产品品牌：" textcolor="#ff555555" float="true" pos="0,0,80,20"  textpadding="0,4,0,0" showhtml="true" align="left"/>
+			 	<Edit name="word5" float="true" pos="80,0,260,25" height="20"  width="180" text="" endellipsis="true" align="left" bordersize="0,0,0,1" bordercolor="#dddddddd"  textcolor="#ff047eda" font="1"/>
+			</VerticalLayout>
+			
+			<VerticalLayout float="true" pos="600,130,860,160">
+				<Text text="<c #ff0000>*</c>产品材质：" textcolor="#ff555555" float="true" pos="0,0,80,20"  textpadding="0,4,0,0" showhtml="true" align="left"/>
+			 	<Edit name="word6" float="true" pos="80,0,260,25" height="20"  width="180" text="" endellipsis="true"  align="left" bordersize="0,0,0,1" bordercolor="#dddddddd"  textcolor="#ff047eda" font="1"/>
+			</VerticalLayout>
+				<Button name="btn_search_anysis" tooltip="分析关键词" float="true" pos="18,20,146,62" width="128" height="42"  normalimage=" file='images\search.gif' " hotimage=" file='images\search2.gif' " />
+			<Label  name="lable_aynsis_tips" text="请填写以下信息（*为必填），然后点此按钮进行关键词分析" float="true" pos="160,30,500,50"  textcolor="#ffc2c1c1" />
+			<ButtonGif name="btn_aynsis_loading"   tooltip="正在查询稍后..." float="true" pos="20,20,52,62" height="32" width="32"   textcolor="#ff057fdb"  NormalGifFile="images\running.gif"  visible="false" />
+			<Label  name="lable_aynsis_running" pos="18,15,400,47" float="true" text="正在查询请稍后..." textcolor="#ffc2c1c1" textpadding="45,5,0,0" visible="false" />		
+			<Button name="btn_aynsis_cancel"  text="取 消" align="center" textcolor="#ff333333" float="true" pos="780,20,851,47" width="71" height="27"  normalimage=" file='images\btn.gif' " hotimage=" file='images\btn2.gif' " visible="false" />
+			<Label name="anysis_error" text="" float="true" pos="510,35,600,50" textcolor="#ffff0000"   showhtml="true" />
+		</HorizontalLayout>
+		
+		
+		
+		
+
+	<!--关键词分析结果-->
+		<HorizontalLayout name="analysisResult"  float="true" pos="20,220,860,450"   vscrollbar="true">
+			
+			<List name="analysisResultView"  vscrollbar="true"   bordersize="1"  itemtextcolor="#ff1e8a37" itemalign="center" bordercolor="#dddddddd"   font="4">
+				<ListHeader height="30"  menu="true"  bordersize="1"  bordercolor="#dddddddd">
+					<ListHeaderItem text="<b>关键词</b>" width="210" sepwidth="4" bordersize="1,0,0,0" bordercolor="#dddddddd" textcolor="#ff999999" showhtml="true"   textpadding="0,5,0,0"/>			
+					<!--<ListHeaderItem text="<b>百度收录量</b>" width="168" sepwidth="4" bordersize="1,0,0,0" bordercolor="#dddddddd" textcolor="#ff999999" showhtml="true"  />-->		
+					<ListHeaderItem text="<b>相关搜索条目</b>" width="210" sepwidth="4" bordersize="1,0,0,0" bordercolor="#dddddddd" textcolor="#ff999999"  showhtml="true" />			
+					<ListHeaderItem text="<b>同行竞争度</b>" width="210" sepwidth="4" bordersize="1,0,0,0" bordercolor="#dddddddd" textcolor="#ff999999" showhtml="true" />		
+					<ListHeaderItem text="<b>推广难度</b>" width="210" sepwidth="4" bordersize="1,0,0,0" bordercolor="#dddddddd" textcolor="#ff999999" showhtml="true" />					
+				</ListHeader>
+				 
+				
+				
+
+			</List>
+
+			
+			
+			
+	
+		
+	
+	
+	
+	
+		</HorizontalLayout>
+
+	<!--中间主体内容结束-->
+  </VerticalLayout>
+	<!--所有内容结束-->	
+</Window>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="370,200" sizebox="4,4,6,6" caption="0,0,0,100" mininfo="370,200" maxinfo="370,200"> <Font name="微软雅黑" size="12" bold="true" italic="false" /> <Font name="SimSun" size="12" bold="true" italic="false" />
+  <VerticalLayout name="login" pos="0,0,370,300" width="370"  bkimage=""  bkcolor="#FFFFFFFF"  bordersize="1" bordercolor="#dddddddd">
+    <!-- 头部内容-->
+    <HorizontalLayout name="text_versions" float="true" pos="0,0,370,30" bkcolor="#FF048ede">
+      <!-- 头部标题-->
+      <VerticalLayout name="login_versions" pos="0,0,300,30" width="300" height="30">
+        <Text name="text_versions"mouse="false" text="{b}舟大师错误提示{/b}" float="true" pos="10,5,180,25" textpadding="0,5,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" showhtml="true" align="wrap" />
+      </VerticalLayout>
+      <!-- 头部关闭按钮-->
+      <VerticalLayout name="login_close" float="true" pos="330,1,365,23" padding="0,0,0,5">
+        <Button name="closebtn" tooltip="关闭" pos="0,0,35,23" width="35" height="23" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage=" file='images\close2.png' " hotimage=" file='images\close2.png' " pushedimage=" file='images\close3.png' "/>
+      </VerticalLayout>
+    </HorizontalLayout>
+    <!-- 登录账户密码内容-->
+	
+	
+    <HorizontalLayout name="warning" float="true" pos="0,30,370,200">
+	
+		<VerticalLayout  name="logo" float="true" pos="155,10,215,70" >
+			<Control bkimage=" file='images\alert.jpg' " tooltip="" height="60" />
+		</VerticalLayout>
+     
+	 	  <Text name="text_versions" text="网络连接超时，请检查您的网络或者本机防火墙设置！" height="30" align="center" textcolor="#ff333333" pos="30,80,340,120" float="true" />
+		  
+		  
+		<HorizontalLayout name="" float="true" pos="1,130,369,169" bkcolor="#fff1f1f1">
+      <Button name="button_ok" tooltip="" float="true" pos="260,5,349,34"  text="确定" height="29" width="89" textcolor="#FFFFFFFF"  align="center" normalimage=" file='images\btn_login.gif' " hotimage=" file='images\btn_login2.gif' "  />
+    </HorizontalLayout>
+	 
+    </HorizontalLayout>
+
+
+   
+  </VerticalLayout>
+</Window>

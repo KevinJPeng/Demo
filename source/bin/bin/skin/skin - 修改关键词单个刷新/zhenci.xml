@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="312,205" caption="0,0,0,205" mininfo="312,205" maxinfo="312,205" >
+    <VerticalLayout width="312" height="205"  bkcolor="#FFFFFFFF"  bordersize="1" bordercolor="#EEEEEEEE">
+        <HorizontalLayout name="push_head" width="312" height="30"  bkcolor="#FF1D92E1">
+            <Button name="closebtn" tooltip="关闭" float="true" pos="9,7,0,0" width="14" height="13" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="images\closezhenci.png" />
+            <Text text="舟大师" float="true" pos="29,7,0,0" width="43" height="14" textpadding="2,0,2,0" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" align="wrap" />
+        </HorizontalLayout>
+        <HorizontalLayout name="pushinfo" height="175">
+            <WebBrowser name="webxxx" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

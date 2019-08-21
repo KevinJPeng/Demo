@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="470,325" caption="0,0,0,325" mininfo="470,325" maxinfo="470,325">
+    <Font name="微软雅黑" size="12" bold="true" italic="false" />
+    <Font name="SimSun" size="12" bold="true" italic="false" />
+    <VerticalLayout name="update" bordersize="1" width="470" height="325" bkcolor="#FFFFFFFF" bordercolor="#DDDDDDDD" mouse="false">
+        <HorizontalLayout name="update_head" width="470" height="29" bkimage=" file=&apos;images\update_head.gif&apos; ">
+            <VerticalLayout name="update_logo" float="true" pos="5,3,0,0" width="185" height="22">
+                <Control name="logo" width="22" height="22" bkimage=" file=&apos;images\logo_s.png&apos; " />
+                <Text name="text_versions" mouse="false" text="舟大师升级提示" float="true" pos="35,5,0,0" width="145" height="15" textpadding="2,0,2,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="wrap" />
+            </VerticalLayout>
+            <VerticalLayout name="update_close" float="true" pos="430,0,0,0" width="35" height="23" padding="0,0,0,5">
+                <Button name="btn_close" tooltip="关闭" width="35" height="23" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage=" file=&apos;images\close.png&apos; " hotimage=" file=&apos;images\close2.png&apos; " pushedimage=" file=&apos;images\close3.png&apos; " />
+            </VerticalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout name="update_content" float="true" pos="1,30,0,0" width="468" height="225" bkimage="file=&apos;images\update_success3.gif&apos; ">
+            <Button name="reload" text="{b}立即重启{/b}" tooltip="立即重启" float="true" pos="160,140,0,0" width="115" height="35" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" font="1" showhtml="true" align="center" normalimage=" file=&apos;images\clear_btn.gif&apos; " hotimage=" file=&apos;images\clear_btn2.gif&apos; " />
+        </HorizontalLayout>
+        <HorizontalLayout float="true" pos="150,270,470,286" width="320" height="16">
+            <Text name="text_tips" text="请先关闭舟大师浏览器页面！" width="320" height="12" textpadding="2,0,2,0" textcolor="#00FF0000" disabledtextcolor="#FFA7A6AA" align="wrap" />
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

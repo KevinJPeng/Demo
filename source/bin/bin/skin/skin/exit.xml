@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="320,165" sizebox="4,4,6,6" caption="0,0,0,165" mininfo="320,165" maxinfo="320,165">
+    <Font name="微软雅黑" size="13" bold="true"  />
+    <Font name="" size="14" bold="true" italic="false" />
+      <VerticalLayout name="pushbox" width="320" height="165" bkcolor="#FFFFFFFF"  bordersize="1" bordercolor="#EEEEEEEE"  >
+        <HorizontalLayout name="push_head" pos="0,0,320,30" width="320" height="30"  bkcolor="#ff1e98e1" >
+            <VerticalLayout name="push_top" pos="0,0,0,30" height="30">
+                <Control name="logo" float="true" pos="5,6,21,22" width="16" height="16" bkimage="file='images\new_logo.png'" />
+                <Text name="push_theme" mouse="false" text="舟大师提示" float="true" pos="28,9,200,21" textpadding="2,0,2,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="wrap" />
+            </VerticalLayout>
+			<VerticalLayout name="push_close" float="true" pos="290,0,320,30">
+					<Button name="closebtn" tooltip="关闭" pos="0,0,30,30" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='images\close4.png'" hotimage="file='images\close5.png'" pushedimage="file='images\close6.png'" />
+				</VerticalLayout>
+        </HorizontalLayout>
+		
+        <HorizontalLayout name="pushinfo" height="95">
+				
+				<VerticalLayout name="" float="true" pos="30,28,60,60" width="30" height="30" bkimage=" file='images\warning.png' " />
+				
+				<Text name="" mouse="false" text="<f 0>客户端退出后将无法继续跟踪关键词排名，您确定要退出吗？</f>" float="true" pos="70,25,290,75" textpadding="2,0,2,0" textcolor="#FFbb8c33" showhtml="true"   />
+		
+        </HorizontalLayout>
+        
+           <HorizontalLayout name="push_foot"  height="30" width="318" bkcolor="#FFFFFFFF"   bordercolor="#FFEEEEEE" padding="1,0,1,5" >
+            <VerticalLayout name="VerticalLayoutUI1" >
+			    	<Button name="btn_exit"  text="继续退出" align="center" textcolor="#ff999999" float="true" pos="150,5,220,30" width="71" height="25"  normalimage=" file='images\btn.gif' " hotimage=" file='images\btn2.gif' "/>
+					<Button name="btn_back" text="取消返回"  textcolor="#ffffffff" disabledtextcolor="#FFA7A6AA" align="center" pos="235,5,305,30" float="true" bkcolor="#ff1e98e1" roundcorner="5,5" />	
+            </VerticalLayout>
+          </HorizontalLayout>
+    </VerticalLayout>
+</Window>

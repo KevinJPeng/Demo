@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+<title>弹出层</title>
+<style>
+body{ margin:0 auto;}
+div,form,input,img,ul,li,dl,dt,dd,p{margin: 0; padding: 0; border: 0;}
+ul,dl{list-style-type:none;}
+h1,h2,h3,h4,h5,h6 {margin:0; padding:0;font-weight:normal;}
+a,a:hover{ text-decoration:none;}
+.box{
+    width: 310px;
+    font-family: "微软雅黑";
+    margin: 0 auto;
+}
+.close{
+    padding: 8px 6px 8px 10px;
+    display: block;
+    float: left;    
+}
+.box_nr{
+    padding: 15px 15px 8px 15px;
+}
+.box_nr span{
+    text-align: center;
+    display: block;
+    font-size: 16px;
+}
+.box_nr p{
+    height: 71px;
+    text-indent: 2em;
+    font-size: 12px;
+    line-height: 18px;
+    color: #5c5c5c;
+    padding-top: 10px;
+}
+.box_nr a{
+    font-size: 12px;
+    color: #006bbb;
+    text-align: right;;
+    display: block;
+}
+.box_nr a:hover{
+    color: #015187;
+}
+.box_foot{
+    border-top: 1px solid #e7e5e6;
+    height: 30px;
+    line-height: 30px;
+}
+.box_foot p{
+    padding-right: 20px;
+    float: right;    
+}
+.box_foot a{
+    font-size: 12px;
+    color: #006bbb;
+}
+.box_foot a:hover{
+    color: #015187;
+}
+</style>
+</head>
+
+<body scroll="no">
+    <div class="box">
+     <div class="box_nr">
+     <span>#Title#</span>
+     <p>#Content#</p>
+     <a href="#DetailURL#" target="_blank">点击了解详情>></a>
+     </div>
+     <div class="box_foot"><p><a href="#ViewURL#" target="_blank"><span class="close"><img src="images/see.png"></span>查看</a></p></div>
+</body>
+</html>

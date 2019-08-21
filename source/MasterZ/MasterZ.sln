@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UpdateOL", "..\module\UpdateOL\UpdateOL.vcxproj", "{739F0603-250F-482A-9C52-3FE9D1338CEE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MasterZ", "MasterZ\MasterZ.vcxproj", "{CB4471DA-09B3-4271-9DE9-BB015B30DB07}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataExchange", "..\module\DataExchange\DataExchange.vcxproj", "{1DF3BFB1-D246-4FD1-AC69-7C6EE69B34B2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExTool", "..\module\ExTool\ExTool.vcxproj", "{D8EBA709-C1B1-4691-9DBF-FB5D6A2D10FD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "..\module\Utility\Utility.vcxproj", "{6CACC145-CDEB-42E4-86D6-F8B048FC5743}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "YunTask", "..\module\YunTask\YunTask.vcxproj", "{953CE3E1-8E83-4DEB-A44B-DAB149A470BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{739F0603-250F-482A-9C52-3FE9D1338CEE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{739F0603-250F-482A-9C52-3FE9D1338CEE}.Debug|Win32.Build.0 = Debug|Win32
+		{739F0603-250F-482A-9C52-3FE9D1338CEE}.Release|Win32.ActiveCfg = Release|Win32
+		{739F0603-250F-482A-9C52-3FE9D1338CEE}.Release|Win32.Build.0 = Release|Win32
+		{CB4471DA-09B3-4271-9DE9-BB015B30DB07}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CB4471DA-09B3-4271-9DE9-BB015B30DB07}.Debug|Win32.Build.0 = Debug|Win32
+		{CB4471DA-09B3-4271-9DE9-BB015B30DB07}.Release|Win32.ActiveCfg = Release|Win32
+		{CB4471DA-09B3-4271-9DE9-BB015B30DB07}.Release|Win32.Build.0 = Release|Win32
+		{1DF3BFB1-D246-4FD1-AC69-7C6EE69B34B2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1DF3BFB1-D246-4FD1-AC69-7C6EE69B34B2}.Debug|Win32.Build.0 = Debug|Win32
+		{1DF3BFB1-D246-4FD1-AC69-7C6EE69B34B2}.Release|Win32.ActiveCfg = Release|Win32
+		{1DF3BFB1-D246-4FD1-AC69-7C6EE69B34B2}.Release|Win32.Build.0 = Release|Win32
+		{D8EBA709-C1B1-4691-9DBF-FB5D6A2D10FD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D8EBA709-C1B1-4691-9DBF-FB5D6A2D10FD}.Debug|Win32.Build.0 = Debug|Win32
+		{D8EBA709-C1B1-4691-9DBF-FB5D6A2D10FD}.Release|Win32.ActiveCfg = Release|Win32
+		{D8EBA709-C1B1-4691-9DBF-FB5D6A2D10FD}.Release|Win32.Build.0 = Release|Win32
+		{6CACC145-CDEB-42E4-86D6-F8B048FC5743}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6CACC145-CDEB-42E4-86D6-F8B048FC5743}.Debug|Win32.Build.0 = Debug|Win32
+		{6CACC145-CDEB-42E4-86D6-F8B048FC5743}.Release|Win32.ActiveCfg = Release|Win32
+		{6CACC145-CDEB-42E4-86D6-F8B048FC5743}.Release|Win32.Build.0 = Release|Win32
+		{953CE3E1-8E83-4DEB-A44B-DAB149A470BA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{953CE3E1-8E83-4DEB-A44B-DAB149A470BA}.Debug|Win32.Build.0 = Debug|Win32
+		{953CE3E1-8E83-4DEB-A44B-DAB149A470BA}.Release|Win32.ActiveCfg = Release|Win32
+		{953CE3E1-8E83-4DEB-A44B-DAB149A470BA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

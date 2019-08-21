@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="320,215" sizebox="4,4,6,6" caption="0,0,0,215" mininfo="320,215" maxinfo="320,215">
+    <Font name="微软雅黑" size="12" bold="true" italic="false" />
+    <Font name="" size="14" bold="true" italic="false" />
+      <VerticalLayout name="pushbox" width="320" height="215" bkcolor="#FFFFFFFF"  bordersize="1" bordercolor="#EEEEEEEE"  >
+        <HorizontalLayout name="push_head" pos="0,0,320,30" width="320" height="30" bkcolor="#FFFF0000" >
+            <VerticalLayout name="push_top" pos="0,0,0,30" height="30">
+                <Control name="logo" float="true" pos="5,6,21,22" width="16" height="16" bkimage="file='images\new_logo.png'" />
+                <Text name="push_theme" mouse="false" text="系统推送消息" float="true" pos="28,9,200,21" textpadding="2,0,2,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="wrap" />
+            </VerticalLayout>
+			<VerticalLayout name="push_close" float="true" pos="290,0,320,30">
+					<Button name="closebtn" tooltip="关闭" pos="0,0,30,30" width="30" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file='images\close4.png'" hotimage="file='images\close5.png'" pushedimage="file='images\close6.png'" />
+				</VerticalLayout>
+        </HorizontalLayout>
+		
+        <HorizontalLayout name="pushinfo" height="150">
+						<WebBrowser name="iexxx" clsid="{8856F961-340A-11D0-A96B-00C04FD705A2}" delaycreate="false" />
+        </HorizontalLayout>
+        
+           <HorizontalLayout name="push_foot"  height="35" bkcolor="#FFFFFFFF"  bordersize="1"  bordercolor="#FFEEEEEE" >
+            <VerticalLayout name="VerticalLayoutUI1" >
+			    <Button name="btn_link" text="查看详情"  textcolor="#ffffffff" disabledtextcolor="#FFA7A6AA" align="center" pos="222,5,310,30" float="true" bkcolor="#FFFF0000" roundcorner="5,5" />
+            </VerticalLayout>
+          </HorizontalLayout>
+    </VerticalLayout>
+</Window>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="500,440" sizebox="0,0,0,0" caption="0,0,0,23" maxinfo="500,440" mininfo="500,440" >
+  <Font name="微软雅黑" size="12" bold="true" />
+  <Font name="微软雅黑" size="17" bold="true"/>
+  
+  <Default name="VScrollBar" value="button1normalimage=&quot;file='images/scrollbar.bmp' source='0,90,16,106' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='images/scrollbar.bmp' source='18,90,34,106' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='images/scrollbar.bmp' source='36,90,52,106' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='images/scrollbar.bmp' source='54,90,70,106' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='images/scrollbar.bmp' source='0,108,16,124' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='images/scrollbar.bmp' source='18,108,34,124' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='images/scrollbar.bmp' source='36,108,52,124' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='images/scrollbar.bmp' source='54,108,70,124' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='images/scrollbar.bmp' source='0,126,16,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='images/scrollbar.bmp' source='18,126,34,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='images/scrollbar.bmp' source='36,126,52,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='images/scrollbar.bmp' source='54,126,70,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='images/scrollbar.bmp' source='0,144,16,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='images/scrollbar.bmp' source='18,144,34,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='images/scrollbar.bmp' source='36,144,52,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='images/scrollbar.bmp' source='54,144,70,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='images/scrollbar.bmp' source='0,162,16,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='images/scrollbar.bmp' source='18,162,34,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='images/scrollbar.bmp' source='36,162,52,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='images/scrollbar.bmp' source='54,162,70,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+	<Default name="HScrollBar" value="button1normalimage=&quot;file='images/scrollbar.bmp' source='0,0,16,16' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='images/scrollbar.bmp' source='18,0,34,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='images/scrollbar.bmp' source='36,0,52,16' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='images/scrollbar.bmp' source='54,0,70,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='images/scrollbar.bmp' source='0,18,16,34' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='images/scrollbar.bmp' source='18,18,34,34' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='images/scrollbar.bmp' source='36,18,52,34' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='images/scrollbar.bmp' source='54,18,70,34' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='images/scrollbar.bmp' source='0,36,16,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='images/scrollbar.bmp' source='18,36,34,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='images/scrollbar.bmp' source='36,36,52,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='images/scrollbar.bmp' source='54,36,70,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='images/scrollbar.bmp' source='0,54,16,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='images/scrollbar.bmp' source='18,54,34,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='images/scrollbar.bmp' source='36,54,52,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='images/scrollbar.bmp' source='54,54,70,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='images/scrollbar.bmp' source='0,72,16,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='images/scrollbar.bmp' source='18,72,34,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='images/scrollbar.bmp' source='36,72,52,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='images/scrollbar.bmp' source='54,72,70,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+	
+  <VerticalLayout name="update" pos="0,0,500,440" width="500" height="440" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="#dddddddd">
+    <!-- 头部内容-->
+    <HorizontalLayout name="update_head" pos="0,0,440,29" width="500" height="29" bkimage=" file='images\update_head.gif' ">
+      <!-- 头部标题-->
+      <VerticalLayout name="update_logo" float="true" pos="5,3,190,25">
+        <Text name="text_versions" mouse="false" text="舟大师诊断工具" float="true" pos="10,5,180,20" textcolor="#ffffffff" />
+      </VerticalLayout>
+      <!-- 头部关闭按钮-->
+      <VerticalLayout name="update_close" float="true" pos="465,0,500,23" width="35" height="23" padding="0,0,0,5" >
+        <Button name="btn_cancle" tooltip="关闭" width="35" height="23"  normalimage=" file='images\close.png' " hotimage=" file='images\close2.png' " pushedimage=" file='images\close3.png' " />
+      </VerticalLayout>
+    </HorizontalLayout>
+			
+		<HorizontalLayout name="initial_section" float="true" pos="1,30,500,140">
+	 		<ButtonGif  name = "btn_checkrunning" float="true" pos="30,25,62,57" width="32" height="32"  NormalGifFile="images\running.gif" visible = "false"/> 
+			<Text name="text_running" text="舟大师正在为您进行问题诊断，请稍后！" textcolor="#ff212121" float="true" pos="80,30,400,60" height="30" font= "1" visible = "false"/>
+			<Button name="repairimage" float="true" pos="20,15,80,65" width="60" height="60"  bkimage="file='images\repair.png' " mouse="false"/>
+			<Text name="text_initial" text="为了更好的使用舟大师客户端，建议您进行一次全面的诊断！" textcolor="#ff212121" float="true" pos="90,18,400,68" height="50" font= "1" visible = "true"/>		
+     <Button name="btn_check" tooltip="开始诊断" float="true" pos="410,70,489,99" text="开始诊断" height="29" width="79" textcolor="#FFFFFFFF"  align="center" normalimage=" file='images\btn_login.gif' " hotimage=" file='images\btn_login2.gif' " disabledimage= " file='images\btn_login3.gif' " /> 
+     <Button name="btn_repairall" tooltip="一键修复" float="true" pos="320,70,399,99" text="一键修复" height="29" width="79" textcolor="#FFFFFFFF"  align="center" normalimage=" file='images\btn_login.gif' " hotimage=" file='images\btn_login2.gif' " disabledimage= " file='images\btn_login3.gif' "  visible = "false"/> 
+     </HorizontalLayout>
+      
+		  <HorizontalLayout name="list_header" float="true" pos="1,140,500,180" bkcolor="#FFEEEEEE">
+            <Label name="3" text="诊断项"  width="450" bordercolor="#DDDDDDDD" textpadding="15,8,0,0" textcolor="#FF333333" disabledtextcolor="#FFA7A6AA" showhtml="true" />
+            <Label name="4" text="诊断结果"  width="50" bordercolor="#DDDDDDDD" textpadding="-25,8,0,0" textcolor="#FF333333" disabledtextcolor="#FFA7A6AA"  showhtml="true" />
+      </HorizontalLayout>
+		
+		<!--0-->
+		<VerticalLayout  name="mianlist"  float="true" pos="0,180,500,440" vscrollbar="true">
+	  <!--<HorizontalLayout height="65" width="500" bordersize="1" bordercolor="#ffeeeeee" padding="0,-1,0,0">
+	   <VerticalLayout height="65" width="500">
+		 <Text name="client_check0" text="检测客户端需要的系统库是否存在" textcolor="#ffa4a4a4" width="300" endellipsis="true" height="30" textpadding="15,15,0,0" />
+		 <Text name="pro_suggest0" text="建议:你目前缺少.dll,.dll.dll可以去网站上下载使用打算打算打算打算到打算打算打算打算到打算打算打算打算打算打算倒萨打算打算打" textcolor="#ffff0000" width="500" endellipsis="true" height="35" textpadding="15,2,0,0" visible="false"/>
+		</VerticalLayout>		
+		<Button name="check_state0" text="未诊断"  textcolor="#ffa4a4a4" float="true" pos="425,10,500,35" align="left" textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+	  
+	  <HorizontalLayout height="65" width="500" bordersize="1" bordercolor="#ffeeeeee" padding="0,-1,0,0" >
+	   <VerticalLayout height="65" width="500">
+		 <Text  name="client_check1"  text="检测服务器连接是否正常" textcolor="#ffa4a4a4" width="300" endellipsis="true" height="30" textpadding="15,15,0,0" />
+		 <Text name="pro_suggest1" text="建议:请检测网络状况" textcolor="#ffff0000"  width="500" endellipsis="true" height="35" textpadding="15,2,0,0" visible="false"/>
+		</VerticalLayout>		
+		<Button name="check_state1" text="未诊断" textcolor="#ffa4a4a4"  float="true" pos="425,10,500,35" align="left"  textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+
+	  <HorizontalLayout height="65" width="500" bordersize="1"  bordercolor="#ffeeeeee" padding="0,-1,0,0" >
+	   <VerticalLayout height="65" width="500">
+		 <Text name="client_check2" text="客户端时间检测"  textcolor="#ffa4a4a4" width="300" endellipsis="true" height="30" textpadding="15,15,0,0" />
+		 <Text name="pro_suggest2" text="建议:修改本地时间与北京时间一致" textcolor="#ffff0000" width="500" endellipsis="true" height="35" textpadding="15,2,0,0" visible="false"/>
+		</VerticalLayout>		
+		<Button name="check_state2" text="未诊断"  textcolor="#ffa4a4a4" float="true" pos="425,10,500,35" align="left" textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+	 
+	  <HorizontalLayout height="65" width="500" bordersize="1" bordercolor="#ffeeeeee" padding="0,-1,0,0" >
+	   <VerticalLayout height="65" width="500">
+		 <Text name="client_check3" text="新版本检测"  textcolor="#ffa4a4a4" width="300" endellipsis="true" height="30" textpadding="15,15,0,0" />
+		 <Text  name="pro_suggest3" text="建议:点击升级到最新版本" textcolor="#ffff0000" width="500" endellipsis="true" height="35" textpadding="15,2,0,0" visible="false"/>
+		</VerticalLayout>		
+		<Button name="check_state3" text="未诊断"  textcolor="#ffa4a4a4" float="true" pos="425,10,500,35" align="left"  textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+
+	  <HorizontalLayout height="65" width="500" bordersize="1" bordercolor="#ffeeeeee" padding="0,-1,0,0" >
+	   <VerticalLayout height="65" width="500">
+		 <Text name="client_check3" text="新版本检测"  textcolor="#ffa4a4a4" width="300" endellipsis="true" height="30" textpadding="15,15,0,0" />
+		 <Text  name="pro_suggest3" text="建议:点击升级到最新版本" textcolor="#ffff0000" width="500" endellipsis="true" height="35" textpadding="15,2,0,0" visible="false"/>
+		</VerticalLayout>		
+		<Button name="check_state3" text="未诊断"  textcolor="#ffa4a4a4" float="true" pos="425,10,500,35" align="left"  textpadding="5,2,0,0"/>
+	  </HorizontalLayout>
+	  
+	  <HorizontalLayout height="65" width="500" bordersize="1" bordercolor="#ffeeeeee" padding="0,-1,0,0" >
+	   <VerticalLayout height="65" width="500">
+		 <Text name="client_check3" text="新版本检测"  textcolor="#ffa4a4a4" width="300" endellipsis="true" height="30" textpadding="15,15,0,0" />
+		 <Text  name="pro_suggest3" text="建议:点击升级到最新版本" textcolor="#ffff0000" width="500" endellipsis="true" height="35" textpadding="15,2,0,0" visible="false"/>
+		</VerticalLayout>		
+		<Button name="check_state3" text="未诊断"  textcolor="#ffa4a4a4" float="true" pos="425,10,500,35" align="left"  textpadding="5,2,0,0"/>
+	  </HorizontalLayout>-->
+	  
+	  </VerticalLayout>
+  </VerticalLayout>
+</Window>

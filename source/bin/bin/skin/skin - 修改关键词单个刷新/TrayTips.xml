@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="203,149" bktrans="true">
+    <Font name="宋体" size="14" bold="false" italic="false" />
+    <Font name="微软雅黑" size="16" bold="true" italic="false" />
+    <VerticalLayout width="180" height="128" bkimage="images\traytips.png">
+        <Text name="tips_text" text="“大师甑词”正在为您优化短词中，请保持客户端开启状态。" float="true" pos="14,42,0,0" width="177" height="61" mouse="false" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="0" align="wrap" />
+        <Text name="tips_title" text="舟大师" float="true" pos="51,9,0,0" width="103" height="28" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="1" align="centerbottomwrap" />
+    </VerticalLayout>
+</Window>

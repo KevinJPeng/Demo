@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\common">
+      <UniqueIdentifier>{9648637f-526b-4023-9e20-4720e1a9efb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\common">
+      <UniqueIdentifier>{4d03137d-b788-4920-b018-fea7a38344c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\threadmodel">
+      <UniqueIdentifier>{926787fd-9004-4630-8eb2-5402dcf32426}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\threadmodel">
+      <UniqueIdentifier>{3bca552a-42ab-410d-9667-51b63037fac4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="ExTool.def">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="res\ExTool.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ExTool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SysOperate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\IMsgQueue.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\IThreadManage.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\IThreadUnit.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\MsgQueue.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\ThreadManage.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\threadmodel\UiHelper.cpp">
+      <Filter>源文件\threadmodel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\Trace.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\CommFunc.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\Lock.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\Reg.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckSystemDll.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\Directory.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckSvrConnect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckDiffTime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckNewVersion.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="InternetHttp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\FTP.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\FtpSocket.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckWebActiveXEsist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\IXMLRW.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\IKeyRW.cpp">
+      <Filter>源文件\common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExTool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SysOperate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\IMsgQueue.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\IThreadManage.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\IThreadUnit.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\MsgDef.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\MsgQueue.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\ThreadManage.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\threadmodel\UiHelper.h">
+      <Filter>头文件\threadmodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Trace.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\CommFunc.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Lock.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Reg.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\ClientDiagnoseBase.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckSystemDll.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\Directory.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckSvrConnect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckDiffTime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckNewVersion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="InternetHttp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\FTP.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="md5.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\FtpSocket.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckWebActiveXEsist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\IXMLRW.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\IKeyRW.h">
+      <Filter>头文件\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ExTool.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
