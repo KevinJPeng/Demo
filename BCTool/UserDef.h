@@ -15,21 +15,21 @@ const TCHAR* const g_sVersion = _T("1&1.0.00");
 	//web服务器地址（ClientUpdateService.exe所在地址）
 	const string g_sServerUrl = "http://112.74.102.50:2015/downloadfilelist/index";
 	//程序自身下载地址
-	const TCHAR* const g_sUpdateSelfUrl = _T("http://112.74.102.50:8075/MagicBox.exe");
+	const TCHAR* const g_sUpdateSelfUrl = _T("http://112.74.102.50:8075/BCTool.exe");
 	//安装包下载地址
 	const TCHAR* const g_sAPKDLUrl = _T("http://112.74.102.50:8075/MasterZ_Custom_93.exe");
 #elif(RUN_DEBUG == 1)
 	//web服务器地址（ClientUpdateService.exe所在地址）
 	const string g_sServerUrl = "http://192.168.1.253:2015/downloadfilelist/index";
 	//程序自身下载地址
-	const TCHAR* const g_sUpdateSelfUrl = _T("http://112.74.102.50:8075/MagicBox.exe");
+	const TCHAR* const g_sUpdateSelfUrl = _T("http://112.74.102.50:8075/BCTool.exe");
 	//安装包下载地址
 	const TCHAR* const g_sAPKDLUrl = _T("http://112.74.102.50:8075/MasterZ_Custom_93.exe");
 #else
 	//web服务器地址（ClientUpdateService.exe所在地址）
 	const string g_sServerUrl = "http://127.0.0.1:2015";
 	//程序自身下载地址
-	const TCHAR* const g_sUpdateSelfUrl = _T("http://112.74.102.50:8075/MagicBox.exe");
+	const TCHAR* const g_sUpdateSelfUrl = _T("http://112.74.102.50:8075/BCTool.exe");
 	//安装包下载地址
 	const TCHAR* const g_sAPKDLUrl = _T("http://112.74.102.50:8075/MasterZ_Custom_93.exe");
 #endif
@@ -38,7 +38,7 @@ const TCHAR* const g_sVersion = _T("1&1.0.00");
 // web服务器地址（ClientUpdateService.exe所在地址）
 // const string g_sServerUrl = "http://127.0.0.1:2015";
 // 程序自身下载地址
-// const TCHAR* const g_sUpdateSelfUrl = _T("http://112.74.102.50:8075/MagicBox.exe");
+// const TCHAR* const g_sUpdateSelfUrl = _T("http://112.74.102.50:8075/BCTool.exe");
 // 安装包下载地址
 // const TCHAR* const g_sAPKDLUrl = _T("http://112.74.102.50:8075/MasterZ_Custom_93.exe");
 
@@ -66,8 +66,8 @@ const int c_iExit_initTime = 5;
 
 /*--------------------------------------自定义消息-------------------------------------*/
 //SKIN_DEFAULT
-const LPARAM USERMSG_PROCESS_EXIT = 1000;
-const LPARAM USERMSG_SINGLE_RUN = 1100;
+// const LPARAM USERMSG_PROCESS_EXIT = 1000;
+// const LPARAM USERMSG_SINGLE_RUN = 1100;
 
 
 enum
@@ -89,7 +89,7 @@ enum
 enum ENUM_LOGGER
 {
 	L_MAIN = 0,		//the main logger, It away exist.
-	L_MagicBox,		//the user-defined logger.
+	L_BCTOOL,		//the user-defined logger.
 	L_LOG_SUM
 };
 //程序运行状态
@@ -132,6 +132,9 @@ enum
 	//服务器消息
 	//WPARAM: 0	消息类型
 	MSG_FROM_SERVWE,
+
+	//程序退出
+	MSG_PROCESS_EXIT,
 };
 
 enum msgparam
@@ -148,5 +151,11 @@ enum msgparam
 
 	//WM_TIMER
 	WPARAM_TIMER_DL_CLIENTPACKAGE = 0,				//客户端安装包下载
+	WPARAM_TRAYICON_TWINKLING = 1,					//托盘闪烁
+	WPARAM_ICON_TWINKLING = 2,					//托盘闪烁
+
+	//MSG_PROCESS_EXIT
+	WPARAM_PROCESS_EXIT_MANUAL = 0,
+	WPARAM_PROCESS_EXIT_AUTO = 1,
 };
 #endif

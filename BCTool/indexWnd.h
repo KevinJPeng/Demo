@@ -40,6 +40,11 @@ public:
 private:
 	//托盘操作--ADD,DELETE
 	void OperateTray(DWORD dwType);
+	//托盘开始闪烁
+	bool StartTwinkling();
+	//托盘停止闪烁
+	void StopTwinkling();
+
 	//打开托盘菜单
 	void OnOpearateTray(WPARAM wParam, LPARAM lParam);
 	//响应托盘菜单
@@ -54,6 +59,9 @@ private:
 	bool SplitString(const string & input, const string & delimiter, std::vector<string >& results);	//分割字符
 	bool isExit();
 
+	DWORD GetCurrentActiveWindowsProcessId();
+	BOOL HasFocus();
+
 protected:
 private:
 	bool m_bThreadRunFlag;				//线程退出标志
@@ -63,6 +71,9 @@ private:
 	int m_iDLFailCount;		//下载安装包失败次数计数	
 	int m_iDLStatus;			//程序运行状态
 	bool m_bUserExit;
+	bool m_bTwinkling;		//托盘闪烁
+	bool m_bVisible;			//托盘可见
+	int m_iTwinklingCount;	//任务栏图标闪烁次数
 
 };
 

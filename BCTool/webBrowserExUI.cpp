@@ -15,10 +15,10 @@ int JSCallCPP(string _sParam)
 	if (-1 != g_utilityVar.sJsData.find("(;0)"))
 	{
 		SetEvent(g_utilityVar.hRecvJSData);
-		LOG_INFO(g_utilityVar.loggerId, "收到JS传过来的数据：" << g_utilityVar.sJsData);
+		LOG_INFO(g_utilityVar.loggerId, "recv data from JS:" << g_utilityVar.sJsData);
 		return 0;
 	}
-	LOG_ERROR(g_utilityVar.loggerId, "收到JS传过来的数据：" << g_utilityVar.sJsData);
+	LOG_ERROR(g_utilityVar.loggerId, "recv data from JS:" << g_utilityVar.sJsData);
 	return -1;
 }
 

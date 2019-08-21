@@ -14,6 +14,9 @@ CIndexWnd::CIndexWnd(void)
 	m_iDLFailCount = 0;
 	m_iDLStatus = CLIENT_DL_NULL;
 	m_bUserExit = false;
+	m_bTwinkling = false;
+	m_bVisible = true;
+	m_iTwinklingCount = 0;
 }
 CIndexWnd::~CIndexWnd(void)
 {
@@ -54,7 +57,13 @@ CControlUI* CIndexWnd::CreateControl(LPCTSTR pstrClass)
 }
 void CIndexWnd::InitWindow()
 {
-//	::SetTimer(m_hWnd, WPARAM_TIMER_DL_CLIENTPACKAGE, 500, NULL);
+//	::MessageBox(m_hWnd, _T("有新消息啦!"), _T("啦啦啦"), 0);
+
+	::SetTimer(m_hWnd, WPARAM_TIMER_DL_CLIENTPACKAGE, 500, NULL);
+
+	//::SetTimer(m_hWnd, 10, 10000, NULL);
+
+
 	//初始化托盘
 	OperateTray(NIM_ADD);
 
@@ -65,7 +74,6 @@ void CIndexWnd::InitWindow()
 	//	m_pBrowser->SetVisible(false);
 	if (m_pBrowser != NULL)
 	{
-
 		m_pBrowser->SetDelayCreate(false);
 		CCustomWebEventHandler *pWebHandle = new CCustomWebEventHandler;
 		pWebHandle->SetMainHwnd(m_hWnd);
@@ -74,7 +82,8 @@ void CIndexWnd::InitWindow()
 		//m_pBrowser->Navigate2(_T("C:/Users/Administrator/Desktop/skin/test.html"));   //http://198.18.0.254:8009/ClientPage/ChartStatisticData?userName=kehu0051
 
 		//m_pBrowser->Navigate2(_T("http://192.168.1.223:8099/Personal/Manage"));   //http://198.18.0.254:8009/ClientPage/ChartStatisticData?userName=kehu0051
-		m_pBrowser->Navigate2(_T("http://192.168.1.245:1966/Personal/chat"));   //http://198.18.0.254:8009/ClientPage/ChartStatisticData?userName=kehu0051
+		//m_pBrowser->Navigate2(_T("http://192.168.1.245:1966/Personal/chat"));   //http://198.18.0.254:8009/ClientPage/ChartStatisticData?userName=kehu0051
+		m_pBrowser->Navigate2(_T("http://47.107.165.10:10010/Login/index"));   //http://198.18.0.254:8009/ClientPage/ChartStatisticData?userName=kehu0051
 	}
 
 	CreateThread(NULL, 0, DoDataFromJSThread, this, 0, 0);
@@ -121,8 +130,9 @@ void CIndexWnd::Notify(TNotifyUI& msg)
 {
 	if (msg.sType == _T("click"))
 	{
-		if (msg.pSender->GetName() == _T("Button_OK"))
+		if (msg.pSender->GetName() == _T("closebtn_index"))
 		{
+			::PostMessage(m_hWnd, MSG_PROCESS_EXIT, WPARAM_PROCESS_EXIT_MANUAL, 0);
 		}
 	}
 	else if (msg.sType == _T("selectchanged"))
@@ -177,6 +187,14 @@ LRESULT CIndexWnd::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
 			OnTimerMsg(wParam, lParam);
 			//return 0;			//注意此处不能够return 否则会导致gif不能正常显示
 		}
+
+// 		if (uMsg == WM_SYSCOMMAND)
+// 		{
+			if (m_bTwinkling && HasFocus()/*wParam == SC_RESTORE*/)
+			{
+				StopTwinkling();
+			}
+//		}
 		//屏蔽对标题栏的双击操作 
 		if (WM_NCLBUTTONDBLCLK != uMsg)
 			return __super::HandleMessage(uMsg, wParam, lParam);
@@ -193,6 +211,62 @@ void CIndexWnd::OnTimerMsg(WPARAM wParam, LPARAM lParam)
 	{
 		CreateThread(NULL, 0, ThreadWorkDL, this, 0, NULL);
 	}
+	else if (WPARAM_TRAYICON_TWINKLING == wParam)
+	{
+// 		if (m_hWnd != GetForegroundWindow())
+// 		{
+// 			FlashWindow(m_hWnd, TRUE);
+// 			////    this->ShowWindow(SW_RESTORE);
+// 			////    MoveWindow(&m_rect);
+// 			HWND hCurwnd = NULL;
+// 			hCurwnd = ::GetForegroundWindow();
+// 			DWORD threadID = ::GetCurrentThreadId();
+// 			DWORD threadprocessid = ::GetWindowThreadProcessId(hCurwnd, &threadID);
+// 			::AttachThreadInput(threadID, threadprocessid, TRUE);
+// 			::SetForegroundWindow(m_hWnd);
+// 			::AttachThreadInput(threadID, threadprocessid, FALSE);
+//		}
+
+
+		if (m_bVisible)
+		{
+			m_bVisible = false;
+			m_NotifyIcon.hIcon = NULL;
+			//m_NotifyIcon.uFlags = NIF_ICON;
+			Shell_NotifyIcon(NIM_MODIFY, &m_NotifyIcon);
+
+		}
+		else
+		{
+			m_bVisible = true;
+			m_NotifyIcon.hIcon = ::LoadIcon(m_PaintManager.GetInstance(), MAKEINTRESOURCE(IDI_BCTOOL_NEW));
+			//m_NotifyIcon.uFlags = NIF_ICON;
+			Shell_NotifyIcon(NIM_MODIFY, &m_NotifyIcon);
+		}
+
+	}
+	else if (WPARAM_ICON_TWINKLING == wParam)
+	{
+		m_iTwinklingCount++;
+		FlashWindow(m_hWnd, true);
+		if (m_iTwinklingCount >= 2)
+		{
+			m_iTwinklingCount = 0;
+			::KillTimer(m_hWnd, WPARAM_ICON_TWINKLING);
+		}
+	}
+	else if (10 == wParam)
+	{
+		g_utilityVar.sJsData = "1(;0)2(;0)深圳";
+		//消息来源(;0)消息类型(;0)数据  1(;0)2(;0)深圳
+		if (-1 != g_utilityVar.sJsData.find("(;0)"))
+		{
+			SetEvent(g_utilityVar.hRecvJSData);
+			LOG_INFO(g_utilityVar.loggerId, "收到JS传过来的数据：" << g_utilityVar.sJsData);
+		}
+		LOG_ERROR(g_utilityVar.loggerId, "收到JS传过来的数据：" << g_utilityVar.sJsData);
+	}
+
 }
 
 /*******************************用户消息处理************************************/
@@ -218,6 +292,27 @@ LRESULT CIndexWnd::HandleCustomMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, 
 		OnServerMsg(wParam, lParam);
 		break;
 	}
+	//处理托盘菜单消息
+	case MSG_PROCESS_EXIT:
+	{
+		if (WPARAM_PROCESS_EXIT_MANUAL == wParam)
+		{
+			ShowWindow(false);
+			OperateTray(NIM_DELETE);
+			m_bUserExit = true;
+		}
+		else if (WPARAM_PROCESS_EXIT_AUTO == wParam)
+		{
+			m_iDLStatus = CLIENT_DL_OVER;
+		}
+		if (isExit())
+		{
+			PostQuitMessage(0);
+		}
+
+		break;
+	}
+
 	default:
 		break;
 	}
@@ -266,12 +361,14 @@ void CIndexWnd::OnOpearateTray(WPARAM wParam, LPARAM lParam)
 		m_TrayWnd.Create(NULL, _T("BCTOOL_Traywnd"), UI_WNDSTYLE_FRAME, WS_EX_TOPMOST | WS_EX_TOOLWINDOW);
 	}
 	//双击托盘
-	if (lParam == WM_LBUTTONDBLCLK)
+	if (lParam == WM_LBUTTONDBLCLK || lParam == WM_LBUTTONDOWN)
 	{
 		//显示对话框，居中,前端显示		
 		ShowWindow();
 		CenterWindow();
 		::SetForegroundWindow(m_hWnd);
+		//停止托盘图标闪烁
+		StopTwinkling();
 	}
 }
 
@@ -291,11 +388,53 @@ void CIndexWnd::OnTaryMenue(WPARAM wParam, LPARAM lParam)
 	//安全退出【需要进行相关进行的kill处理】
 	else if (wParam == WPARAM_SAFE_EXIT)
 	{
-		ShowWindow(false);
-		OperateTray(NIM_DELETE);
-		PostQuitMessage(0);
-		//::PostMessage(m_hWnd, WM_SHOW_MODAL, WPARAM_SHOW_SAFEEXIT_WMD, 0);
+		::PostMessage(m_hWnd, MSG_PROCESS_EXIT, WPARAM_PROCESS_EXIT_MANUAL, 0);
 	}
+}
+DWORD CIndexWnd::GetCurrentActiveWindowsProcessId()
+{
+	HWND hWnd = GetActiveWindow();
+	DWORD processId = 0;
+	GetWindowThreadProcessId(hWnd, &processId);
+	return processId;
+}
+
+BOOL CIndexWnd::HasFocus()
+{
+	DWORD active_process = GetCurrentActiveWindowsProcessId();
+	DWORD current_process = ::GetCurrentProcessId();
+	return current_process == active_process;
+}
+
+//托盘开始闪烁
+bool CIndexWnd::StartTwinkling()
+{
+	if (!m_bTwinkling && (!HasFocus()))
+	{
+		::SetTimer(m_hWnd, WPARAM_TRAYICON_TWINKLING, 500, NULL);
+		::SetTimer(m_hWnd, WPARAM_ICON_TWINKLING, 1200, NULL);
+		
+		m_bTwinkling = true;
+	}
+
+	return true;
+}
+//托盘停止闪烁
+void CIndexWnd::StopTwinkling()
+{
+	if (m_bTwinkling)
+	{
+		m_bTwinkling = false;
+		::KillTimer(m_hWnd, WPARAM_TRAYICON_TWINKLING);
+		::KillTimer(m_hWnd, WPARAM_ICON_TWINKLING);
+		m_iTwinklingCount = 0;
+
+		m_bVisible = true;
+		m_NotifyIcon.hIcon = ::LoadIcon(m_PaintManager.GetInstance(), MAKEINTRESOURCE(IDI_BCTOOL_NEW));
+		//m_NotifyIcon.uFlags = NIF_ICON;
+		Shell_NotifyIcon(NIM_MODIFY, &m_NotifyIcon);
+	}
+
 }
 
 void CIndexWnd::OnServerMsg(WPARAM wParam, LPARAM lParam)
@@ -303,7 +442,8 @@ void CIndexWnd::OnServerMsg(WPARAM wParam, LPARAM lParam)
 	//来新消息啦
 	if (wParam == WPARAM_NEWINFO_MSG)
 	{
-		::MessageBox(m_hWnd, _T("有新消息啦!"), _T("啦啦啦"), 0);
+		StartTwinkling();
+		//::MessageBox(m_hWnd, _T("有新消息啦!"), _T("啦啦啦"), 0);
 	}
 }
 
@@ -476,10 +616,6 @@ void CIndexWnd::DoDL()
 	else
 	{
 		LOG_INFO(g_utilityVar.loggerId, "软件运行正常，Code = " << iCode);
-		m_iDLStatus = CLIENT_DL_OVER;
-		if (isExit())
-		{
-			::PostMessage(m_hWnd, USERMSG_PROCESS_EXIT, 0, 0);
-		}
+		::PostMessage(m_hWnd, MSG_PROCESS_EXIT, WPARAM_PROCESS_EXIT_AUTO, 0);
 	}
 }

@@ -218,7 +218,7 @@ int CUtility::UpgradeSelf(CStdString& _sLocalPath, string _pRecv)
 					{
 						_sLocalPath = SelectLocalPath(_T("%temp%"));
 					}
-					CStdString sLocalPathName = _sLocalPath + _T("\\MagicBox.exe");
+					CStdString sLocalPathName = _sLocalPath + _T("\\BCTool.exe");
 					CStdString sServerUrl = g_sUpdateSelfUrl; //SelectServer();
 					if (sServerUrl.IsEmpty())
 					{
@@ -238,12 +238,12 @@ int CUtility::UpgradeSelf(CStdString& _sLocalPath, string _pRecv)
 							{
 								char buf[500] = { 0 };
 								int iLen = 0;
-								CStdString sLocalBatName = _sLocalPath + _T("\\killProcessTemp.bat");
+								CStdString sLocalBatName = _sLocalPath + _T("\\killProcessTemp_BCTool.bat");
 
 								fileTest    file;        //file handle.
 								file.open(WideToChar(sLocalBatName.c_str()), "wb+");
 
-								sprintf(buf, "taskkill /F /IM MagicBox.exe\r\n");
+								sprintf(buf, "taskkill /F /IM BCTool.exe\r\n");
 								iLen = strlen(buf);
 								file.write(buf, iLen);
 
